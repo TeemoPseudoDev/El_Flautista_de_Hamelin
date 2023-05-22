@@ -1,5 +1,7 @@
 using El_Flautista_de_Hamelin.Models;
 using El_Flautista_de_Hamelin.Properties;
+using System.Reflection.Emit;
+using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -21,6 +23,42 @@ namespace El_Flautista_de_Hamelin
 
             //pictureBox1.BackgroundImage = Image.FromFile(imagePath);
         }
+
+
+        //para que al hacer click sobre la imagen también se pueda mover la ventana del formulario de login
+
+        private const int WM_NCLBUTTONDOWN = 0xA1;
+        private const int HT_CAPTION = 0x2;
+
+        [DllImport("user32.dll")]
+        private static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        private static extern bool ReleaseCapture();
+
+        protected override void WndProc(ref Message m)
+        {
+            const int WM_NCHITTEST = 0x0084;
+            const int HTCAPTION = 0x0002;
+
+            if (m.Msg == WM_NCHITTEST)
+            {
+                m.Result = (IntPtr)HTCAPTION;
+                return;
+            }
+
+            base.WndProc(ref m);
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        //fin click para mover ventana
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -118,6 +156,45 @@ namespace El_Flautista_de_Hamelin
             }
 
         }
+
+        private void general_message_error_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void psw_message_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_input_user_Enter(object sender, EventArgs e)
+        {
+            user_container.BackColor = SystemColors.Control;
+            user_container.BorderStyle = BorderStyle.FixedSingle;
+            login_input_user.BackColor = SystemColors.Control;
+        }
+
+        private void login_input_user_Leave(object sender, EventArgs e)
+        {
+            user_container.BackColor = Color.FromArgb(224, 224, 224);
+            user_container.BorderStyle = BorderStyle.None;
+            login_input_user.BackColor = Color.FromArgb(224, 224, 224);
+        }
+
+        private void login_input_psw_Enter(object sender, EventArgs e)
+        {
+            psw_container.BackColor = SystemColors.Control;
+            psw_container.BorderStyle = BorderStyle.FixedSingle;
+            login_input_psw.BackColor = SystemColors.Control;
+        }
+
+        private void login_input_psw_Leave(object sender, EventArgs e)
+        {
+            psw_container.BackColor = Color.FromArgb(224, 224, 224);
+            psw_container.BorderStyle = BorderStyle.None;
+            login_input_psw.BackColor = Color.FromArgb(224, 224, 224);
+        }
+
 
     }
 }
