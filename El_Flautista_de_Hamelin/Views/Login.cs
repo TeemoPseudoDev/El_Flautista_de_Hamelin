@@ -1,5 +1,6 @@
 using El_Flautista_de_Hamelin.Models;
 using El_Flautista_de_Hamelin.Properties;
+using El_Flautista_de_Hamelin.Views;
 using System.Reflection.Emit;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
@@ -62,7 +63,7 @@ namespace El_Flautista_de_Hamelin
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.Select();
             //Comida pizza = new Comida(1, "pizza", 58, 1);
             //Admin inti = new Admin(1, "inti", "taretto", new DateTime(1994, 09, 26), "jasda@alsd", "2131231", "Colonia990", "admin");
             //Detalle detalle = new Detalle(1, pizza, 15, 870);
@@ -123,10 +124,10 @@ namespace El_Flautista_de_Hamelin
             if (sender == login_input_user)
             {
                 string texto = login_input_user.Text;
-                string patron = @"^[A-Za-z1-9]{1,15}$";
+                string patron = @"^[A-Za-z1-9]{5,15}$";
                 if (!Regex.IsMatch(texto, patron))
                 {
-                    user_message.Text = "Sólo se admiten letras y números";
+                    user_message.Text = "Sólo se admiten letras y números.\r\nMínimo 5 caracteres.";
                     user_message.Visible = true;
                 }
                 else
@@ -140,11 +141,12 @@ namespace El_Flautista_de_Hamelin
             if (sender == login_input_psw)
             {
                 string texto = login_input_psw.Text;
-                string patron = @"^(?=.*[a-zA-Z0-9!_])[a-zA-Z0-9!_]{0,15}$";
+                //string patron = @"^(?=.*[a-zA-Z0-9!_])[a-zA-Z0-9!_]{0,15}$";
+                string patron = @"^[a-zA-Z0-9!_]{5,15}$";
 
                 if (!Regex.IsMatch(texto, patron))
                 {
-                    psw_message.Text = "Letras, números, '!' y '_'";
+                    psw_message.Text = "Letras, números, '!' y '_'\r\n.Mínimo 5 caracteres.";
                     psw_message.Visible = true;
                 }
                 else
@@ -167,34 +169,32 @@ namespace El_Flautista_de_Hamelin
 
         }
 
-        private void login_input_user_Enter(object sender, EventArgs e)
+        private void input_Enter(object sender, EventArgs e)
         {
-            user_container.BackColor = SystemColors.Control;
-            user_container.BorderStyle = BorderStyle.FixedSingle;
-            login_input_user.BackColor = SystemColors.Control;
-        }
+            System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)sender;
+            Panel panel = (Panel)textBox.Parent;
 
-        private void login_input_user_Leave(object sender, EventArgs e)
-        {
-            user_container.BackColor = Color.FromArgb(224, 224, 224);
-            user_container.BorderStyle = BorderStyle.None;
-            login_input_user.BackColor = Color.FromArgb(224, 224, 224);
+            panel.BackColor = SystemColors.Control;
+            panel.BorderStyle = BorderStyle.FixedSingle;
+            textBox.BackColor = SystemColors.Control;
         }
-
-        private void login_input_psw_Enter(object sender, EventArgs e)
+        private void input_Leave(object sender, EventArgs e)
         {
-            psw_container.BackColor = SystemColors.Control;
-            psw_container.BorderStyle = BorderStyle.FixedSingle;
-            login_input_psw.BackColor = SystemColors.Control;
-        }
+            System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)sender;
+            Panel panel = (Panel)textBox.Parent;
 
-        private void login_input_psw_Leave(object sender, EventArgs e)
-        {
-            psw_container.BackColor = Color.FromArgb(224, 224, 224);
-            psw_container.BorderStyle = BorderStyle.None;
-            login_input_psw.BackColor = Color.FromArgb(224, 224, 224);
+            panel.BackColor = Color.FromArgb(224, 224, 224);
+            panel.BorderStyle = BorderStyle.None;
+            textBox.BackColor = Color.FromArgb(224, 224, 224);
         }
 
 
+        private void login_new_Click(object sender, EventArgs e)
+        {
+            Account accountForm = new Account();
+            accountForm.Owner = this;
+            accountForm.Show();
+            this.Hide();
+        }
     }
 }

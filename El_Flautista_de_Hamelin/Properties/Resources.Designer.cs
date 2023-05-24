@@ -63,6 +63,36 @@ namespace El_Flautista_de_Hamelin.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap comida {
+            get {
+                object obj = ResourceManager.GetObject("comida", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap comiendo {
+            get {
+                object obj = ResourceManager.GetObject("comiendo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loader {
+            get {
+                object obj = ResourceManager.GetObject("loader", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap moto_delivery {
             get {
                 object obj = ResourceManager.GetObject("moto_delivery", resourceCulture);
@@ -76,6 +106,16 @@ namespace El_Flautista_de_Hamelin.Properties {
         internal static System.Drawing.Bitmap pizza {
             get {
                 object obj = ResourceManager.GetObject("pizza", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap taco {
+            get {
+                object obj = ResourceManager.GetObject("taco", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
