@@ -42,6 +42,7 @@ namespace El_Flautista_de_Hamelin
             login_new = new Label();
             general_message_error = new Label();
             newaccount_title = new Label();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             user_container.SuspendLayout();
             psw_container.SuspendLayout();
@@ -132,12 +133,13 @@ namespace El_Flautista_de_Hamelin
             // 
             // login_submit
             // 
-            login_submit.BackgroundImage = Properties.Resources.pizza;
+            login_submit.BackColor = SystemColors.Control;
+            login_submit.BackgroundImage = Properties.Resources.entrar;
             login_submit.BackgroundImageLayout = ImageLayout.Stretch;
             login_submit.Cursor = Cursors.Hand;
-            login_submit.Location = new Point(962, 498);
+            login_submit.Location = new Point(962, 505);
             login_submit.Name = "login_submit";
-            login_submit.Size = new Size(80, 80);
+            login_submit.Size = new Size(60, 60);
             login_submit.TabIndex = 7;
             login_submit.TabStop = false;
             login_submit.Click += HandleSubmit;
@@ -207,6 +209,13 @@ namespace El_Flautista_de_Hamelin
             newaccount_title.TabIndex = 30;
             newaccount_title.Text = "Ingresar";
             // 
+            // panel1
+            // 
+            panel1.Location = new Point(698, 58);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(200, 100);
+            panel1.TabIndex = 31;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
@@ -215,6 +224,7 @@ namespace El_Flautista_de_Hamelin
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1280, 720);
             ControlBox = false;
+            Controls.Add(panel1);
             Controls.Add(newaccount_title);
             Controls.Add(login_new);
             Controls.Add(general_message_error);
@@ -260,5 +270,6 @@ namespace El_Flautista_de_Hamelin
         private Label login_new;
         private Label general_message_error;
         private Label newaccount_title;
+        private Panel panel1;
     }
 }

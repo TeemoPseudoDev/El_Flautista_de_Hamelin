@@ -54,7 +54,6 @@
             login_close = new PictureBox();
             newaccount_title = new Label();
             pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
@@ -79,7 +78,6 @@
             container_new_email.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)login_close).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)custom_loader).BeginInit();
             SuspendLayout();
@@ -303,12 +301,12 @@
             // 
             // newaccount_submit
             // 
-            newaccount_submit.BackgroundImage = Properties.Resources.pizza;
+            newaccount_submit.BackgroundImage = Properties.Resources.agregar_usuario;
             newaccount_submit.BackgroundImageLayout = ImageLayout.Stretch;
             newaccount_submit.Cursor = Cursors.Hand;
-            newaccount_submit.Location = new Point(697, 590);
+            newaccount_submit.Location = new Point(712, 598);
             newaccount_submit.Name = "newaccount_submit";
-            newaccount_submit.Size = new Size(80, 80);
+            newaccount_submit.Size = new Size(60, 60);
             newaccount_submit.TabIndex = 24;
             newaccount_submit.TabStop = false;
             newaccount_submit.Click += newaccount_submit_Click;
@@ -428,17 +426,6 @@
             pictureBox1.TabIndex = 30;
             pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.BackgroundImage = Properties.Resources.taco;
-            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox2.InitialImage = null;
-            pictureBox2.Location = new Point(45, 498);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(50, 50);
-            pictureBox2.TabIndex = 31;
-            pictureBox2.TabStop = false;
-            // 
             // pictureBox3
             // 
             pictureBox3.BackgroundImage = Properties.Resources.comiendo;
@@ -523,7 +510,7 @@
             // 
             custom_loader.BackgroundImageLayout = ImageLayout.Stretch;
             custom_loader.Image = Properties.Resources.loader;
-            custom_loader.Location = new Point(712, 518);
+            custom_loader.Location = new Point(718, 532);
             custom_loader.Name = "custom_loader";
             custom_loader.Size = new Size(50, 50);
             custom_loader.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -573,7 +560,6 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(newaccount_title);
             Controls.Add(login_close);
@@ -622,7 +608,6 @@
             container_new_email.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)login_close).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)custom_loader).EndInit();
             ResumeLayout(false);
@@ -658,7 +643,6 @@
         private PictureBox login_close;
         private Label newaccount_title;
         private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private Label label1;
         private Label label2;

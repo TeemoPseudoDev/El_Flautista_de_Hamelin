@@ -64,6 +64,13 @@ namespace El_Flautista_de_Hamelin
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Select();
+            Form1 formularioSecundario = new Form1();
+            formularioSecundario.TopLevel = false;
+            formularioSecundario.FormBorderStyle = FormBorderStyle.None;
+            formularioSecundario.Dock = DockStyle.Fill;
+            panel1.Controls.Add(formularioSecundario);
+            formularioSecundario.Show();
+
             //Comida pizza = new Comida(1, "pizza", 58, 1);
             //Admin inti = new Admin(1, "inti", "taretto", new DateTime(1994, 09, 26), "jasda@alsd", "2131231", "Colonia990", "admin");
             //Detalle detalle = new Detalle(1, pizza, 15, 870);
