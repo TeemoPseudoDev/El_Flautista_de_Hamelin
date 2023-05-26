@@ -1,4 +1,5 @@
 using El_Flautista_de_Hamelin.Models;
+using El_Flautista_de_Hamelin.Views;
 
 namespace El_Flautista_de_Hamelin
 {
@@ -11,6 +12,13 @@ namespace El_Flautista_de_Hamelin
             // see https://aka.ms/applicationconfiguration.
             
             ApplicationConfiguration.Initialize();
+
+
+            /*Select select = new Select();
+            Application.Run(select);*/
+
+
+
 
             Login loginForm = new Login();
             Application.Run(loginForm);

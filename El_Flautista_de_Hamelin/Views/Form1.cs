@@ -16,5 +16,10 @@ namespace El_Flautista_de_Hamelin.Views
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

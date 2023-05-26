@@ -6,16 +6,26 @@ using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using MySql.Data.MySqlClient;
+
 
 namespace El_Flautista_de_Hamelin
 {
+
+
     public partial class Login : Form
     {
-        public int user_id;
 
+        public string connectionString;
+        public MySqlConnection connection;
+
+        public int user_id;
+                
         public Login()
         {
             InitializeComponent();
+            this.connectionString = "Server = localhost; Port = 3306; Database = comidarapida; Uid = root; Pwd = c0c@c0l@";
+            this.connection = new MySqlConnection(connectionString);
 
             user_id = 0;
 
@@ -101,6 +111,8 @@ namespace El_Flautista_de_Hamelin
                 general_message_error.Visible = true;
                 return;
             }
+
+            
 
             if (user == "admin" && psw == "admin")
             {

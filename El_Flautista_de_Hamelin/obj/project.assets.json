@@ -8,19 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\brian\\.nuget\\packages\\": {}
+    "C:\\Users\\E in\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj",
+      "projectUniqueName": "C:\\Users\\E in\\Desktop\\Program\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj",
       "projectName": "El_Flautista_de_Hamelin",
-      "projectPath": "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj",
-      "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
-      "outputPath": "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\obj\\",
+      "projectPath": "C:\\Users\\E in\\Desktop\\Program\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj",
+      "packagesPath": "C:\\Users\\E in\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\E in\\Desktop\\Program\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\brian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\E in\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
