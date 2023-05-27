@@ -45,23 +45,21 @@
             // 
             resources.ApplyResources(label1, "label1");
             label1.Name = "label1";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
             resources.ApplyResources(label2, "label2");
             label2.Name = "label2";
-            label2.Click += label2_Click;
             // 
             // Select
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Red;
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(comboBox1);
             Name = "Select";
-            Load += Select_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -2,7 +2,7 @@
 
 namespace El_Flautista_de_Hamelin
 {
-    partial class Login
+    partial class LoginForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -129,7 +129,7 @@ namespace El_Flautista_de_Hamelin
             login_close.Size = new Size(35, 35);
             login_close.TabIndex = 6;
             login_close.TabStop = false;
-            login_close.Click += HandleClose;
+            login_close.Click += form_close;
             // 
             // login_submit
             // 
@@ -169,7 +169,6 @@ namespace El_Flautista_de_Hamelin
             psw_message.Text = "Letras, números, '!' y '_'.\r\nMínimo 5 caracteres.\r\n";
             psw_message.TextAlign = ContentAlignment.MiddleCenter;
             psw_message.Visible = false;
-            psw_message.Click += psw_message_Click;
             // 
             // login_new
             // 
@@ -195,7 +194,6 @@ namespace El_Flautista_de_Hamelin
             general_message_error.TabIndex = 10;
             general_message_error.Text = "Usuario y/o contraseña inexistentes";
             general_message_error.Visible = false;
-            general_message_error.Click += general_message_error_Click;
             // 
             // newaccount_title
             // 

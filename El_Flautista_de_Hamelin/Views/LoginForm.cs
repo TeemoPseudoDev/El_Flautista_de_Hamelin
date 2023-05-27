@@ -1,38 +1,23 @@
-using El_Flautista_de_Hamelin.Models;
-using El_Flautista_de_Hamelin.Properties;
 using El_Flautista_de_Hamelin.Views;
-using System.Reflection.Emit;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using MySql.Data.MySqlClient;
-
+using El_Flautista_de_Hamelin.Controllers;
 
 namespace El_Flautista_de_Hamelin
 {
 
 
-    public partial class Login : Form
+    public partial class LoginForm : Form
     {
-
-        public string connectionString;
-        public MySqlConnection connection;
-
+        private LoginController controller;
         public int user_id;
-                
-        public Login()
+
+        public LoginForm()
         {
             InitializeComponent();
-            this.connectionString = "Server = localhost; Port = 3306; Database = comidarapida; Uid = root; Pwd = c0c@c0l@";
-            this.connection = new MySqlConnection(connectionString);
+            controller = new LoginController();
 
             user_id = 0;
-
-            //string imagePath = Path.Combine(Application.StartupPath, "..", "..", "..", "Images", "moto_delivery.png");
-            //this.BackgroundImage = Image.FromFile(imagePath);
-
-            //pictureBox1.BackgroundImage = Image.FromFile(imagePath);
         }
 
 
@@ -68,24 +53,18 @@ namespace El_Flautista_de_Hamelin
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
-
         //fin click para mover ventana
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Select();
+            /*this.Select();
             Form1 formularioSecundario = new Form1();
             formularioSecundario.TopLevel = false;
             formularioSecundario.FormBorderStyle = FormBorderStyle.None;
             formularioSecundario.Dock = DockStyle.Fill;
             panel1.Controls.Add(formularioSecundario);
-            formularioSecundario.Show();
+            formularioSecundario.Show();*/
 
-            //Comida pizza = new Comida(1, "pizza", 58, 1);
-            //Admin inti = new Admin(1, "inti", "taretto", new DateTime(1994, 09, 26), "jasda@alsd", "2131231", "Colonia990", "admin");
-            //Detalle detalle = new Detalle(1, pizza, 15, 870);
-
-            //textBox1.Text = pizza.nombre + inti.nombre + detalle.id;
         }
 
         private void Psw_container_Click(object sender, EventArgs e)
@@ -102,26 +81,23 @@ namespace El_Flautista_de_Hamelin
         private void HandleSubmit(object sender, EventArgs e)
         {
 
-            string user = login_input_user.Text;
-            string psw = login_input_psw.Text;
-
             if (psw_message.Text != "" || user_message.Text != "")
             {
                 general_message_error.Text = "Usuario y/o contraseña con errores";
                 general_message_error.Visible = true;
                 return;
             }
+            string user = login_input_user.Text;
+            string psw = login_input_psw.Text;
 
-            
+            int id = this.controller.SearchUser(user, psw);
 
-            if (user == "admin" && psw == "admin")
+            if(id != 0)
             {
-                //manipular el controlador y el modelo
-                this.user_id = 1;
+                this.user_id = id;
+                this.DialogResult = DialogResult.OK;
                 this.Close();
-
-            }
-            else
+            } else
             {
                 general_message_error.Text = "Usuario y/o contraseña inexistentes";
                 general_message_error.Visible = true;
@@ -129,15 +105,10 @@ namespace El_Flautista_de_Hamelin
 
         }
 
-        private void HandleClose(object sender, EventArgs e)
-        {
-            this.user_id = -1;
-            this.Close();
-        }
-
 
         private void HandleChanged(object sender, EventArgs e)
         {
+
             general_message_error.Visible = false;
 
             if (sender == login_input_user)
@@ -160,12 +131,11 @@ namespace El_Flautista_de_Hamelin
             if (sender == login_input_psw)
             {
                 string texto = login_input_psw.Text;
-                //string patron = @"^(?=.*[a-zA-Z0-9!_])[a-zA-Z0-9!_]{0,15}$";
                 string patron = @"^[a-zA-Z0-9!_]{5,15}$";
 
                 if (!Regex.IsMatch(texto, patron))
                 {
-                    psw_message.Text = "Letras, números, '!' y '_'\r\n.Mínimo 5 caracteres.";
+                    psw_message.Text = "Letras, números, '!' y '_'.\r\nMínimo 5 caracteres.";
                     psw_message.Visible = true;
                 }
                 else
@@ -178,15 +148,6 @@ namespace El_Flautista_de_Hamelin
 
         }
 
-        private void general_message_error_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void psw_message_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void input_Enter(object sender, EventArgs e)
         {
@@ -214,6 +175,11 @@ namespace El_Flautista_de_Hamelin
             accountForm.Owner = this;
             accountForm.Show();
             this.Hide();
+        }
+
+        private void form_close(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
