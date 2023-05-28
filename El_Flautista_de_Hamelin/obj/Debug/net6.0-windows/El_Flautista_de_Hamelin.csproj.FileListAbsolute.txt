@@ -128,3 +128,5 @@ C:\Users\marin\OneDrive\Escritorio\Cosas\El_Flautista_de_Hamelin\El_Flautista_de
 C:\Users\marin\OneDrive\Escritorio\Cosas\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.pdb
 C:\Users\marin\OneDrive\Escritorio\Cosas\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.genruntimeconfig.cache
 C:\Users\marin\OneDrive\Escritorio\Cosas\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\ref\El_Flautista_de_Hamelin.dll
+C:\Users\marin\OneDrive\Escritorio\Cosas\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.ComidaForm.resources
+C:\Users\marin\OneDrive\Escritorio\Cosas\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.Tarjeta.resources

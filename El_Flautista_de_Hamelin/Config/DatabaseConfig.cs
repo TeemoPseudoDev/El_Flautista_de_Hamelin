@@ -3,12 +3,13 @@ using MySql.Data.MySqlClient;
 
 namespace El_Flautista_de_Hamelin.Config
 {
-    public class DatabaseConfig
+    public class DatabaseConnect
     {
         private string connectionString;
         private MySqlConnection connection;
 
-        public DatabaseConfig()
+
+        public DatabaseConnect()
         {
             // Credenciales de la base de datos
             string server = "localhost";
@@ -21,18 +22,22 @@ namespace El_Flautista_de_Hamelin.Config
             this.connectionString = $"Server={server}; Port={port}; Database={database}; Uid={username}; Pwd={password}";
 
             this.connection = new MySqlConnection(connectionString);
+            this.connection.Open(); // Abre la conexión aquí
         }
 
         public MySqlConnection GetConnection()
         {
-            // Antes de abrir conexión, verificar que está cerrada
-            if (connection.State == ConnectionState.Closed)
-            {
-                connection.Open();
-            }
-
             return connection;
         }
+
+        public MySqlDataReader conectar(string query)
+        {
+            using (var command = new MySqlCommand(query, GetConnection()))
+            {
+                return command.ExecuteReader();
+            }
+        }
     }
+
 
 }

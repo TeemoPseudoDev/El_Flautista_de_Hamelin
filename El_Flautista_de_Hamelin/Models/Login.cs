@@ -6,40 +6,25 @@ namespace El_Flautista_de_Hamelin.Models
     internal class Login
     {
         // Importar la configuración de la base de datos
-        private DatabaseConfig databaseConfig;
+        private DatabaseConnect database;
 
         public Login()
         {
-            databaseConfig = new DatabaseConfig();
+            database = new DatabaseConnect();
         }
-        public int BuscarCuenta(string usuario, string contrasena)
+
+        public int BuscarCuenta(string nombre, string contrasena)
         {
-            using (MySqlConnection connection = databaseConfig.GetConnection())
+            string query = $"SELECT id_usuario FROM cuenta WHERE nombre = '{nombre}' AND contraseña = '{contrasena}';";
+            using (MySqlDataReader reader = database.conectar(query))
             {
-                // Query hacia la base de datos
-                string query = "SELECT id_usuario FROM cuenta WHERE nombre = @user AND contraseña = @psw;";
-
-                using (MySqlCommand command = new MySqlCommand(query, connection))
+                if (reader.Read())
                 {
-                    // Parámetros utilizados en el Query. Se agrega seguridad al programa evitando inyeción SQL 
-                    command.Parameters.AddWithValue("@user", usuario);
-                    command.Parameters.AddWithValue("@psw", contrasena);
-
-                    // Se ejecuta la consulta 
-                    using (MySqlDataReader reader = command.ExecuteReader())
-                    {
-                        // Valida si trajo algún registro
-                        if (reader.Read())
-                        {
-                            return reader.GetInt32("id_usuario");
-                        }
-                    }
+                    return reader.GetInt32("id_usuario");
                 }
             }
-
-            //0 si no encontró alguna cuenta.
             return 0;
-
         }
     }
+
 }

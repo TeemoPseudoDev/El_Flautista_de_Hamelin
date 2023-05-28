@@ -180,7 +180,6 @@ namespace El_Flautista_de_Hamelin.Views
 
             }
 
-
         }
 
 
@@ -222,12 +221,12 @@ namespace El_Flautista_de_Hamelin.Views
             this.Close();
         }
 
-        private void Account_FormClosed(object sender, FormClosedEventArgs e)
+        /*private void Account_FormClosed(object sender, FormClosedEventArgs e)
         {
             LoginForm loginForm = this.Owner as LoginForm;
 
             loginForm.Show();
-        }
+        }*/
 
         private void Account_Load(object sender, EventArgs e)
         {

@@ -14,7 +14,6 @@ namespace El_Flautista_de_Hamelin.Views
             this.id = id;
             this.connectionString = "Server = localhost; Port = 3306; Database = comidarapida; Uid = root; Pwd = esteesmiWORK";
             this.connection = new MySqlConnection(connectionString);
-            MessageBox.Show(id.ToString());
 
             InitializeComponent();
         }
@@ -46,23 +45,7 @@ namespace El_Flautista_de_Hamelin.Views
         {
             connection.Open();
 
-            string queryUser = "select * from usuario where id_usuario = @id;";
 
-
-            using (MySqlCommand command = new MySqlCommand(queryUser, connection))
-            {
-                command.Parameters.AddWithValue("@id", id);
-                // Ejecutar el comando y obtener el lector de datos
-                using (MySqlDataReader reader = command.ExecuteReader())
-                {
-                    // Leer los datos del lector
-                    if (reader.Read())
-                    {
-                        label2.Text = reader["nombre"].ToString();
-                    }
-
-                }
-            }
             /*
             string query = "select descripcion from categoria;";
             using (MySqlCommand command = new MySqlCommand(query, connection))
