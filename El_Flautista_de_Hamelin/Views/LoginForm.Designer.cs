@@ -214,7 +214,7 @@ namespace El_Flautista_de_Hamelin
             panel1.Size = new Size(200, 100);
             panel1.TabIndex = 31;
             // 
-            // Login
+            // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -237,7 +237,7 @@ namespace El_Flautista_de_Hamelin
             FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "Login";
+            Name = "LoginForm";
             Padding = new Padding(4, 5, 4, 5);
             ShowInTaskbar = false;
             SizeGripStyle = SizeGripStyle.Hide;

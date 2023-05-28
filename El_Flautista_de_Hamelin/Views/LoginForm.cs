@@ -92,12 +92,13 @@ namespace El_Flautista_de_Hamelin
 
             int id = this.controller.SearchUser(user, psw);
 
-            if(id != 0)
+            if (id != 0)
             {
                 this.user_id = id;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
-            } else
+            }
+            else
             {
                 general_message_error.Text = "Usuario y/o contraseña inexistentes";
                 general_message_error.Visible = true;
@@ -172,9 +173,12 @@ namespace El_Flautista_de_Hamelin
         private void login_new_Click(object sender, EventArgs e)
         {
             Account accountForm = new Account();
-            accountForm.Owner = this;
-            accountForm.Show();
-            this.Hide();
+            //accountForm.Owner = this;
+            accountForm.ShowDialog();
+            /*accountForm.FormClosed += (sender, e) => {
+                this.Show();
+            };*/
+            //this.Hide();
         }
 
         private void form_close(object sender, EventArgs e)

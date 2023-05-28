@@ -84,7 +84,7 @@
             // 
             // container_new_nacimiento
             // 
-            container_new_nacimiento.BackColor = Color.FromArgb(224, 224, 224);
+            container_new_nacimiento.BackColor = SystemColors.ControlLight;
             container_new_nacimiento.Controls.Add(new_nacimiento);
             container_new_nacimiento.Cursor = Cursors.Hand;
             container_new_nacimiento.Location = new Point(43, 303);
@@ -95,7 +95,7 @@
             // 
             // new_nacimiento
             // 
-            new_nacimiento.BackColor = Color.FromArgb(224, 224, 224);
+            new_nacimiento.BackColor = SystemColors.ControlLight;
             new_nacimiento.BorderStyle = BorderStyle.None;
             new_nacimiento.Cursor = Cursors.Hand;
             new_nacimiento.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
@@ -110,7 +110,7 @@
             // 
             // container_new_nombre
             // 
-            container_new_nombre.BackColor = Color.FromArgb(224, 224, 224);
+            container_new_nombre.BackColor = SystemColors.ControlLight;
             container_new_nombre.Controls.Add(new_nombre);
             container_new_nombre.Cursor = Cursors.Hand;
             container_new_nombre.Location = new Point(43, 175);
@@ -121,10 +121,11 @@
             // 
             // new_nombre
             // 
-            new_nombre.BackColor = Color.FromArgb(224, 224, 224);
+            new_nombre.BackColor = SystemColors.ControlLight;
             new_nombre.BorderStyle = BorderStyle.None;
             new_nombre.Cursor = Cursors.Hand;
             new_nombre.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            new_nombre.ForeColor = SystemColors.InactiveCaptionText;
             new_nombre.Location = new Point(3, 14);
             new_nombre.MaxLength = 20;
             new_nombre.Name = "new_nombre";
@@ -138,7 +139,7 @@
             // 
             // container_new_apellido
             // 
-            container_new_apellido.BackColor = Color.FromArgb(224, 224, 224);
+            container_new_apellido.BackColor = SystemColors.ControlLight;
             container_new_apellido.Controls.Add(new_apellido);
             container_new_apellido.Cursor = Cursors.Hand;
             container_new_apellido.Location = new Point(290, 175);
@@ -149,7 +150,7 @@
             // 
             // new_apellido
             // 
-            new_apellido.BackColor = Color.FromArgb(224, 224, 224);
+            new_apellido.BackColor = SystemColors.ControlLight;
             new_apellido.BorderStyle = BorderStyle.None;
             new_apellido.Cursor = Cursors.Hand;
             new_apellido.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
@@ -166,7 +167,7 @@
             // 
             // container_new_telefono
             // 
-            container_new_telefono.BackColor = Color.FromArgb(224, 224, 224);
+            container_new_telefono.BackColor = SystemColors.ControlLight;
             container_new_telefono.Controls.Add(new_telefono);
             container_new_telefono.Cursor = Cursors.Hand;
             container_new_telefono.Location = new Point(43, 425);
@@ -177,7 +178,7 @@
             // 
             // new_telefono
             // 
-            new_telefono.BackColor = Color.FromArgb(224, 224, 224);
+            new_telefono.BackColor = SystemColors.ControlLight;
             new_telefono.BorderStyle = BorderStyle.None;
             new_telefono.Cursor = Cursors.Hand;
             new_telefono.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
@@ -192,7 +193,7 @@
             // 
             // container_new_calle
             // 
-            container_new_calle.BackColor = Color.FromArgb(224, 224, 224);
+            container_new_calle.BackColor = SystemColors.ControlLight;
             container_new_calle.Controls.Add(new_calle);
             container_new_calle.Cursor = Cursors.Hand;
             container_new_calle.Location = new Point(43, 548);
@@ -203,7 +204,7 @@
             // 
             // new_calle
             // 
-            new_calle.BackColor = Color.FromArgb(224, 224, 224);
+            new_calle.BackColor = SystemColors.ControlLight;
             new_calle.BorderStyle = BorderStyle.None;
             new_calle.Cursor = Cursors.Hand;
             new_calle.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
@@ -218,7 +219,7 @@
             // 
             // container_new_usuario
             // 
-            container_new_usuario.BackColor = Color.FromArgb(224, 224, 224);
+            container_new_usuario.BackColor = SystemColors.ControlLight;
             container_new_usuario.Controls.Add(new_usuario);
             container_new_usuario.Cursor = Cursors.Hand;
             container_new_usuario.Location = new Point(651, 175);
@@ -229,7 +230,7 @@
             // 
             // new_usuario
             // 
-            new_usuario.BackColor = Color.FromArgb(224, 224, 224);
+            new_usuario.BackColor = SystemColors.ControlLight;
             new_usuario.BorderStyle = BorderStyle.None;
             new_usuario.Cursor = Cursors.Hand;
             new_usuario.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
@@ -245,7 +246,7 @@
             // 
             // container_new_contrasena
             // 
-            container_new_contrasena.BackColor = Color.FromArgb(224, 224, 224);
+            container_new_contrasena.BackColor = SystemColors.ControlLight;
             container_new_contrasena.Controls.Add(new_contrasena);
             container_new_contrasena.Cursor = Cursors.Hand;
             container_new_contrasena.Location = new Point(651, 303);
@@ -256,7 +257,7 @@
             // 
             // new_contrasena
             // 
-            new_contrasena.BackColor = Color.FromArgb(224, 224, 224);
+            new_contrasena.BackColor = SystemColors.ControlLight;
             new_contrasena.BorderStyle = BorderStyle.None;
             new_contrasena.Cursor = Cursors.Hand;
             new_contrasena.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
@@ -273,7 +274,7 @@
             // 
             // container_new_contrasena2
             // 
-            container_new_contrasena2.BackColor = Color.FromArgb(224, 224, 224);
+            container_new_contrasena2.BackColor = SystemColors.ControlLight;
             container_new_contrasena2.Controls.Add(new_contrasena2);
             container_new_contrasena2.Cursor = Cursors.Hand;
             container_new_contrasena2.Location = new Point(651, 425);
@@ -284,7 +285,7 @@
             // 
             // new_contrasena2
             // 
-            new_contrasena2.BackColor = Color.FromArgb(224, 224, 224);
+            new_contrasena2.BackColor = SystemColors.ControlLight;
             new_contrasena2.BorderStyle = BorderStyle.None;
             new_contrasena2.Cursor = Cursors.Hand;
             new_contrasena2.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
@@ -313,7 +314,7 @@
             // 
             // container_new_altura
             // 
-            container_new_altura.BackColor = Color.FromArgb(224, 224, 224);
+            container_new_altura.BackColor = SystemColors.ControlLight;
             container_new_altura.Controls.Add(new_altura);
             container_new_altura.Cursor = Cursors.Hand;
             container_new_altura.Location = new Point(290, 548);
@@ -324,7 +325,7 @@
             // 
             // new_altura
             // 
-            new_altura.BackColor = Color.FromArgb(224, 224, 224);
+            new_altura.BackColor = SystemColors.ControlLight;
             new_altura.BorderStyle = BorderStyle.None;
             new_altura.Cursor = Cursors.Hand;
             new_altura.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
@@ -340,7 +341,7 @@
             // 
             // container_new_foto
             // 
-            container_new_foto.BackColor = Color.FromArgb(224, 224, 224);
+            container_new_foto.BackColor = SystemColors.ControlLight;
             container_new_foto.Controls.Add(new_foto);
             container_new_foto.Cursor = Cursors.Hand;
             container_new_foto.Location = new Point(290, 425);
@@ -351,7 +352,7 @@
             // 
             // new_foto
             // 
-            new_foto.BackColor = Color.FromArgb(224, 224, 224);
+            new_foto.BackColor = SystemColors.ControlLight;
             new_foto.BorderStyle = BorderStyle.None;
             new_foto.Cursor = Cursors.Hand;
             new_foto.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
@@ -366,7 +367,7 @@
             // 
             // container_new_email
             // 
-            container_new_email.BackColor = Color.FromArgb(224, 224, 224);
+            container_new_email.BackColor = SystemColors.ControlLight;
             container_new_email.Controls.Add(new_email);
             container_new_email.Cursor = Cursors.Hand;
             container_new_email.Location = new Point(290, 303);
@@ -377,7 +378,7 @@
             // 
             // new_email
             // 
-            new_email.BackColor = Color.FromArgb(224, 224, 224);
+            new_email.BackColor = SystemColors.ControlLight;
             new_email.BorderStyle = BorderStyle.None;
             new_email.Cursor = Cursors.Hand;
             new_email.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
@@ -406,7 +407,7 @@
             // newaccount_title
             // 
             newaccount_title.AutoSize = true;
-            newaccount_title.BackColor = SystemColors.Control;
+            newaccount_title.BackColor = SystemColors.ControlLightLight;
             newaccount_title.Font = new Font("Bauhaus 93", 36F, FontStyle.Bold, GraphicsUnit.Point);
             newaccount_title.ForeColor = SystemColors.WindowText;
             newaccount_title.Location = new Point(43, 38);
@@ -548,7 +549,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
+            BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(950, 720);
             Controls.Add(new_apellido_error);
             Controls.Add(new_nombre_error);
@@ -581,7 +582,6 @@
             Name = "Account";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "NewAccount";
-            FormClosed += Account_FormClosed;
             Load += Account_Load;
             container_new_nacimiento.ResumeLayout(false);
             container_new_nacimiento.PerformLayout();
