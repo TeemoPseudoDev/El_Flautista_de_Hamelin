@@ -22,7 +22,11 @@ namespace El_Flautista_de_Hamelin.Config
             this.connectionString = $"Server={server}; Port={port}; Database={database}; Uid={username}; Pwd={password}";
 
             this.connection = new MySqlConnection(connectionString);
-            this.connection.Open(); // Abre la conexión aquí
+
+            if (this.connection.State != ConnectionState.Open) // Validar si la conexión está cerrada
+            {
+                this.connection.Open();
+            }
         }
 
         public MySqlConnection GetConnection()
