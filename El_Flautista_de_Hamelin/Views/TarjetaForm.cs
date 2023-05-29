@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace El_Flautista_de_Hamelin.Views
 {
-    public partial class Tarjeta : Form
+    public partial class TarjetaForm : Form
     {
-        public Tarjeta()
+        public TarjetaForm()
         {
             InitializeComponent();
         }

@@ -20,8 +20,8 @@ namespace El_Flautista_de_Hamelin
             //    Application.Run(homeForm);
             //}
 
-            ComidaForm comidaNombre= new ComidaForm();
-            Application.Run(comidaNombre);
+            ComidaForm comidaForm = new ComidaForm();
+            Application.Run(comidaForm);
         }
     }
 

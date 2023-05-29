@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel1.Location = new System.Drawing.Point(47, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 299);
-            this.panel1.TabIndex = 0;
+            panel1.BackColor = SystemColors.ControlLightLight;
+            panel1.Location = new Point(47, 24);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(250, 299);
+            panel1.TabIndex = 0;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Location = new System.Drawing.Point(414, 24);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(272, 299);
-            this.panel2.TabIndex = 0;
+            panel2.BackColor = SystemColors.ActiveCaption;
+            panel2.Location = new Point(414, 24);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(272, 299);
+            panel2.TabIndex = 0;
             // 
             // ComidaForm
             // 
-            this.ClientSize = new System.Drawing.Size(736, 403);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Name = "ComidaForm";
-            this.ResumeLayout(false);
-
+            ClientSize = new Size(736, 403);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Name = "ComidaForm";
+            Load += Comida_Load;
+            ResumeLayout(false);
         }
 
         #endregion

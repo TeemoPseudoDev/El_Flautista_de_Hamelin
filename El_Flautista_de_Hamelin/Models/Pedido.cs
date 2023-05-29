@@ -8,14 +8,14 @@ namespace El_Flautista_de_Hamelin.Models
 {
     public class Pedido
     {
-        private int id { get; set; }
-        private DateTime fecha { get; set; }
-        private DateTime hora_pedido { get; set; }
-        private DateTime hora_entrega { get; set; }
-        private Cliente cliente { get; set; }
-        private Detalle[] detalles { get; set; }
-        private double envio { get; set; }
-        private double total { get; set; }
+        public int id { get; private set; }
+        public DateTime fecha { get; private set; }
+        public DateTime hora_pedido { get; private set; }
+        public DateTime hora_entrega { get; private set; }
+        public Cliente cliente { get; private set; }
+        public Detalle[] detalles { get; private set; }
+        public double envio { get; private set; }
+        public double total { get; private set; }
 
         public Pedido(int id, DateTime fecha, DateTime hora_pedido, DateTime hora_entrega, Cliente cliente, Detalle[] detalles, double envio, double total)
         {

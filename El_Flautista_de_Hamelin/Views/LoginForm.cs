@@ -57,13 +57,13 @@ namespace El_Flautista_de_Hamelin
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            /*this.Select();
+
             Form1 formularioSecundario = new Form1();
             formularioSecundario.TopLevel = false;
             formularioSecundario.FormBorderStyle = FormBorderStyle.None;
             formularioSecundario.Dock = DockStyle.Fill;
             panel1.Controls.Add(formularioSecundario);
-            formularioSecundario.Show();*/
+            formularioSecundario.Show();
 
         }
 
@@ -172,7 +172,7 @@ namespace El_Flautista_de_Hamelin
 
         private void login_new_Click(object sender, EventArgs e)
         {
-            Account accountForm = new Account();
+            AccountForm accountForm = new AccountForm();
             //accountForm.Owner = this;
             accountForm.ShowDialog();
             /*accountForm.FormClosed += (sender, e) => {

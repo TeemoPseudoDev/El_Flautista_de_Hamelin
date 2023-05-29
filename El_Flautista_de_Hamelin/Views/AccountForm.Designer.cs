@@ -1,6 +1,6 @@
 ﻿namespace El_Flautista_de_Hamelin.Views
 {
-    partial class Account
+    partial class AccountForm
     {
         /// <summary>
         /// Required designer variable.

@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace El_Flautista_de_Hamelin.Views
 {
-    public partial class Account : Form
+    public partial class AccountForm : Form
     {
-        public Account()
+        public AccountForm()
         {
             InitializeComponent();
             this.MouseDown += AccountForm_MouseDown;

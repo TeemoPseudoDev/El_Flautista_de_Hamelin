@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace El_Flautista_de_Hamelin.Controllers
 {
-    internal class comidaController
+    internal class ComidaController
     {
         private Comida comidaModel;
 
-        public comidaController()
+        public ComidaController()
         {
             comidaModel = new Comida();
         }
 
         public List<Comida> obtenerComidas(){
-            return comidaModel.traerComidad();
+            return comidaModel.traerComidas();
 
         }
     }
