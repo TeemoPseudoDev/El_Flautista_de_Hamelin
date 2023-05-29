@@ -16,8 +16,8 @@ namespace El_Flautista_de_Hamelin.Controllers
             comidaModel = new Comida();
         }
 
-        public List<Comida> obtenerComidas(){
-            return comidaModel.traerComidas();
+        public List<Comida> BuscarComidas(){
+            return comidaModel.BuscarComidasDB();
 
         }
     }

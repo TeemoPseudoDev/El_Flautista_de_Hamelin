@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace El_Flautista_de_Hamelin.Models
+﻿namespace El_Flautista_de_Hamelin.Models
 {
     public  class Cliente : Usuario
     {

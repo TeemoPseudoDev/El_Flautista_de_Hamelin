@@ -1,10 +1,4 @@
 ﻿using El_Flautista_de_Hamelin.Config;
-using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace El_Flautista_de_Hamelin.Models
 {
@@ -18,7 +12,7 @@ namespace El_Flautista_de_Hamelin.Models
         public bool oferta { get; private set; }
         public int veces_pedido { get; private set; }
         public int categoria { get; private set; }
-        public DatabaseConnect database { get; private set; }
+        public DatabaseConfig Database { get; private set; }
 
         public Comida(int id, string nombre, double precio, string foto, bool destacado, bool oferta, int veces_pedido, int categoria)
         {
@@ -30,43 +24,41 @@ namespace El_Flautista_de_Hamelin.Models
             this.oferta = oferta;
             this.veces_pedido = veces_pedido;
             this.categoria = categoria;
-            database = new DatabaseConnect();
+            Database = new DatabaseConfig();
         }
 
         public Comida()
         {
-            database = new DatabaseConnect();
+            Database = new DatabaseConfig();
         }
 
-        public List<Comida> traerComidas()
+        public List<Comida> BuscarComidasDB()
         {
-            List<Comida> listaComidas = new List<Comida>();
-            string query = "SELECT * FROM comida;";
-            using (MySqlDataReader reader = database.conectar(query))
+            List<Comida> listaComidas = new List<Comida>(); // Lista de comidas
+            string query = "SELECT * FROM comida;"; // Query SQL
+            var respuesta = Database.Usar(query); // Respuesta de la base de datos
+
+            while (respuesta.Read()) // Abrimos la respuesta, si son muchos registros se hace en un while
             {
-                while (reader.Read())
-                {
-                    listaComidas.Add(
-                        new Comida(
-                            (int)reader["id_comida"],
-                            reader["nombre"].ToString(),
-                            Convert.ToDouble(reader["precio"]),
-                            reader["foto"].ToString(),
-                            (bool)reader["destacado"],
-                            (bool)reader["oferta"],
-                            Convert.ToInt32(reader["veces_pedido"]),
-                            (int)reader["id_categoria"]
-                        )
-                    );
-                }
+                listaComidas.Add( // Por cada respuesta agregamos una nueva comida a la lista
+                    new Comida(
+                        (int)respuesta["id_comida"],
+                        respuesta["nombre"].ToString(),
+                        Convert.ToDouble(respuesta["precio"]),         // Constructor de la clase Comida
+                        respuesta["foto"].ToString(),
+                        (bool)respuesta["destacado"],
+                        (bool)respuesta["oferta"],
+                        Convert.ToInt32(respuesta["veces_pedido"]),
+                        (int)respuesta["id_categoria"]
+                    )
+                );
             }
 
-            return listaComidas;
+            respuesta.Close(); // Cerramos la respuesta
+
+
+            return listaComidas; // Retornamos la lista de comidas
         }
-
-
-
-
 
 
 

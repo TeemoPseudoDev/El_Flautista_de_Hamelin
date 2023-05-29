@@ -3,13 +3,13 @@ using MySql.Data.MySqlClient;
 
 namespace El_Flautista_de_Hamelin.Config
 {
-    public class DatabaseConnect
+    public class DatabaseConfig
     {
         private string connectionString;
         private MySqlConnection connection;
 
 
-        public DatabaseConnect()
+        public DatabaseConfig()
         {
             // Credenciales de la base de datos
             string server = "localhost";
@@ -34,7 +34,7 @@ namespace El_Flautista_de_Hamelin.Config
             return connection;
         }
 
-        public MySqlDataReader conectar(string query)
+        public MySqlDataReader Usar(string query)
         {
             using (var command = new MySqlCommand(query, GetConnection()))
             {

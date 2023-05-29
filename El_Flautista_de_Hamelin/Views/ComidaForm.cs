@@ -1,13 +1,4 @@
 ﻿using El_Flautista_de_Hamelin.Controllers;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace El_Flautista_de_Hamelin.Views
 {
@@ -22,7 +13,7 @@ namespace El_Flautista_de_Hamelin.Views
 
         private void Comida_Load(object sender, EventArgs e)
         {
-            var comidas = comidaController.obtenerComidas();
+            var comidas = comidaController.BuscarComidas();
             TarjetaForm Tarjetita = new TarjetaForm();
             Tarjetita.TopLevel = false;
             Tarjetita.Dock = DockStyle.Fill;
