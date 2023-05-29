@@ -12,16 +12,16 @@ namespace El_Flautista_de_Hamelin
             ApplicationConfiguration.Initialize();
 
 
-            //LoginForm loginForm = new LoginForm();
-            //if (loginForm.ShowDialog() == DialogResult.OK)
-            //{
-            //    int userId = loginForm.user_id;
-            //    Select homeForm = new Select(userId);
-            //    Application.Run(homeForm);
-            //}
-
+            LoginForm loginForm = new LoginForm();
+            if (loginForm.ShowDialog() == DialogResult.OK)
+            {
+                int userId = loginForm.user_id;
+                Select homeForm = new Select(userId);
+                Application.Run(homeForm);
+            }
+            /*
             ComidaForm comidaForm = new ComidaForm();
-            Application.Run(comidaForm);
+            Application.Run(comidaForm);*/
         }
     }
 

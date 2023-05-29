@@ -64,6 +64,10 @@
             custom_loader = new PictureBox();
             new_nombre_error = new Label();
             new_apellido_error = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
             container_new_nacimiento.SuspendLayout();
             container_new_nombre.SuspendLayout();
             container_new_apellido.SuspendLayout();
@@ -441,7 +445,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Abyssinica SIL", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Abyssinica SIL", 9F, FontStyle.Italic, GraphicsUnit.Point);
             label1.Location = new Point(47, 357);
             label1.Name = "label1";
             label1.Size = new Size(128, 16);
@@ -545,12 +549,56 @@
             new_apellido_error.TextAlign = ContentAlignment.MiddleCenter;
             new_apellido_error.Visible = false;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(837, 175);
+            label4.Name = "label4";
+            label4.Size = new Size(19, 25);
+            label4.TabIndex = 42;
+            label4.Text = "*";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(834, 303);
+            label5.Name = "label5";
+            label5.Size = new Size(19, 25);
+            label5.TabIndex = 43;
+            label5.Text = "*";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(834, 425);
+            label6.Name = "label6";
+            label6.Size = new Size(19, 25);
+            label6.TabIndex = 44;
+            label6.Text = "*";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Abyssinica SIL", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            label7.Location = new Point(43, 125);
+            label7.Name = "label7";
+            label7.Size = new Size(138, 16);
+            label7.TabIndex = 45;
+            label7.Text = "(*) campos obligatorios";
+            // 
             // Account
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(950, 720);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
             Controls.Add(new_apellido_error);
             Controls.Add(new_nombre_error);
             Controls.Add(custom_loader);
@@ -653,5 +701,9 @@
         private PictureBox custom_loader;
         private Label new_nombre_error;
         private Label new_apellido_error;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
     }
 }

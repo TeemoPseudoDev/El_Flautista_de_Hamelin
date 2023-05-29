@@ -174,11 +174,12 @@ namespace El_Flautista_de_Hamelin
         {
             AccountForm accountForm = new AccountForm();
             //accountForm.Owner = this;
+            this.Opacity = 0;
+
+            accountForm.FormClosing += (sender, e) => {
+                this.Opacity = 1;
+            };
             accountForm.ShowDialog();
-            /*accountForm.FormClosed += (sender, e) => {
-                this.Show();
-            };*/
-            //this.Hide();
         }
 
         private void form_close(object sender, EventArgs e)

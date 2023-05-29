@@ -223,9 +223,9 @@ namespace El_Flautista_de_Hamelin.Views
 
         /*private void Account_FormClosed(object sender, FormClosedEventArgs e)
         {
-            LoginForm loginForm = this.Owner as LoginForm;
+            LoginForm loginForm = Owner as LoginForm;
 
-            loginForm.Show();
+            loginForm.Opacity = 1.0;
         }*/
 
         private void Account_Load(object sender, EventArgs e)
