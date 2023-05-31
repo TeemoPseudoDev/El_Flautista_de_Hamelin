@@ -32,7 +32,6 @@ F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_H
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.genruntimeconfig.cache
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\ref\El_Flautista_de_Hamelin.dll
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Properties.Resources.resources
-F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.Account.resources
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.Form1.resources
 C:\Users\E in\Desktop\Program\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\El_Flautista_de_Hamelin.exe
 C:\Users\E in\Desktop\Program\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\El_Flautista_de_Hamelin.deps.json
@@ -169,3 +168,6 @@ F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin2\El_Flautista_de_
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin2\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\ref\El_Flautista_de_Hamelin.dll
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin2\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.AccountForm.resources
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin2\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.TarjetaForm.resources
+F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.ComidaForm.resources
+F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.TarjetaForm.resources
+F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.CuentaForm.resources

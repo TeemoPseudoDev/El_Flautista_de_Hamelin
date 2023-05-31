@@ -2,7 +2,7 @@
 
 namespace El_Flautista_de_Hamelin.Controllers
 {
-    internal class LoginController
+    public class LoginController
     {
         private Login model;
         public LoginController() {

@@ -43,11 +43,13 @@ namespace El_Flautista_de_Hamelin
             general_message_error = new Label();
             newaccount_title = new Label();
             panel1 = new Panel();
+            login_minimize = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             user_container.SuspendLayout();
             psw_container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)login_close).BeginInit();
             ((System.ComponentModel.ISupportInitialize)login_submit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)login_minimize).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -124,9 +126,9 @@ namespace El_Flautista_de_Hamelin
             login_close.BackgroundImage = Properties.Resources.tenedor_y_cuchillo_en_cruz;
             login_close.BackgroundImageLayout = ImageLayout.Stretch;
             login_close.Cursor = Cursors.Hand;
-            login_close.Location = new Point(1238, 8);
+            login_close.Location = new Point(1248, 8);
             login_close.Name = "login_close";
-            login_close.Size = new Size(35, 35);
+            login_close.Size = new Size(25, 25);
             login_close.TabIndex = 6;
             login_close.TabStop = false;
             login_close.Click += form_close;
@@ -214,6 +216,19 @@ namespace El_Flautista_de_Hamelin
             panel1.Size = new Size(200, 100);
             panel1.TabIndex = 31;
             // 
+            // login_minimize
+            // 
+            login_minimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            login_minimize.BackgroundImage = Properties.Resources.tenedor;
+            login_minimize.BackgroundImageLayout = ImageLayout.Stretch;
+            login_minimize.Cursor = Cursors.Hand;
+            login_minimize.Location = new Point(1203, 0);
+            login_minimize.Name = "login_minimize";
+            login_minimize.Size = new Size(32, 40);
+            login_minimize.TabIndex = 32;
+            login_minimize.TabStop = false;
+            login_minimize.Click += login_minimize_Click;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
@@ -222,6 +237,7 @@ namespace El_Flautista_de_Hamelin
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1280, 720);
             ControlBox = false;
+            Controls.Add(login_minimize);
             Controls.Add(panel1);
             Controls.Add(newaccount_title);
             Controls.Add(login_new);
@@ -239,10 +255,9 @@ namespace El_Flautista_de_Hamelin
             MinimizeBox = false;
             Name = "LoginForm";
             Padding = new Padding(4, 5, 4, 5);
-            ShowInTaskbar = false;
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;
-            Load += Form1_Load;
+            Load += LoginForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             user_container.ResumeLayout(false);
             user_container.PerformLayout();
@@ -250,6 +265,7 @@ namespace El_Flautista_de_Hamelin
             psw_container.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)login_close).EndInit();
             ((System.ComponentModel.ISupportInitialize)login_submit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)login_minimize).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -269,5 +285,6 @@ namespace El_Flautista_de_Hamelin
         private Label general_message_error;
         private Label newaccount_title;
         private Panel panel1;
+        private PictureBox login_minimize;
     }
 }

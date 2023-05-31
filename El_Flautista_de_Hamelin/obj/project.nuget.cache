@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u4IFr0F4/SlnfbmhfKiFmZUFBW/ewsIPScvBCwnfKXgptsfppxFUfbEmJNwCeqwqkftEUuy924XgSYOLBKAh9A==",
+  "dgSpecHash": "znTZn2BHRm/uMq6gT8J8vbAliEP0LYerSv111RmrykPSQS3K0sYvDvN6VLDSdxsNkmqzbRpH5KaT5kKZIWCEpQ==",
   "success": true,
-  "projectFilePath": "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin2\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj",
+  "projectFilePath": "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\brian\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\brian\\.nuget\\packages\\k4os.compression.lz4\\1.3.5\\k4os.compression.lz4.1.3.5.nupkg.sha512",

@@ -2,7 +2,7 @@
 
 namespace El_Flautista_de_Hamelin.Models
 {
-    internal class Login
+    public class Login
     {
         // Importar la configuración de la base de datos
         private DatabaseConfig Database;

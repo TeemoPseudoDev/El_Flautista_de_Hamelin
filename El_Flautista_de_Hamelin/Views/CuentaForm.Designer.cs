@@ -1,6 +1,6 @@
 ﻿namespace El_Flautista_de_Hamelin.Views
 {
-    partial class AccountForm
+    partial class CuentaForm
     {
         /// <summary>
         /// Required designer variable.
@@ -68,6 +68,10 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
+            login_minimize = new PictureBox();
+            new_nacimiento_error = new Label();
+            database_response_error = new Label();
+            database_response_success = new Label();
             container_new_nacimiento.SuspendLayout();
             container_new_nombre.SuspendLayout();
             container_new_apellido.SuspendLayout();
@@ -84,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)custom_loader).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)login_minimize).BeginInit();
             SuspendLayout();
             // 
             // container_new_nacimiento
@@ -104,12 +109,14 @@
             new_nacimiento.Cursor = Cursors.Hand;
             new_nacimiento.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             new_nacimiento.Location = new Point(3, 14);
-            new_nacimiento.MaxLength = 15;
+            new_nacimiento.MaxLength = 10;
             new_nacimiento.Name = "new_nacimiento";
             new_nacimiento.PlaceholderText = "Nacimiento";
             new_nacimiento.Size = new Size(174, 20);
             new_nacimiento.TabIndex = 3;
+            new_nacimiento.TextChanged += HandleChanged;
             new_nacimiento.Enter += input_Enter;
+            new_nacimiento.KeyPress += inputs_KeyPress;
             new_nacimiento.Leave += input_Leave;
             // 
             // container_new_nombre
@@ -138,7 +145,7 @@
             new_nombre.TabIndex = 1;
             new_nombre.TextChanged += HandleChanged;
             new_nombre.Enter += input_Enter;
-            new_nombre.KeyPress += letters_KeyPress;
+            new_nombre.KeyPress += inputs_KeyPress;
             new_nombre.Leave += input_Leave;
             // 
             // container_new_apellido
@@ -166,7 +173,7 @@
             new_apellido.TabIndex = 2;
             new_apellido.TextChanged += HandleChanged;
             new_apellido.Enter += input_Enter;
-            new_apellido.KeyPress += letters_KeyPress;
+            new_apellido.KeyPress += inputs_KeyPress;
             new_apellido.Leave += input_Leave;
             // 
             // container_new_telefono
@@ -246,6 +253,7 @@
             new_usuario.TabIndex = 9;
             new_usuario.TextChanged += HandleChanged;
             new_usuario.Enter += input_Enter;
+            new_usuario.KeyPress += inputs_KeyPress;
             new_usuario.Leave += input_Leave;
             // 
             // container_new_contrasena
@@ -274,6 +282,7 @@
             new_contrasena.UseSystemPasswordChar = true;
             new_contrasena.TextChanged += HandleChanged;
             new_contrasena.Enter += input_Enter;
+            new_contrasena.KeyPress += inputs_KeyPress;
             new_contrasena.Leave += input_Leave;
             // 
             // container_new_contrasena2
@@ -302,6 +311,7 @@
             new_contrasena2.UseSystemPasswordChar = true;
             new_contrasena2.TextChanged += HandleChanged;
             new_contrasena2.Enter += input_Enter;
+            new_contrasena2.KeyPress += inputs_KeyPress;
             new_contrasena2.Leave += input_Leave;
             // 
             // newaccount_submit
@@ -340,7 +350,7 @@
             new_altura.Size = new Size(174, 20);
             new_altura.TabIndex = 8;
             new_altura.Enter += input_Enter;
-            new_altura.KeyPress += numbers_KeyPress;
+            new_altura.KeyPress += inputs_KeyPress;
             new_altura.Leave += input_Leave;
             // 
             // container_new_foto
@@ -401,9 +411,9 @@
             login_close.BackgroundImage = Properties.Resources.tenedor_y_cuchillo_en_cruz;
             login_close.BackgroundImageLayout = ImageLayout.Stretch;
             login_close.Cursor = Cursors.Hand;
-            login_close.Location = new Point(903, 12);
+            login_close.Location = new Point(913, 12);
             login_close.Name = "login_close";
-            login_close.Size = new Size(35, 35);
+            login_close.Size = new Size(25, 25);
             login_close.TabIndex = 28;
             login_close.TabStop = false;
             login_close.Click += HandleClose;
@@ -446,11 +456,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Abyssinica SIL", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(47, 357);
+            label1.Location = new Point(31, 284);
             label1.Name = "label1";
-            label1.Size = new Size(128, 16);
+            label1.Size = new Size(205, 16);
             label1.TabIndex = 26;
-            label1.Text = "Formato: dd/mm/aaaa";
+            label1.Text = "Formato: dd/mm/aaaa (1940 a 2005)";
             // 
             // label2
             // 
@@ -505,9 +515,9 @@
             psw_message2.ForeColor = Color.Red;
             psw_message2.Location = new Point(625, 478);
             psw_message2.Name = "psw_message2";
-            psw_message2.Size = new Size(231, 21);
+            psw_message2.Size = new Size(236, 21);
             psw_message2.TabIndex = 38;
-            psw_message2.Text = "Las contraseñas deben coincidir";
+            psw_message2.Text = "Las contraseñas deben coincidir.";
             psw_message2.TextAlign = ContentAlignment.MiddleCenter;
             psw_message2.Visible = false;
             // 
@@ -528,11 +538,11 @@
             new_nombre_error.AutoSize = true;
             new_nombre_error.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             new_nombre_error.ForeColor = Color.Red;
-            new_nombre_error.Location = new Point(58, 229);
+            new_nombre_error.Location = new Point(46, 229);
             new_nombre_error.Name = "new_nombre_error";
-            new_nombre_error.Size = new Size(126, 21);
+            new_nombre_error.Size = new Size(168, 42);
             new_nombre_error.TabIndex = 40;
-            new_nombre_error.Text = "Mínimo 3 letras.";
+            new_nombre_error.Text = "Sólo letras y espacios.\r\nAl menos 3 caracteres.";
             new_nombre_error.TextAlign = ContentAlignment.MiddleCenter;
             new_nombre_error.Visible = false;
             // 
@@ -541,11 +551,11 @@
             new_apellido_error.AutoSize = true;
             new_apellido_error.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             new_apellido_error.ForeColor = Color.Red;
-            new_apellido_error.Location = new Point(311, 229);
+            new_apellido_error.Location = new Point(293, 229);
             new_apellido_error.Name = "new_apellido_error";
-            new_apellido_error.Size = new Size(121, 21);
+            new_apellido_error.Size = new Size(168, 42);
             new_apellido_error.TabIndex = 41;
-            new_apellido_error.Text = "Mínimo 3 letras";
+            new_apellido_error.Text = "Sólo letras y espacios.\r\nAl menos 3 caracteres.";
             new_apellido_error.TextAlign = ContentAlignment.MiddleCenter;
             new_apellido_error.Visible = false;
             // 
@@ -589,12 +599,68 @@
             label7.TabIndex = 45;
             label7.Text = "(*) campos obligatorios";
             // 
-            // Account
+            // login_minimize
+            // 
+            login_minimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            login_minimize.BackgroundImage = Properties.Resources.tenedor;
+            login_minimize.BackgroundImageLayout = ImageLayout.Stretch;
+            login_minimize.Cursor = Cursors.Hand;
+            login_minimize.Location = new Point(863, 4);
+            login_minimize.Name = "login_minimize";
+            login_minimize.Size = new Size(32, 40);
+            login_minimize.TabIndex = 46;
+            login_minimize.TabStop = false;
+            login_minimize.Click += login_minimize_Click;
+            // 
+            // new_nacimiento_error
+            // 
+            new_nacimiento_error.AutoSize = true;
+            new_nacimiento_error.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            new_nacimiento_error.ForeColor = Color.Red;
+            new_nacimiento_error.Location = new Point(58, 357);
+            new_nacimiento_error.Name = "new_nacimiento_error";
+            new_nacimiento_error.Size = new Size(146, 21);
+            new_nacimiento_error.TabIndex = 47;
+            new_nacimiento_error.Text = "Formato incorrecto.";
+            new_nacimiento_error.TextAlign = ContentAlignment.MiddleCenter;
+            new_nacimiento_error.Visible = false;
+            // 
+            // database_response_error
+            // 
+            database_response_error.AutoSize = true;
+            database_response_error.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            database_response_error.ForeColor = Color.Red;
+            database_response_error.Location = new Point(668, 548);
+            database_response_error.Name = "database_response_error";
+            database_response_error.Size = new Size(151, 21);
+            database_response_error.TabIndex = 48;
+            database_response_error.Text = "La cuenta ya existe.";
+            database_response_error.TextAlign = ContentAlignment.MiddleCenter;
+            database_response_error.Visible = false;
+            // 
+            // database_response_success
+            // 
+            database_response_success.AutoSize = true;
+            database_response_success.Font = new Font("Abyssinica SIL", 14.25F, FontStyle.Italic, GraphicsUnit.Point);
+            database_response_success.ForeColor = Color.Green;
+            database_response_success.Location = new Point(621, 548);
+            database_response_success.Name = "database_response_success";
+            database_response_success.Size = new Size(252, 26);
+            database_response_success.TabIndex = 49;
+            database_response_success.Text = "¡Usuario creado con éxito!";
+            database_response_success.TextAlign = ContentAlignment.MiddleCenter;
+            database_response_success.Visible = false;
+            // 
+            // CuentaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(950, 720);
+            Controls.Add(database_response_success);
+            Controls.Add(database_response_error);
+            Controls.Add(new_nacimiento_error);
+            Controls.Add(login_minimize);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -627,7 +693,9 @@
             FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "Account";
+            Name = "CuentaForm";
+            ShowIcon = false;
+            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "NewAccount";
             Load += Account_Load;
@@ -658,6 +726,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)custom_loader).EndInit();
+            ((System.ComponentModel.ISupportInitialize)login_minimize).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -705,5 +774,9 @@
         private Label label5;
         private Label label6;
         private Label label7;
+        private PictureBox login_minimize;
+        private Label new_nacimiento_error;
+        private Label database_response_error;
+        private Label database_response_success;
     }
 }

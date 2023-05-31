@@ -55,8 +55,13 @@ namespace El_Flautista_de_Hamelin
         }
         //fin click para mover ventana
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void LoginForm_Load(object sender, EventArgs e)
         {
+            // Configuración del ícono
+            Icon icon = Properties.Resources.Flautista;
+            this.Icon = icon;
+            this.ShowIcon = true;
+            this.ShowInTaskbar = true;
 
             Form1 formularioSecundario = new Form1();
             formularioSecundario.TopLevel = false;
@@ -172,11 +177,12 @@ namespace El_Flautista_de_Hamelin
 
         private void login_new_Click(object sender, EventArgs e)
         {
-            AccountForm accountForm = new AccountForm();
+            CuentaForm accountForm = new CuentaForm();
             //accountForm.Owner = this;
             this.Opacity = 0;
 
-            accountForm.FormClosing += (sender, e) => {
+            accountForm.FormClosing += (sender, e) =>
+            {
                 this.Opacity = 1;
             };
             accountForm.ShowDialog();
@@ -185,6 +191,11 @@ namespace El_Flautista_de_Hamelin
         private void form_close(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void login_minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

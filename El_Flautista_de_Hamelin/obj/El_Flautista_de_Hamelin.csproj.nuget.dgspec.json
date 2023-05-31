@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin2\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj": {}
+    "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj": {}
   },
   "projects": {
-    "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin2\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj": {
+    "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin2\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj",
+        "projectUniqueName": "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj",
         "projectName": "El_Flautista_de_Hamelin",
-        "projectPath": "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin2\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj",
+        "projectPath": "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj",
         "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
-        "outputPath": "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin2\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\obj\\",
+        "outputPath": "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\brian\\AppData\\Roaming\\NuGet\\NuGet.Config",

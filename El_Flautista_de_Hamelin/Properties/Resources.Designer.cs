@@ -101,6 +101,16 @@ namespace El_Flautista_de_Hamelin.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon Flautista {
+            get {
+                object obj = ResourceManager.GetObject("Flautista", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap loader {
@@ -136,6 +146,16 @@ namespace El_Flautista_de_Hamelin.Properties {
         internal static System.Drawing.Bitmap taco {
             get {
                 object obj = ResourceManager.GetObject("taco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tenedor {
+            get {
+                object obj = ResourceManager.GetObject("tenedor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
