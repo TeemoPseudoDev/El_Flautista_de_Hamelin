@@ -28,39 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            panel2 = new Panel();
-            SuspendLayout();
+            this.Contenedor = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
             // 
-            // panel1
+            // Contenedor
             // 
-            panel1.BackColor = SystemColors.ControlLightLight;
-            panel1.Location = new Point(47, 24);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(250, 299);
-            panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.ActiveCaption;
-            panel2.Location = new Point(414, 24);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(272, 299);
-            panel2.TabIndex = 0;
+            this.Contenedor.AutoScroll = true;
+            this.Contenedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Contenedor.Location = new System.Drawing.Point(47, 45);
+            this.Contenedor.Name = "Contenedor";
+            this.Contenedor.Size = new System.Drawing.Size(1039, 446);
+            this.Contenedor.TabIndex = 0;
             // 
             // ComidaForm
             // 
-            ClientSize = new Size(736, 403);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
-            Name = "ComidaForm";
-            Load += Comida_Load;
-            ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(1334, 518);
+            this.Controls.Add(this.Contenedor);
+            this.Name = "ComidaForm";
+            this.Load += new System.EventHandler(this.Comida_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private Panel panel1;
-        private Panel panel2;
+        private Panel Contenedor;
     }
 }

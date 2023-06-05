@@ -44,7 +44,7 @@ namespace El_Flautista_de_Hamelin.Models
                     new Comida(
                         (int)respuesta["id_comida"],
                         respuesta["nombre"].ToString(),
-                        Convert.ToDouble(respuesta["precio"]),         // Constructor de la clase Comida
+                        Convert.ToDouble(respuesta["precio"]),   // Constructor de la clase Comida
                         respuesta["foto"].ToString(),
                         (bool)respuesta["destacado"],
                         (bool)respuesta["oferta"],

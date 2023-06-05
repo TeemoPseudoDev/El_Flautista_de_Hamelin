@@ -16,7 +16,6 @@ namespace El_Flautista_de_Hamelin
         {
             InitializeComponent();
             controller = new LoginController();
-
             user_id = 0;
         }
 
@@ -58,12 +57,12 @@ namespace El_Flautista_de_Hamelin
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            Form1 formularioSecundario = new Form1();
-            formularioSecundario.TopLevel = false;
-            formularioSecundario.FormBorderStyle = FormBorderStyle.None;
-            formularioSecundario.Dock = DockStyle.Fill;
-            panel1.Controls.Add(formularioSecundario);
-            formularioSecundario.Show();
+        //    Form1 formularioSecundario = new Form1();
+        //    formularioSecundario.TopLevel = false;
+        //    formularioSecundario.FormBorderStyle = FormBorderStyle.None;
+        //    formularioSecundario.Dock = DockStyle.Fill;
+        //    panel1.Controls.Add(formularioSecundario);
+        //    formularioSecundario.Show();
 
         }
 

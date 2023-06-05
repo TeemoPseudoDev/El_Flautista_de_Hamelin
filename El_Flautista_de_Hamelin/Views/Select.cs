@@ -12,7 +12,7 @@ namespace El_Flautista_de_Hamelin.Views
         public Select(int id)
         {
             this.id = id;
-            this.connectionString = "Server = localhost; Port = 3306; Database = comidarapida; Uid = root; Pwd = esteesmiWORK";
+            this.connectionString = "Server = localhost; Port = 3306; Database = comidarapida; Uid = root; Pwd = Mari.1209";
             this.connection = new MySqlConnection(connectionString);
 
             InitializeComponent();
