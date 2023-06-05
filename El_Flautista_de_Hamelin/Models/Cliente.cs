@@ -14,6 +14,9 @@ namespace El_Flautista_de_Hamelin.Models
         {
             Database = new DatabaseConfig();
         }
+
+
+
         public void CrearCliente()
         {
             string queryCliente = $"INSERT INTO usuario (nombre, apellido, nacimiento, email, telefono, id_direccion, id_tipo, foto, alta, id_cuenta) " +
