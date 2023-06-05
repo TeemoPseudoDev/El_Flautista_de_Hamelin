@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\marin\\OneDrive\\Escritorio\\Cosas\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\marin\\OneDrive\\Escritorio\\Cosas\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj",
         "packagesPath": "C:\\Users\\marin\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\marin\\OneDrive\\Escritorio\\Cosas\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\obj\\",
+=======
+    "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj": {}
+  },
+  "projects": {
+    "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj",
+        "projectName": "El_Flautista_de_Hamelin",
+        "projectPath": "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin.csproj",
+        "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
+        "outputPath": "F:\\Cosas Brian\\Cosas mias\\programacion\\El_Flautista_de_Hamelin\\El_Flautista_de_Hamelin\\obj\\",
+>>>>>>> 499bcb689015f578f9e443df885533d321ec31b1
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

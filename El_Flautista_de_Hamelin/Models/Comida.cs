@@ -26,10 +26,21 @@ namespace El_Flautista_de_Hamelin.Models
             this.categoria = categoria;
             Database = new DatabaseConfig();
         }
-
         public Comida()
         {
             Database = new DatabaseConfig();
+        }
+
+        public Comida(string nombre, double precio, string foto, bool destacado, bool oferta, int veces_pedido, int categoria)
+        {
+            Database = new DatabaseConfig();
+            this.nombre = nombre;
+            this.precio = precio;
+            this.foto = foto;
+            this.destacado = destacado;
+            this.oferta = oferta;
+            this.veces_pedido = veces_pedido;
+            this.categoria = categoria;
         }
 
         public List<Comida> BuscarComidasDB()
