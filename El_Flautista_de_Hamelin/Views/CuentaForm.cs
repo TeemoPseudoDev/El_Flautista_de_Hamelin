@@ -10,11 +10,15 @@ using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using El_Flautista_de_Hamelin.Controllers;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace El_Flautista_de_Hamelin.Views
 {
     public partial class CuentaForm : Form
     {
+
         private CuentaController controller;
         public CuentaForm()
         {
@@ -23,6 +27,18 @@ namespace El_Flautista_de_Hamelin.Views
             this.MouseDown += AccountForm_MouseDown;
             this.MouseMove += AccountForm_MouseMove;
             this.MouseUp += AccountForm_MouseUp;
+            RedondearPanel(container_new_nombre, 20);
+            RedondearPanel(container_new_apellido, 20);
+            RedondearPanel(container_new_nacimiento, 20);
+            RedondearPanel(container_new_email, 20);
+            RedondearPanel(container_new_telefono, 20);
+            RedondearPanel(container_new_foto, 20);
+            RedondearPanel(container_new_calle, 20);
+            RedondearPanel(container_new_altura, 20);
+            RedondearPanel(container_new_usuario, 20);
+            RedondearPanel(container_new_contrasena, 20);
+            RedondearPanel(container_new_contrasena2, 20);
+
         }
 
         private bool mouseDown;
@@ -49,34 +65,186 @@ namespace El_Flautista_de_Hamelin.Views
             mouseDown = false;
         }
 
-
-
         // Definir la función controladora para manipular el Focus de los hijos
         private void PanelClickHandler(object sender, EventArgs e)
         {
-
             Panel panel = (Panel)sender;
-            panel.Controls[0].Focus();
+            TextBox textBox = null;
+            foreach (Control control in panel.Controls)
+            {
+                if (control is TextBox)
+                {
+                    textBox = (TextBox)control;
+                    break;
+                }
+            }
 
+            if (textBox != null)
+            {
+                textBox.Focus();
+            }
+        }
+        private void LabelClickHandler(object sender, EventArgs e)
+        {
+            Label label = (Label)sender;
+            Panel panel = label.Parent as Panel;
+            TextBox textBox = null;
+            foreach (Control control in panel.Controls)
+            {
+                if (control is TextBox)
+                {
+                    textBox = (TextBox)control;
+                    break;
+                }
+            }
+
+            if (textBox != null)
+            {
+                textBox.Focus();
+            }
         }
 
         private void input_Enter(object sender, EventArgs e)
         {
-            System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)sender;
+            TextBox textBox = (TextBox)sender;
             Panel panel = (Panel)textBox.Parent;
 
-            panel.BackColor = SystemColors.Control;
-            panel.BorderStyle = BorderStyle.FixedSingle;
-            textBox.BackColor = SystemColors.Control;
+            panel.BackColor = SystemColors.ControlLightLight;
+            //panel.BorderStyle = BorderStyle.FixedSingle;
+            textBox.BackColor = SystemColors.ControlLightLight;
+
+
+            Label label = null;
+            foreach (Control control in panel.Controls)
+            {
+                if (control is Label)
+                {
+                    label = (Label)control;
+                    break;
+                }
+            }
+
+            if (label != null)
+            {
+                LabelAnimationToTop(label);
+            }
+        }
+
+        private void LabelAnimationToTop(Label label)
+        {
+            if (label.Left == 2 || label.Top == 2) return;
+
+            label.Font = new Font(label.Font.FontFamily, 9, label.Font.Style);
+
+
+            int originalX = label.Left;
+            int originalY = label.Top;
+
+
+            int targetX = 2;
+            int targetY = 2;
+
+            int step = 8; // Cantidad de píxeles para cada paso de la animación
+            int interval = 2; // Intervalo de tiempo entre cada paso de la animación (en milisegundos)
+
+            int deltaX = (targetX - label.Left) / step;
+            int deltaY = (targetY - label.Top) / step;
+
+            System.Windows.Forms.Timer animationTimer = new System.Windows.Forms.Timer();
+            animationTimer.Interval = interval;
+
+            animationTimer.Tick += (s, args) =>
+            {
+                if (label.Left != targetX)
+                {
+                    label.Left += deltaX;
+                }
+
+                if (label.Top != targetY)
+                {
+                    label.Top += deltaY;
+                }
+
+                if (label.Left == targetX && label.Top == targetY)
+                {
+                    animationTimer.Stop();
+                    animationTimer.Dispose();
+                    animationTimer = null;
+                }
+            };
+
+            animationTimer.Start();
+
+            // Guardar la posición original en la propiedad Tag del Label
+            label.Tag = new Point(originalX, originalY);
         }
         private void input_Leave(object sender, EventArgs e)
         {
-            System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)sender;
+            TextBox textBox = (TextBox)sender;
             Panel panel = (Panel)textBox.Parent;
+            panel.BackColor = SystemColors.ScrollBar;
+            textBox.BackColor = SystemColors.ScrollBar;
 
-            panel.BackColor = Color.FromArgb(224, 224, 224);
-            panel.BorderStyle = BorderStyle.None;
-            textBox.BackColor = Color.FromArgb(224, 224, 224);
+            if (textBox.Text == "")
+            {
+                Label label = null;
+                foreach (Control control in panel.Controls)
+                {
+                    if (control is Label)
+                    {
+                        label = (Label)control;
+                        break;
+                    }
+                }
+
+                if (label != null)
+                {
+                    LabelAnimationToOriginal(label);
+                }
+            }
+        }
+
+        private void LabelAnimationToOriginal(Label label)
+        {
+            if (label.Left != 2 || label.Top != 2) return;
+
+            label.Font = new Font(label.Font.FontFamily, 11, label.Font.Style);
+
+            Point originalPosition = (Point)label.Tag;
+
+            int targetX = originalPosition.X;
+            int targetY = originalPosition.Y;
+
+            int step = 8; // Cantidad de píxeles para cada paso de la animación
+            int interval = 2; // Intervalo de tiempo entre cada paso de la animación (en milisegundos)
+
+            int deltaX = (targetX - label.Left) / step;
+            int deltaY = (targetY - label.Top) / step;
+
+            System.Windows.Forms.Timer animationTimer = new System.Windows.Forms.Timer();
+            animationTimer.Interval = interval;
+
+            animationTimer.Tick += (s, args) =>
+            {
+                if (label.Left != targetX)
+                {
+                    label.Left += deltaX;
+                }
+
+                if (label.Top != targetY)
+                {
+                    label.Top += deltaY;
+                }
+
+                if (label.Left == targetX && label.Top == targetY)
+                {
+                    animationTimer.Stop();
+                    animationTimer.Dispose();
+                    animationTimer = null;
+                }
+            };
+
+            animationTimer.Start();
         }
 
         private void inputs_KeyPress(object sender, KeyPressEventArgs e)
@@ -113,7 +281,6 @@ namespace El_Flautista_de_Hamelin.Views
 
             }
         }
-
 
         private void HandleChanged(object sender, EventArgs e)
         {
@@ -281,8 +448,10 @@ namespace El_Flautista_de_Hamelin.Views
 
             ReiniciarCampos();
 
-            new System.Threading.Timer(_ => {
-                database_response_success.Invoke((Action)(() => {
+            new System.Threading.Timer(_ =>
+            {
+                database_response_success.Invoke((Action)(() =>
+                {
                     database_response_success.Visible = false;
                 }));
             }, null, 3000, Timeout.Infinite);
@@ -290,13 +459,10 @@ namespace El_Flautista_de_Hamelin.Views
 
         }
 
-
-
         private void HandleClose(object sender, EventArgs e)
         {
             this.Close();
         }
-
 
         private void Account_Load(object sender, EventArgs e)
         {
@@ -306,6 +472,21 @@ namespace El_Flautista_de_Hamelin.Views
         private void login_minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void RedondearPanel(Panel panel, int radio)
+        {
+
+            GraphicsPath forma = new GraphicsPath();
+            forma.AddArc(new Rectangle(0, 0, radio, radio), 180, 90);
+            forma.AddArc(new Rectangle(panel.Width - radio, 0, radio, radio), 270, 90);
+            forma.AddArc(new Rectangle(panel.Width - radio, panel.Height - radio, radio, radio), 0, 90);
+            forma.AddArc(new Rectangle(0, panel.Height - radio, radio, radio), 90, 90);
+            forma.CloseFigure();
+
+            Region region = new Region(forma);
+
+            panel.Region = region;
         }
 
     }

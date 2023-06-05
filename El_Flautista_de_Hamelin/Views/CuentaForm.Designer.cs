@@ -29,27 +29,38 @@
         private void InitializeComponent()
         {
             container_new_nacimiento = new Panel();
+            label_nacimiento = new Label();
             new_nacimiento = new TextBox();
             container_new_nombre = new Panel();
+            label_nombre = new Label();
             new_nombre = new TextBox();
             container_new_apellido = new Panel();
+            label_apellido = new Label();
             new_apellido = new TextBox();
             container_new_telefono = new Panel();
+            label_telefono = new Label();
             new_telefono = new TextBox();
             container_new_calle = new Panel();
+            label_calle = new Label();
             new_calle = new TextBox();
             container_new_usuario = new Panel();
+            label_usuario = new Label();
             new_usuario = new TextBox();
             container_new_contrasena = new Panel();
+            label_contrasena = new Label();
             new_contrasena = new TextBox();
             container_new_contrasena2 = new Panel();
+            label_contrasena2 = new Label();
             new_contrasena2 = new TextBox();
             newaccount_submit = new PictureBox();
             container_new_altura = new Panel();
+            label_altura = new Label();
             new_altura = new TextBox();
             container_new_foto = new Panel();
+            label_foto = new Label();
             new_foto = new TextBox();
             container_new_email = new Panel();
+            label_email = new Label();
             new_email = new TextBox();
             login_close = new PictureBox();
             newaccount_title = new Label();
@@ -93,25 +104,37 @@
             // 
             // container_new_nacimiento
             // 
-            container_new_nacimiento.BackColor = SystemColors.ControlLight;
+            container_new_nacimiento.BackColor = SystemColors.ScrollBar;
+            container_new_nacimiento.Controls.Add(label_nacimiento);
             container_new_nacimiento.Controls.Add(new_nacimiento);
             container_new_nacimiento.Cursor = Cursors.Hand;
-            container_new_nacimiento.Location = new Point(43, 303);
+            container_new_nacimiento.Location = new Point(43, 302);
             container_new_nacimiento.Name = "container_new_nacimiento";
-            container_new_nacimiento.Size = new Size(180, 51);
+            container_new_nacimiento.Size = new Size(180, 55);
             container_new_nacimiento.TabIndex = 14;
             container_new_nacimiento.Click += PanelClickHandler;
             // 
+            // label_nacimiento
+            // 
+            label_nacimiento.AutoSize = true;
+            label_nacimiento.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            label_nacimiento.ForeColor = SystemColors.WindowText;
+            label_nacimiento.Location = new Point(18, 18);
+            label_nacimiento.Name = "label_nacimiento";
+            label_nacimiento.Size = new Size(88, 21);
+            label_nacimiento.TabIndex = 51;
+            label_nacimiento.Text = "Nacimiento";
+            label_nacimiento.Click += LabelClickHandler;
+            // 
             // new_nacimiento
             // 
-            new_nacimiento.BackColor = SystemColors.ControlLight;
+            new_nacimiento.BackColor = SystemColors.ScrollBar;
             new_nacimiento.BorderStyle = BorderStyle.None;
             new_nacimiento.Cursor = Cursors.Hand;
-            new_nacimiento.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            new_nacimiento.Location = new Point(3, 14);
+            new_nacimiento.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            new_nacimiento.Location = new Point(3, 19);
             new_nacimiento.MaxLength = 10;
             new_nacimiento.Name = "new_nacimiento";
-            new_nacimiento.PlaceholderText = "Nacimiento";
             new_nacimiento.Size = new Size(174, 20);
             new_nacimiento.TabIndex = 3;
             new_nacimiento.TextChanged += HandleChanged;
@@ -121,26 +144,38 @@
             // 
             // container_new_nombre
             // 
-            container_new_nombre.BackColor = SystemColors.ControlLight;
+            container_new_nombre.BackColor = SystemColors.ScrollBar;
+            container_new_nombre.Controls.Add(label_nombre);
             container_new_nombre.Controls.Add(new_nombre);
             container_new_nombre.Cursor = Cursors.Hand;
-            container_new_nombre.Location = new Point(43, 175);
+            container_new_nombre.Location = new Point(43, 174);
             container_new_nombre.Name = "container_new_nombre";
-            container_new_nombre.Size = new Size(180, 51);
+            container_new_nombre.Size = new Size(180, 55);
             container_new_nombre.TabIndex = 12;
             container_new_nombre.Click += PanelClickHandler;
             // 
+            // label_nombre
+            // 
+            label_nombre.AutoSize = true;
+            label_nombre.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            label_nombre.ForeColor = SystemColors.WindowText;
+            label_nombre.Location = new Point(18, 18);
+            label_nombre.Name = "label_nombre";
+            label_nombre.Size = new Size(63, 21);
+            label_nombre.TabIndex = 50;
+            label_nombre.Text = "Nombre";
+            label_nombre.Click += LabelClickHandler;
+            // 
             // new_nombre
             // 
-            new_nombre.BackColor = SystemColors.ControlLight;
+            new_nombre.BackColor = SystemColors.ScrollBar;
             new_nombre.BorderStyle = BorderStyle.None;
             new_nombre.Cursor = Cursors.Hand;
-            new_nombre.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            new_nombre.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             new_nombre.ForeColor = SystemColors.InactiveCaptionText;
-            new_nombre.Location = new Point(3, 14);
+            new_nombre.Location = new Point(3, 19);
             new_nombre.MaxLength = 20;
             new_nombre.Name = "new_nombre";
-            new_nombre.PlaceholderText = "Nombre";
             new_nombre.Size = new Size(174, 20);
             new_nombre.TabIndex = 1;
             new_nombre.TextChanged += HandleChanged;
@@ -150,25 +185,37 @@
             // 
             // container_new_apellido
             // 
-            container_new_apellido.BackColor = SystemColors.ControlLight;
+            container_new_apellido.BackColor = SystemColors.ScrollBar;
+            container_new_apellido.Controls.Add(label_apellido);
             container_new_apellido.Controls.Add(new_apellido);
             container_new_apellido.Cursor = Cursors.Hand;
-            container_new_apellido.Location = new Point(290, 175);
+            container_new_apellido.Location = new Point(290, 174);
             container_new_apellido.Name = "container_new_apellido";
-            container_new_apellido.Size = new Size(180, 51);
+            container_new_apellido.Size = new Size(180, 55);
             container_new_apellido.TabIndex = 13;
             container_new_apellido.Click += PanelClickHandler;
             // 
+            // label_apellido
+            // 
+            label_apellido.AutoSize = true;
+            label_apellido.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            label_apellido.ForeColor = SystemColors.WindowText;
+            label_apellido.Location = new Point(18, 18);
+            label_apellido.Name = "label_apellido";
+            label_apellido.Size = new Size(64, 21);
+            label_apellido.TabIndex = 51;
+            label_apellido.Text = "Apellido";
+            label_apellido.Click += LabelClickHandler;
+            // 
             // new_apellido
             // 
-            new_apellido.BackColor = SystemColors.ControlLight;
+            new_apellido.BackColor = SystemColors.ScrollBar;
             new_apellido.BorderStyle = BorderStyle.None;
             new_apellido.Cursor = Cursors.Hand;
-            new_apellido.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            new_apellido.Location = new Point(3, 14);
+            new_apellido.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            new_apellido.Location = new Point(3, 19);
             new_apellido.MaxLength = 20;
             new_apellido.Name = "new_apellido";
-            new_apellido.PlaceholderText = "Apellido";
             new_apellido.Size = new Size(174, 20);
             new_apellido.TabIndex = 2;
             new_apellido.TextChanged += HandleChanged;
@@ -178,25 +225,37 @@
             // 
             // container_new_telefono
             // 
-            container_new_telefono.BackColor = SystemColors.ControlLight;
+            container_new_telefono.BackColor = SystemColors.ScrollBar;
+            container_new_telefono.Controls.Add(label_telefono);
             container_new_telefono.Controls.Add(new_telefono);
             container_new_telefono.Cursor = Cursors.Hand;
-            container_new_telefono.Location = new Point(43, 425);
+            container_new_telefono.Location = new Point(43, 430);
             container_new_telefono.Name = "container_new_telefono";
-            container_new_telefono.Size = new Size(180, 51);
+            container_new_telefono.Size = new Size(180, 55);
             container_new_telefono.TabIndex = 16;
             container_new_telefono.Click += PanelClickHandler;
             // 
+            // label_telefono
+            // 
+            label_telefono.AutoSize = true;
+            label_telefono.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            label_telefono.ForeColor = SystemColors.WindowText;
+            label_telefono.Location = new Point(18, 18);
+            label_telefono.Name = "label_telefono";
+            label_telefono.Size = new Size(67, 21);
+            label_telefono.TabIndex = 52;
+            label_telefono.Text = "Teléfono";
+            label_telefono.Click += LabelClickHandler;
+            // 
             // new_telefono
             // 
-            new_telefono.BackColor = SystemColors.ControlLight;
+            new_telefono.BackColor = SystemColors.ScrollBar;
             new_telefono.BorderStyle = BorderStyle.None;
             new_telefono.Cursor = Cursors.Hand;
-            new_telefono.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            new_telefono.Location = new Point(3, 14);
+            new_telefono.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            new_telefono.Location = new Point(3, 19);
             new_telefono.MaxLength = 20;
             new_telefono.Name = "new_telefono";
-            new_telefono.PlaceholderText = "Teléfono";
             new_telefono.Size = new Size(174, 20);
             new_telefono.TabIndex = 5;
             new_telefono.Enter += input_Enter;
@@ -204,25 +263,37 @@
             // 
             // container_new_calle
             // 
-            container_new_calle.BackColor = SystemColors.ControlLight;
+            container_new_calle.BackColor = SystemColors.ScrollBar;
+            container_new_calle.Controls.Add(label_calle);
             container_new_calle.Controls.Add(new_calle);
             container_new_calle.Cursor = Cursors.Hand;
-            container_new_calle.Location = new Point(43, 548);
+            container_new_calle.Location = new Point(43, 558);
             container_new_calle.Name = "container_new_calle";
-            container_new_calle.Size = new Size(180, 51);
+            container_new_calle.Size = new Size(180, 55);
             container_new_calle.TabIndex = 18;
             container_new_calle.Click += PanelClickHandler;
             // 
+            // label_calle
+            // 
+            label_calle.AutoSize = true;
+            label_calle.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            label_calle.ForeColor = SystemColors.WindowText;
+            label_calle.Location = new Point(18, 18);
+            label_calle.Name = "label_calle";
+            label_calle.Size = new Size(42, 21);
+            label_calle.TabIndex = 54;
+            label_calle.Text = "Calle";
+            label_calle.Click += LabelClickHandler;
+            // 
             // new_calle
             // 
-            new_calle.BackColor = SystemColors.ControlLight;
+            new_calle.BackColor = SystemColors.ScrollBar;
             new_calle.BorderStyle = BorderStyle.None;
             new_calle.Cursor = Cursors.Hand;
-            new_calle.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            new_calle.Location = new Point(3, 14);
+            new_calle.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            new_calle.Location = new Point(3, 19);
             new_calle.MaxLength = 20;
             new_calle.Name = "new_calle";
-            new_calle.PlaceholderText = "Calle";
             new_calle.Size = new Size(174, 20);
             new_calle.TabIndex = 7;
             new_calle.Enter += input_Enter;
@@ -230,25 +301,37 @@
             // 
             // container_new_usuario
             // 
-            container_new_usuario.BackColor = SystemColors.ControlLight;
+            container_new_usuario.BackColor = SystemColors.ScrollBar;
+            container_new_usuario.Controls.Add(label_usuario);
             container_new_usuario.Controls.Add(new_usuario);
             container_new_usuario.Cursor = Cursors.Hand;
-            container_new_usuario.Location = new Point(651, 175);
+            container_new_usuario.Location = new Point(651, 174);
             container_new_usuario.Name = "container_new_usuario";
-            container_new_usuario.Size = new Size(180, 51);
+            container_new_usuario.Size = new Size(180, 55);
             container_new_usuario.TabIndex = 20;
             container_new_usuario.Click += PanelClickHandler;
             // 
+            // label_usuario
+            // 
+            label_usuario.AutoSize = true;
+            label_usuario.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            label_usuario.ForeColor = SystemColors.WindowText;
+            label_usuario.Location = new Point(18, 18);
+            label_usuario.Name = "label_usuario";
+            label_usuario.Size = new Size(63, 21);
+            label_usuario.TabIndex = 52;
+            label_usuario.Text = "Usuario";
+            label_usuario.Click += LabelClickHandler;
+            // 
             // new_usuario
             // 
-            new_usuario.BackColor = SystemColors.ControlLight;
+            new_usuario.BackColor = SystemColors.ScrollBar;
             new_usuario.BorderStyle = BorderStyle.None;
             new_usuario.Cursor = Cursors.Hand;
-            new_usuario.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            new_usuario.Location = new Point(3, 14);
+            new_usuario.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            new_usuario.Location = new Point(3, 19);
             new_usuario.MaxLength = 15;
             new_usuario.Name = "new_usuario";
-            new_usuario.PlaceholderText = "Usuario";
             new_usuario.Size = new Size(174, 20);
             new_usuario.TabIndex = 9;
             new_usuario.TextChanged += HandleChanged;
@@ -258,25 +341,37 @@
             // 
             // container_new_contrasena
             // 
-            container_new_contrasena.BackColor = SystemColors.ControlLight;
+            container_new_contrasena.BackColor = SystemColors.ScrollBar;
+            container_new_contrasena.Controls.Add(label_contrasena);
             container_new_contrasena.Controls.Add(new_contrasena);
             container_new_contrasena.Cursor = Cursors.Hand;
-            container_new_contrasena.Location = new Point(651, 303);
+            container_new_contrasena.Location = new Point(651, 302);
             container_new_contrasena.Name = "container_new_contrasena";
-            container_new_contrasena.Size = new Size(180, 51);
+            container_new_contrasena.Size = new Size(180, 55);
             container_new_contrasena.TabIndex = 21;
             container_new_contrasena.Click += PanelClickHandler;
             // 
+            // label_contrasena
+            // 
+            label_contrasena.AutoSize = true;
+            label_contrasena.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            label_contrasena.ForeColor = SystemColors.WindowText;
+            label_contrasena.Location = new Point(18, 18);
+            label_contrasena.Name = "label_contrasena";
+            label_contrasena.Size = new Size(85, 21);
+            label_contrasena.TabIndex = 53;
+            label_contrasena.Text = "Contraseña";
+            label_contrasena.Click += LabelClickHandler;
+            // 
             // new_contrasena
             // 
-            new_contrasena.BackColor = SystemColors.ControlLight;
+            new_contrasena.BackColor = SystemColors.ScrollBar;
             new_contrasena.BorderStyle = BorderStyle.None;
             new_contrasena.Cursor = Cursors.Hand;
-            new_contrasena.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            new_contrasena.Location = new Point(3, 14);
+            new_contrasena.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            new_contrasena.Location = new Point(3, 19);
             new_contrasena.MaxLength = 15;
             new_contrasena.Name = "new_contrasena";
-            new_contrasena.PlaceholderText = "Contraseña";
             new_contrasena.Size = new Size(174, 20);
             new_contrasena.TabIndex = 10;
             new_contrasena.UseSystemPasswordChar = true;
@@ -287,25 +382,37 @@
             // 
             // container_new_contrasena2
             // 
-            container_new_contrasena2.BackColor = SystemColors.ControlLight;
+            container_new_contrasena2.BackColor = SystemColors.ScrollBar;
+            container_new_contrasena2.Controls.Add(label_contrasena2);
             container_new_contrasena2.Controls.Add(new_contrasena2);
             container_new_contrasena2.Cursor = Cursors.Hand;
-            container_new_contrasena2.Location = new Point(651, 425);
+            container_new_contrasena2.Location = new Point(651, 430);
             container_new_contrasena2.Name = "container_new_contrasena2";
-            container_new_contrasena2.Size = new Size(180, 51);
+            container_new_contrasena2.Size = new Size(180, 55);
             container_new_contrasena2.TabIndex = 22;
             container_new_contrasena2.Click += PanelClickHandler;
             // 
+            // label_contrasena2
+            // 
+            label_contrasena2.AutoSize = true;
+            label_contrasena2.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            label_contrasena2.ForeColor = SystemColors.WindowText;
+            label_contrasena2.Location = new Point(18, 18);
+            label_contrasena2.Name = "label_contrasena2";
+            label_contrasena2.Size = new Size(151, 21);
+            label_contrasena2.TabIndex = 54;
+            label_contrasena2.Text = "Repite la contraseña";
+            label_contrasena2.Click += LabelClickHandler;
+            // 
             // new_contrasena2
             // 
-            new_contrasena2.BackColor = SystemColors.ControlLight;
+            new_contrasena2.BackColor = SystemColors.ScrollBar;
             new_contrasena2.BorderStyle = BorderStyle.None;
             new_contrasena2.Cursor = Cursors.Hand;
-            new_contrasena2.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            new_contrasena2.Location = new Point(3, 14);
+            new_contrasena2.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            new_contrasena2.Location = new Point(3, 19);
             new_contrasena2.MaxLength = 15;
             new_contrasena2.Name = "new_contrasena2";
-            new_contrasena2.PlaceholderText = "Repite la contraseña";
             new_contrasena2.Size = new Size(174, 20);
             new_contrasena2.TabIndex = 11;
             new_contrasena2.UseSystemPasswordChar = true;
@@ -328,25 +435,37 @@
             // 
             // container_new_altura
             // 
-            container_new_altura.BackColor = SystemColors.ControlLight;
+            container_new_altura.BackColor = SystemColors.ScrollBar;
+            container_new_altura.Controls.Add(label_altura);
             container_new_altura.Controls.Add(new_altura);
             container_new_altura.Cursor = Cursors.Hand;
-            container_new_altura.Location = new Point(290, 548);
+            container_new_altura.Location = new Point(290, 558);
             container_new_altura.Name = "container_new_altura";
-            container_new_altura.Size = new Size(180, 51);
+            container_new_altura.Size = new Size(180, 55);
             container_new_altura.TabIndex = 19;
             container_new_altura.Click += PanelClickHandler;
             // 
+            // label_altura
+            // 
+            label_altura.AutoSize = true;
+            label_altura.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            label_altura.ForeColor = SystemColors.WindowText;
+            label_altura.Location = new Point(18, 18);
+            label_altura.Name = "label_altura";
+            label_altura.Size = new Size(52, 21);
+            label_altura.TabIndex = 55;
+            label_altura.Text = "Altura";
+            label_altura.Click += LabelClickHandler;
+            // 
             // new_altura
             // 
-            new_altura.BackColor = SystemColors.ControlLight;
+            new_altura.BackColor = SystemColors.ScrollBar;
             new_altura.BorderStyle = BorderStyle.None;
             new_altura.Cursor = Cursors.Hand;
-            new_altura.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            new_altura.Location = new Point(3, 14);
+            new_altura.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            new_altura.Location = new Point(3, 19);
             new_altura.MaxLength = 10;
             new_altura.Name = "new_altura";
-            new_altura.PlaceholderText = "Altura";
             new_altura.Size = new Size(174, 20);
             new_altura.TabIndex = 8;
             new_altura.Enter += input_Enter;
@@ -355,25 +474,37 @@
             // 
             // container_new_foto
             // 
-            container_new_foto.BackColor = SystemColors.ControlLight;
+            container_new_foto.BackColor = SystemColors.ScrollBar;
+            container_new_foto.Controls.Add(label_foto);
             container_new_foto.Controls.Add(new_foto);
             container_new_foto.Cursor = Cursors.Hand;
-            container_new_foto.Location = new Point(290, 425);
+            container_new_foto.Location = new Point(290, 430);
             container_new_foto.Name = "container_new_foto";
-            container_new_foto.Size = new Size(180, 51);
+            container_new_foto.Size = new Size(180, 55);
             container_new_foto.TabIndex = 17;
             container_new_foto.Click += PanelClickHandler;
             // 
+            // label_foto
+            // 
+            label_foto.AutoSize = true;
+            label_foto.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            label_foto.ForeColor = SystemColors.WindowText;
+            label_foto.Location = new Point(18, 18);
+            label_foto.Name = "label_foto";
+            label_foto.Size = new Size(39, 21);
+            label_foto.TabIndex = 53;
+            label_foto.Text = "Foto";
+            label_foto.Click += LabelClickHandler;
+            // 
             // new_foto
             // 
-            new_foto.BackColor = SystemColors.ControlLight;
+            new_foto.BackColor = SystemColors.ScrollBar;
             new_foto.BorderStyle = BorderStyle.None;
             new_foto.Cursor = Cursors.Hand;
-            new_foto.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            new_foto.Location = new Point(3, 14);
+            new_foto.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            new_foto.Location = new Point(3, 19);
             new_foto.MaxLength = 50;
             new_foto.Name = "new_foto";
-            new_foto.PlaceholderText = "Foto";
             new_foto.Size = new Size(174, 20);
             new_foto.TabIndex = 6;
             new_foto.Enter += input_Enter;
@@ -381,25 +512,37 @@
             // 
             // container_new_email
             // 
-            container_new_email.BackColor = SystemColors.ControlLight;
+            container_new_email.BackColor = SystemColors.ScrollBar;
+            container_new_email.Controls.Add(label_email);
             container_new_email.Controls.Add(new_email);
             container_new_email.Cursor = Cursors.Hand;
-            container_new_email.Location = new Point(290, 303);
+            container_new_email.Location = new Point(290, 302);
             container_new_email.Name = "container_new_email";
-            container_new_email.Size = new Size(180, 51);
+            container_new_email.Size = new Size(180, 55);
             container_new_email.TabIndex = 15;
             container_new_email.Click += PanelClickHandler;
             // 
+            // label_email
+            // 
+            label_email.AutoSize = true;
+            label_email.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            label_email.ForeColor = SystemColors.WindowText;
+            label_email.Location = new Point(18, 18);
+            label_email.Name = "label_email";
+            label_email.Size = new Size(49, 21);
+            label_email.TabIndex = 52;
+            label_email.Text = "Email";
+            label_email.Click += LabelClickHandler;
+            // 
             // new_email
             // 
-            new_email.BackColor = SystemColors.ControlLight;
+            new_email.BackColor = SystemColors.ScrollBar;
             new_email.BorderStyle = BorderStyle.None;
             new_email.Cursor = Cursors.Hand;
-            new_email.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            new_email.Location = new Point(3, 14);
+            new_email.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            new_email.Location = new Point(3, 19);
             new_email.MaxLength = 50;
             new_email.Name = "new_email";
-            new_email.PlaceholderText = "Email";
             new_email.Size = new Size(174, 20);
             new_email.TabIndex = 4;
             new_email.Enter += input_Enter;
@@ -421,7 +564,7 @@
             // newaccount_title
             // 
             newaccount_title.AutoSize = true;
-            newaccount_title.BackColor = SystemColors.ControlLightLight;
+            newaccount_title.BackColor = SystemColors.Control;
             newaccount_title.Font = new Font("Bauhaus 93", 36F, FontStyle.Bold, GraphicsUnit.Point);
             newaccount_title.ForeColor = SystemColors.WindowText;
             newaccount_title.Location = new Point(43, 38);
@@ -435,7 +578,7 @@
             pictureBox1.BackgroundImage = Properties.Resources.comida;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.InitialImage = null;
-            pictureBox1.Location = new Point(781, 125);
+            pictureBox1.Location = new Point(781, 124);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(50, 50);
             pictureBox1.TabIndex = 30;
@@ -487,7 +630,7 @@
             user_message.AutoSize = true;
             user_message.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             user_message.ForeColor = Color.Red;
-            user_message.Location = new Point(625, 229);
+            user_message.Location = new Point(625, 232);
             user_message.Name = "user_message";
             user_message.Size = new Size(248, 42);
             user_message.TabIndex = 36;
@@ -500,7 +643,7 @@
             psw_message.AutoSize = true;
             psw_message.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             psw_message.ForeColor = Color.Red;
-            psw_message.Location = new Point(648, 357);
+            psw_message.Location = new Point(648, 360);
             psw_message.Name = "psw_message";
             psw_message.Size = new Size(188, 42);
             psw_message.TabIndex = 37;
@@ -513,7 +656,7 @@
             psw_message2.AutoSize = true;
             psw_message2.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             psw_message2.ForeColor = Color.Red;
-            psw_message2.Location = new Point(625, 478);
+            psw_message2.Location = new Point(625, 488);
             psw_message2.Name = "psw_message2";
             psw_message2.Size = new Size(236, 21);
             psw_message2.TabIndex = 38;
@@ -538,7 +681,7 @@
             new_nombre_error.AutoSize = true;
             new_nombre_error.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             new_nombre_error.ForeColor = Color.Red;
-            new_nombre_error.Location = new Point(46, 229);
+            new_nombre_error.Location = new Point(46, 232);
             new_nombre_error.Name = "new_nombre_error";
             new_nombre_error.Size = new Size(168, 42);
             new_nombre_error.TabIndex = 40;
@@ -551,7 +694,7 @@
             new_apellido_error.AutoSize = true;
             new_apellido_error.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             new_apellido_error.ForeColor = Color.Red;
-            new_apellido_error.Location = new Point(293, 229);
+            new_apellido_error.Location = new Point(293, 232);
             new_apellido_error.Name = "new_apellido_error";
             new_apellido_error.Size = new Size(168, 42);
             new_apellido_error.TabIndex = 41;
@@ -617,7 +760,7 @@
             new_nacimiento_error.AutoSize = true;
             new_nacimiento_error.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             new_nacimiento_error.ForeColor = Color.Red;
-            new_nacimiento_error.Location = new Point(58, 357);
+            new_nacimiento_error.Location = new Point(58, 360);
             new_nacimiento_error.Name = "new_nacimiento_error";
             new_nacimiento_error.Size = new Size(146, 21);
             new_nacimiento_error.TabIndex = 47;
@@ -655,7 +798,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlLightLight;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(950, 720);
             Controls.Add(database_response_success);
             Controls.Add(database_response_error);
@@ -778,5 +921,16 @@
         private Label new_nacimiento_error;
         private Label database_response_error;
         private Label database_response_success;
+        private Label label_nombre;
+        private Label label_apellido;
+        private Label label_nacimiento;
+        private Label label_telefono;
+        private Label label_foto;
+        private Label label_email;
+        private Label label_calle;
+        private Label label_usuario;
+        private Label label_contrasena;
+        private Label label_contrasena2;
+        private Label label_altura;
     }
 }

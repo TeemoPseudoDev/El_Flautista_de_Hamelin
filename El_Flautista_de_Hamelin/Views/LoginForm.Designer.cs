@@ -213,7 +213,7 @@ namespace El_Flautista_de_Hamelin
             // 
             panel1.Location = new Point(698, 58);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 100);
+            panel1.Size = new Size(392, 247);
             panel1.TabIndex = 31;
             // 
             // login_minimize
