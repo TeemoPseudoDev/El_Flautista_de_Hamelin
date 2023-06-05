@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Contenedor = new System.Windows.Forms.Panel();
-            this.SuspendLayout();
+            Contenedor = new Panel();
+            SuspendLayout();
             // 
             // Contenedor
             // 
-            this.Contenedor.AutoScroll = true;
-            this.Contenedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Contenedor.Location = new System.Drawing.Point(47, 45);
-            this.Contenedor.Name = "Contenedor";
-            this.Contenedor.Size = new System.Drawing.Size(1039, 446);
-            this.Contenedor.TabIndex = 0;
+            Contenedor.AutoScroll = true;
+            Contenedor.BackColor = SystemColors.ControlLightLight;
+            Contenedor.Location = new Point(47, 45);
+            Contenedor.Name = "Contenedor";
+            Contenedor.Size = new Size(1039, 596);
+            Contenedor.TabIndex = 0;
             // 
             // ComidaForm
             // 
-            this.ClientSize = new System.Drawing.Size(1334, 518);
-            this.Controls.Add(this.Contenedor);
-            this.Name = "ComidaForm";
-            this.Load += new System.EventHandler(this.Comida_Load);
-            this.ResumeLayout(false);
-
+            ClientSize = new Size(1280, 720);
+            Controls.Add(Contenedor);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "ComidaForm";
+            Load += Comida_Load;
+            ResumeLayout(false);
         }
 
         #endregion

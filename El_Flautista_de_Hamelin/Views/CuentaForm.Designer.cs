@@ -108,7 +108,7 @@
             container_new_nacimiento.Controls.Add(label_nacimiento);
             container_new_nacimiento.Controls.Add(new_nacimiento);
             container_new_nacimiento.Cursor = Cursors.Hand;
-            container_new_nacimiento.Location = new Point(43, 302);
+            container_new_nacimiento.Location = new Point(74, 302);
             container_new_nacimiento.Name = "container_new_nacimiento";
             container_new_nacimiento.Size = new Size(180, 55);
             container_new_nacimiento.TabIndex = 14;
@@ -148,7 +148,7 @@
             container_new_nombre.Controls.Add(label_nombre);
             container_new_nombre.Controls.Add(new_nombre);
             container_new_nombre.Cursor = Cursors.Hand;
-            container_new_nombre.Location = new Point(43, 174);
+            container_new_nombre.Location = new Point(74, 174);
             container_new_nombre.Name = "container_new_nombre";
             container_new_nombre.Size = new Size(180, 55);
             container_new_nombre.TabIndex = 12;
@@ -189,7 +189,7 @@
             container_new_apellido.Controls.Add(label_apellido);
             container_new_apellido.Controls.Add(new_apellido);
             container_new_apellido.Cursor = Cursors.Hand;
-            container_new_apellido.Location = new Point(290, 174);
+            container_new_apellido.Location = new Point(321, 174);
             container_new_apellido.Name = "container_new_apellido";
             container_new_apellido.Size = new Size(180, 55);
             container_new_apellido.TabIndex = 13;
@@ -229,7 +229,7 @@
             container_new_telefono.Controls.Add(label_telefono);
             container_new_telefono.Controls.Add(new_telefono);
             container_new_telefono.Cursor = Cursors.Hand;
-            container_new_telefono.Location = new Point(43, 430);
+            container_new_telefono.Location = new Point(74, 430);
             container_new_telefono.Name = "container_new_telefono";
             container_new_telefono.Size = new Size(180, 55);
             container_new_telefono.TabIndex = 16;
@@ -267,7 +267,7 @@
             container_new_calle.Controls.Add(label_calle);
             container_new_calle.Controls.Add(new_calle);
             container_new_calle.Cursor = Cursors.Hand;
-            container_new_calle.Location = new Point(43, 558);
+            container_new_calle.Location = new Point(74, 558);
             container_new_calle.Name = "container_new_calle";
             container_new_calle.Size = new Size(180, 55);
             container_new_calle.TabIndex = 18;
@@ -305,7 +305,7 @@
             container_new_usuario.Controls.Add(label_usuario);
             container_new_usuario.Controls.Add(new_usuario);
             container_new_usuario.Cursor = Cursors.Hand;
-            container_new_usuario.Location = new Point(651, 174);
+            container_new_usuario.Location = new Point(682, 174);
             container_new_usuario.Name = "container_new_usuario";
             container_new_usuario.Size = new Size(180, 55);
             container_new_usuario.TabIndex = 20;
@@ -344,7 +344,7 @@
             container_new_contrasena.Controls.Add(label_contrasena);
             container_new_contrasena.Controls.Add(new_contrasena);
             container_new_contrasena.Cursor = Cursors.Hand;
-            container_new_contrasena.Location = new Point(651, 302);
+            container_new_contrasena.Location = new Point(682, 302);
             container_new_contrasena.Name = "container_new_contrasena";
             container_new_contrasena.Size = new Size(180, 55);
             container_new_contrasena.TabIndex = 21;
@@ -385,7 +385,7 @@
             container_new_contrasena2.Controls.Add(label_contrasena2);
             container_new_contrasena2.Controls.Add(new_contrasena2);
             container_new_contrasena2.Cursor = Cursors.Hand;
-            container_new_contrasena2.Location = new Point(651, 430);
+            container_new_contrasena2.Location = new Point(682, 430);
             container_new_contrasena2.Name = "container_new_contrasena2";
             container_new_contrasena2.Size = new Size(180, 55);
             container_new_contrasena2.TabIndex = 22;
@@ -425,7 +425,7 @@
             newaccount_submit.BackgroundImage = Properties.Resources.agregar_usuario;
             newaccount_submit.BackgroundImageLayout = ImageLayout.Stretch;
             newaccount_submit.Cursor = Cursors.Hand;
-            newaccount_submit.Location = new Point(712, 598);
+            newaccount_submit.Location = new Point(743, 598);
             newaccount_submit.Name = "newaccount_submit";
             newaccount_submit.Size = new Size(60, 60);
             newaccount_submit.TabIndex = 24;
@@ -438,7 +438,7 @@
             container_new_altura.Controls.Add(label_altura);
             container_new_altura.Controls.Add(new_altura);
             container_new_altura.Cursor = Cursors.Hand;
-            container_new_altura.Location = new Point(290, 558);
+            container_new_altura.Location = new Point(321, 558);
             container_new_altura.Name = "container_new_altura";
             container_new_altura.Size = new Size(180, 55);
             container_new_altura.TabIndex = 19;
@@ -477,7 +477,7 @@
             container_new_foto.Controls.Add(label_foto);
             container_new_foto.Controls.Add(new_foto);
             container_new_foto.Cursor = Cursors.Hand;
-            container_new_foto.Location = new Point(290, 430);
+            container_new_foto.Location = new Point(321, 430);
             container_new_foto.Name = "container_new_foto";
             container_new_foto.Size = new Size(180, 55);
             container_new_foto.TabIndex = 17;
@@ -515,7 +515,7 @@
             container_new_email.Controls.Add(label_email);
             container_new_email.Controls.Add(new_email);
             container_new_email.Cursor = Cursors.Hand;
-            container_new_email.Location = new Point(290, 302);
+            container_new_email.Location = new Point(321, 302);
             container_new_email.Name = "container_new_email";
             container_new_email.Size = new Size(180, 55);
             container_new_email.TabIndex = 15;
@@ -566,7 +566,7 @@
             newaccount_title.BackColor = SystemColors.Control;
             newaccount_title.Font = new Font("Bauhaus 93", 36F, FontStyle.Bold, GraphicsUnit.Point);
             newaccount_title.ForeColor = SystemColors.WindowText;
-            newaccount_title.Location = new Point(173, 34);
+            newaccount_title.Location = new Point(270, 33);
             newaccount_title.Name = "newaccount_title";
             newaccount_title.Size = new Size(396, 54);
             newaccount_title.TabIndex = 23;
@@ -577,7 +577,7 @@
             pictureBox1.BackgroundImage = Properties.Resources.comida;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.InitialImage = null;
-            pictureBox1.Location = new Point(781, 124);
+            pictureBox1.Location = new Point(812, 124);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(50, 50);
             pictureBox1.TabIndex = 30;
@@ -588,7 +588,7 @@
             pictureBox3.BackgroundImage = Properties.Resources.comiendo;
             pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox3.InitialImage = null;
-            pictureBox3.Location = new Point(575, 38);
+            pictureBox3.Location = new Point(672, 37);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(50, 50);
             pictureBox3.TabIndex = 32;
@@ -598,7 +598,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Abyssinica SIL", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(31, 284);
+            label1.Location = new Point(62, 284);
             label1.Name = "label1";
             label1.Size = new Size(205, 16);
             label1.TabIndex = 26;
@@ -608,7 +608,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(227, 175);
+            label2.Location = new Point(258, 175);
             label2.Name = "label2";
             label2.Size = new Size(19, 25);
             label2.TabIndex = 24;
@@ -618,7 +618,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(477, 175);
+            label3.Location = new Point(508, 175);
             label3.Name = "label3";
             label3.Size = new Size(19, 25);
             label3.TabIndex = 25;
@@ -629,7 +629,7 @@
             user_message.AutoSize = true;
             user_message.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             user_message.ForeColor = Color.Red;
-            user_message.Location = new Point(625, 232);
+            user_message.Location = new Point(656, 232);
             user_message.Name = "user_message";
             user_message.Size = new Size(248, 42);
             user_message.TabIndex = 36;
@@ -642,7 +642,7 @@
             psw_message.AutoSize = true;
             psw_message.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             psw_message.ForeColor = Color.Red;
-            psw_message.Location = new Point(648, 360);
+            psw_message.Location = new Point(679, 360);
             psw_message.Name = "psw_message";
             psw_message.Size = new Size(188, 42);
             psw_message.TabIndex = 37;
@@ -655,7 +655,7 @@
             psw_message2.AutoSize = true;
             psw_message2.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             psw_message2.ForeColor = Color.Red;
-            psw_message2.Location = new Point(625, 488);
+            psw_message2.Location = new Point(656, 488);
             psw_message2.Name = "psw_message2";
             psw_message2.Size = new Size(236, 21);
             psw_message2.TabIndex = 38;
@@ -667,7 +667,7 @@
             // 
             custom_loader.BackgroundImageLayout = ImageLayout.Stretch;
             custom_loader.Image = Properties.Resources.loader;
-            custom_loader.Location = new Point(718, 532);
+            custom_loader.Location = new Point(749, 532);
             custom_loader.Name = "custom_loader";
             custom_loader.Size = new Size(50, 50);
             custom_loader.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -680,7 +680,7 @@
             new_nombre_error.AutoSize = true;
             new_nombre_error.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             new_nombre_error.ForeColor = Color.Red;
-            new_nombre_error.Location = new Point(46, 232);
+            new_nombre_error.Location = new Point(77, 232);
             new_nombre_error.Name = "new_nombre_error";
             new_nombre_error.Size = new Size(168, 42);
             new_nombre_error.TabIndex = 40;
@@ -693,7 +693,7 @@
             new_apellido_error.AutoSize = true;
             new_apellido_error.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             new_apellido_error.ForeColor = Color.Red;
-            new_apellido_error.Location = new Point(293, 232);
+            new_apellido_error.Location = new Point(324, 232);
             new_apellido_error.Name = "new_apellido_error";
             new_apellido_error.Size = new Size(168, 42);
             new_apellido_error.TabIndex = 41;
@@ -705,7 +705,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(837, 175);
+            label4.Location = new Point(868, 175);
             label4.Name = "label4";
             label4.Size = new Size(19, 25);
             label4.TabIndex = 42;
@@ -715,7 +715,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(834, 303);
+            label5.Location = new Point(865, 303);
             label5.Name = "label5";
             label5.Size = new Size(19, 25);
             label5.TabIndex = 43;
@@ -725,7 +725,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Arial Narrow", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(834, 425);
+            label6.Location = new Point(865, 425);
             label6.Name = "label6";
             label6.Size = new Size(19, 25);
             label6.TabIndex = 44;
@@ -735,7 +735,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Abyssinica SIL", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            label7.Location = new Point(43, 125);
+            label7.Location = new Point(74, 125);
             label7.Name = "label7";
             label7.Size = new Size(138, 16);
             label7.TabIndex = 45;
@@ -746,7 +746,7 @@
             new_nacimiento_error.AutoSize = true;
             new_nacimiento_error.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             new_nacimiento_error.ForeColor = Color.Red;
-            new_nacimiento_error.Location = new Point(58, 360);
+            new_nacimiento_error.Location = new Point(89, 360);
             new_nacimiento_error.Name = "new_nacimiento_error";
             new_nacimiento_error.Size = new Size(146, 21);
             new_nacimiento_error.TabIndex = 47;
@@ -759,7 +759,7 @@
             database_response_error.AutoSize = true;
             database_response_error.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
             database_response_error.ForeColor = Color.Red;
-            database_response_error.Location = new Point(668, 548);
+            database_response_error.Location = new Point(699, 548);
             database_response_error.Name = "database_response_error";
             database_response_error.Size = new Size(151, 21);
             database_response_error.TabIndex = 48;
@@ -772,7 +772,7 @@
             database_response_success.AutoSize = true;
             database_response_success.Font = new Font("Abyssinica SIL", 14.25F, FontStyle.Italic, GraphicsUnit.Point);
             database_response_success.ForeColor = Color.Green;
-            database_response_success.Location = new Point(621, 548);
+            database_response_success.Location = new Point(652, 548);
             database_response_success.Name = "database_response_success";
             database_response_success.Size = new Size(252, 26);
             database_response_success.TabIndex = 49;
@@ -794,7 +794,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Bauhaus 93", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(709, 661);
+            label9.Location = new Point(740, 661);
             label9.Name = "label9";
             label9.Size = new Size(64, 24);
             label9.TabIndex = 51;

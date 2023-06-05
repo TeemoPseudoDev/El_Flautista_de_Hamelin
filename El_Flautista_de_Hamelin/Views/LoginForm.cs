@@ -107,8 +107,7 @@ namespace El_Flautista_de_Hamelin
             }
         }
 
-        private void HandleSubmit(object sender, EventArgs e)
-        {
+        private void Loguearse() {
             general_message_error.Visible = false;
 
             string usuario = login_input_user.Text;
@@ -133,16 +132,19 @@ namespace El_Flautista_de_Hamelin
 
             if (id != 0)
             {
-                /*this.user_id = id;
+                this.user_id = id;
                 this.DialogResult = DialogResult.OK;
-                this.Close();*/
-                login_input_user.Text = id.ToString();
+                this.Close();
             }
             else
             {
                 general_message_error.Visible = true;
                 return;
             }
+        }
+        private void HandleSubmit(object sender, EventArgs e)
+        {
+            Loguearse();
 
         }
 
@@ -150,6 +152,12 @@ namespace El_Flautista_de_Hamelin
         {
             if (sender == login_input_user)
             {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    Loguearse();
+                    e.Handled = true;
+                }
+
                 if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
                 {
                     e.Handled = true;
@@ -159,6 +167,12 @@ namespace El_Flautista_de_Hamelin
 
             if (sender == login_input_psw)
             {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    Loguearse();
+                    e.Handled = true;
+                }
+
                 if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != '!' && e.KeyChar != '_' && !char.IsControl(e.KeyChar))
                 {
                     e.Handled = true;
