@@ -79,10 +79,11 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            login_minimize = new PictureBox();
             new_nacimiento_error = new Label();
             database_response_error = new Label();
             database_response_success = new Label();
+            label8 = new Label();
+            label9 = new Label();
             container_new_nacimiento.SuspendLayout();
             container_new_nombre.SuspendLayout();
             container_new_apellido.SuspendLayout();
@@ -99,7 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)custom_loader).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)login_minimize).BeginInit();
             SuspendLayout();
             // 
             // container_new_nacimiento
@@ -334,7 +334,6 @@
             new_usuario.Name = "new_usuario";
             new_usuario.Size = new Size(174, 20);
             new_usuario.TabIndex = 9;
-            new_usuario.TextChanged += HandleChanged;
             new_usuario.Enter += input_Enter;
             new_usuario.KeyPress += inputs_KeyPress;
             new_usuario.Leave += input_Leave;
@@ -551,12 +550,12 @@
             // login_close
             // 
             login_close.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            login_close.BackgroundImage = Properties.Resources.tenedor_y_cuchillo_en_cruz;
+            login_close.BackgroundImage = Properties.Resources.atras;
             login_close.BackgroundImageLayout = ImageLayout.Stretch;
             login_close.Cursor = Cursors.Hand;
-            login_close.Location = new Point(913, 12);
+            login_close.Location = new Point(15, 15);
             login_close.Name = "login_close";
-            login_close.Size = new Size(25, 25);
+            login_close.Size = new Size(45, 45);
             login_close.TabIndex = 28;
             login_close.TabStop = false;
             login_close.Click += HandleClose;
@@ -567,7 +566,7 @@
             newaccount_title.BackColor = SystemColors.Control;
             newaccount_title.Font = new Font("Bauhaus 93", 36F, FontStyle.Bold, GraphicsUnit.Point);
             newaccount_title.ForeColor = SystemColors.WindowText;
-            newaccount_title.Location = new Point(43, 38);
+            newaccount_title.Location = new Point(173, 34);
             newaccount_title.Name = "newaccount_title";
             newaccount_title.Size = new Size(396, 54);
             newaccount_title.TabIndex = 23;
@@ -589,7 +588,7 @@
             pictureBox3.BackgroundImage = Properties.Resources.comiendo;
             pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox3.InitialImage = null;
-            pictureBox3.Location = new Point(445, 42);
+            pictureBox3.Location = new Point(575, 38);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(50, 50);
             pictureBox3.TabIndex = 32;
@@ -742,19 +741,6 @@
             label7.TabIndex = 45;
             label7.Text = "(*) campos obligatorios";
             // 
-            // login_minimize
-            // 
-            login_minimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            login_minimize.BackgroundImage = Properties.Resources.tenedor;
-            login_minimize.BackgroundImageLayout = ImageLayout.Stretch;
-            login_minimize.Cursor = Cursors.Hand;
-            login_minimize.Location = new Point(863, 4);
-            login_minimize.Name = "login_minimize";
-            login_minimize.Size = new Size(32, 40);
-            login_minimize.TabIndex = 46;
-            login_minimize.TabStop = false;
-            login_minimize.Click += login_minimize_Click;
-            // 
             // new_nacimiento_error
             // 
             new_nacimiento_error.AutoSize = true;
@@ -794,16 +780,37 @@
             database_response_success.TextAlign = ContentAlignment.MiddleCenter;
             database_response_success.Visible = false;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Bauhaus 93", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(7, 63);
+            label8.Name = "label8";
+            label8.Size = new Size(66, 24);
+            label8.TabIndex = 50;
+            label8.Text = "Volver";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Bauhaus 93", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(709, 661);
+            label9.Name = "label9";
+            label9.Size = new Size(64, 24);
+            label9.TabIndex = 51;
+            label9.Text = "Crear";
+            // 
             // CuentaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(950, 720);
+            Controls.Add(label9);
+            Controls.Add(label8);
             Controls.Add(database_response_success);
             Controls.Add(database_response_error);
             Controls.Add(new_nacimiento_error);
-            Controls.Add(login_minimize);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -869,7 +876,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)custom_loader).EndInit();
-            ((System.ComponentModel.ISupportInitialize)login_minimize).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -917,7 +923,6 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private PictureBox login_minimize;
         private Label new_nacimiento_error;
         private Label database_response_error;
         private Label database_response_success;
@@ -932,5 +937,7 @@
         private Label label_contrasena;
         private Label label_contrasena2;
         private Label label_altura;
+        private Label label8;
+        private Label label9;
     }
 }

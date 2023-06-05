@@ -2,6 +2,7 @@ using El_Flautista_de_Hamelin.Views;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using El_Flautista_de_Hamelin.Controllers;
+using System.Drawing.Drawing2D;
 
 namespace El_Flautista_de_Hamelin
 {
@@ -16,6 +17,8 @@ namespace El_Flautista_de_Hamelin
         {
             InitializeComponent();
             controller = new LoginController();
+            RedondearPanel(user_container, 20);
+            RedondearPanel(psw_container, 20);
 
             user_id = 0;
         }
@@ -63,117 +66,250 @@ namespace El_Flautista_de_Hamelin
             this.ShowIcon = true;
             this.ShowInTaskbar = true;
 
-            Form1 formularioSecundario = new Form1();
-            formularioSecundario.TopLevel = false;
-            formularioSecundario.FormBorderStyle = FormBorderStyle.None;
-            formularioSecundario.Dock = DockStyle.Fill;
-            panel1.Controls.Add(formularioSecundario);
-            formularioSecundario.Show();
-
         }
 
-        private void Psw_container_Click(object sender, EventArgs e)
+        private void LabelClickHandler(object sender, EventArgs e)
         {
-            login_input_psw.Focus();
+            Label label = (Label)sender;
+            Panel panel = label.Parent as Panel;
+            TextBox textBox = null;
+            foreach (Control control in panel.Controls)
+            {
+                if (control is TextBox)
+                {
+                    textBox = (TextBox)control;
+                    break;
+                }
+            }
+
+            if (textBox != null)
+            {
+                textBox.Focus();
+            }
         }
 
-        private void User_container_Click(object sender, EventArgs e)
+        private void PanelClickHandler(object sender, EventArgs e)
         {
-            login_input_user.Focus();
-        }
+            Panel panel = (Panel)sender;
+            TextBox textBox = null;
+            foreach (Control control in panel.Controls)
+            {
+                if (control is TextBox)
+                {
+                    textBox = (TextBox)control;
+                    break;
+                }
+            }
 
+            if (textBox != null)
+            {
+                textBox.Focus();
+            }
+        }
 
         private void HandleSubmit(object sender, EventArgs e)
         {
+            general_message_error.Visible = false;
 
-            if (psw_message.Text != "" || user_message.Text != "")
+            string usuario = login_input_user.Text;
+            if (!Regex.IsMatch(usuario, @"^[A-Za-z1-9]{5,15}$"))
             {
-                general_message_error.Text = "Usuario y/o contraseña con errores";
-                general_message_error.Visible = true;
+                user_message.Visible = true;
                 return;
             }
-            string user = login_input_user.Text;
-            string psw = login_input_psw.Text;
+            else user_message.Visible = false;
 
-            int id = this.controller.SearchUser(user, psw);
+
+            string contrasena = login_input_psw.Text;
+            if (!Regex.IsMatch(contrasena, @"^[a-zA-Z0-9!_]{5,15}$"))
+            {
+                psw_message.Visible = true;
+                return;
+            }
+            else psw_message.Visible = false;
+
+
+            int id = this.controller.SearchUser(usuario, contrasena);
 
             if (id != 0)
             {
-                this.user_id = id;
+                /*this.user_id = id;
                 this.DialogResult = DialogResult.OK;
-                this.Close();
+                this.Close();*/
+                login_input_user.Text = id.ToString();
             }
             else
             {
-                general_message_error.Text = "Usuario y/o contraseña inexistentes";
                 general_message_error.Visible = true;
+                return;
             }
 
         }
 
-
-        private void HandleChanged(object sender, EventArgs e)
+        private void inputs_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            general_message_error.Visible = false;
-
             if (sender == login_input_user)
             {
-                string texto = login_input_user.Text;
-                string patron = @"^[A-Za-z1-9]{5,15}$";
-                if (!Regex.IsMatch(texto, patron))
+                if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
                 {
-                    user_message.Text = "Sólo se admiten letras y números.\r\nMínimo 5 caracteres.";
-                    user_message.Visible = true;
-                }
-                else
-                {
-                    user_message.Text = "";
-                    user_message.Visible = false;
+                    e.Handled = true;
                 }
 
             }
 
             if (sender == login_input_psw)
             {
-                string texto = login_input_psw.Text;
-                string patron = @"^[a-zA-Z0-9!_]{5,15}$";
-
-                if (!Regex.IsMatch(texto, patron))
+                if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != '!' && e.KeyChar != '_' && !char.IsControl(e.KeyChar))
                 {
-                    psw_message.Text = "Letras, números, '!' y '_'.\r\nMínimo 5 caracteres.";
-                    psw_message.Visible = true;
-                }
-                else
-                {
-                    psw_message.Text = "";
-                    psw_message.Visible = false;
+                    e.Handled = true;
                 }
 
             }
-
         }
-
 
         private void input_Enter(object sender, EventArgs e)
         {
-            System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)sender;
+            TextBox textBox = (TextBox)sender;
             Panel panel = (Panel)textBox.Parent;
 
-            panel.BackColor = SystemColors.Control;
-            panel.BorderStyle = BorderStyle.FixedSingle;
-            textBox.BackColor = SystemColors.Control;
+            panel.BackColor = SystemColors.ControlLightLight;
+            //panel.BorderStyle = BorderStyle.FixedSingle;
+            textBox.BackColor = SystemColors.ControlLightLight;
+
+
+            Label label = null;
+            foreach (Control control in panel.Controls)
+            {
+                if (control is Label)
+                {
+                    label = (Label)control;
+                    break;
+                }
+            }
+
+            if (label != null)
+            {
+                LabelAnimationToTop(label);
+            }
         }
+
+        private void LabelAnimationToTop(Label label)
+        {
+            if (label.Left == 2 || label.Top == 2) return;
+
+            label.Font = new Font(label.Font.FontFamily, 9, label.Font.Style);
+
+
+            int originalX = label.Left;
+            int originalY = label.Top;
+
+
+            int targetX = 2;
+            int targetY = 2;
+
+            int step = 8; // Cantidad de píxeles para cada paso de la animación
+            int interval = 2; // Intervalo de tiempo entre cada paso de la animación (en milisegundos)
+
+            int deltaX = (targetX - label.Left) / step;
+            int deltaY = (targetY - label.Top) / step;
+
+            System.Windows.Forms.Timer animationTimer = new System.Windows.Forms.Timer();
+            animationTimer.Interval = interval;
+
+            animationTimer.Tick += (s, args) =>
+            {
+                if (label.Left != targetX)
+                {
+                    label.Left += deltaX;
+                }
+
+                if (label.Top != targetY)
+                {
+                    label.Top += deltaY;
+                }
+
+                if (label.Left == targetX && label.Top == targetY)
+                {
+                    animationTimer.Stop();
+                    animationTimer.Dispose();
+                    animationTimer = null;
+                }
+            };
+
+            animationTimer.Start();
+
+            // Guardar la posición original en la propiedad Tag del Label
+            label.Tag = new Point(originalX, originalY);
+        }
+
         private void input_Leave(object sender, EventArgs e)
         {
-            System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)sender;
+            TextBox textBox = (TextBox)sender;
             Panel panel = (Panel)textBox.Parent;
+            panel.BackColor = SystemColors.ScrollBar;
+            textBox.BackColor = SystemColors.ScrollBar;
 
-            panel.BackColor = Color.FromArgb(224, 224, 224);
-            panel.BorderStyle = BorderStyle.None;
-            textBox.BackColor = Color.FromArgb(224, 224, 224);
+            if (textBox.Text == "")
+            {
+                Label label = null;
+                foreach (Control control in panel.Controls)
+                {
+                    if (control is Label)
+                    {
+                        label = (Label)control;
+                        break;
+                    }
+                }
+
+                if (label != null)
+                {
+                    LabelAnimationToOriginal(label);
+                }
+            }
         }
 
+        private void LabelAnimationToOriginal(Label label)
+        {
+            if (label.Left != 2 || label.Top != 2) return;
+
+            label.Font = new Font(label.Font.FontFamily, 11, label.Font.Style);
+
+            Point originalPosition = (Point)label.Tag;
+
+            int targetX = originalPosition.X;
+            int targetY = originalPosition.Y;
+
+            int step = 8; // Cantidad de píxeles para cada paso de la animación
+            int interval = 2; // Intervalo de tiempo entre cada paso de la animación (en milisegundos)
+
+            int deltaX = (targetX - label.Left) / step;
+            int deltaY = (targetY - label.Top) / step;
+
+            System.Windows.Forms.Timer animationTimer = new System.Windows.Forms.Timer();
+            animationTimer.Interval = interval;
+
+            animationTimer.Tick += (s, args) =>
+            {
+                if (label.Left != targetX)
+                {
+                    label.Left += deltaX;
+                }
+
+                if (label.Top != targetY)
+                {
+                    label.Top += deltaY;
+                }
+
+                if (label.Left == targetX && label.Top == targetY)
+                {
+                    animationTimer.Stop();
+                    animationTimer.Dispose();
+                    animationTimer = null;
+                }
+            };
+
+            animationTimer.Start();
+        }
 
         private void login_new_Click(object sender, EventArgs e)
         {
@@ -196,6 +332,21 @@ namespace El_Flautista_de_Hamelin
         private void login_minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void RedondearPanel(Panel panel, int radio)
+        {
+
+            GraphicsPath forma = new GraphicsPath();
+            forma.AddArc(new Rectangle(0, 0, radio, radio), 180, 90);
+            forma.AddArc(new Rectangle(panel.Width - radio, 0, radio, radio), 270, 90);
+            forma.AddArc(new Rectangle(panel.Width - radio, panel.Height - radio, radio, radio), 0, 90);
+            forma.AddArc(new Rectangle(0, panel.Height - radio, radio, radio), 90, 90);
+            forma.CloseFigure();
+
+            Region region = new Region(forma);
+
+            panel.Region = region;
         }
     }
 }

@@ -469,10 +469,6 @@ namespace El_Flautista_de_Hamelin.Views
             this.Select();
         }
 
-        private void login_minimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
 
         private void RedondearPanel(Panel panel, int radio)
         {

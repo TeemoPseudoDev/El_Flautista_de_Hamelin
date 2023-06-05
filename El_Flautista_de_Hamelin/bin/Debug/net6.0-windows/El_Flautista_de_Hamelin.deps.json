@@ -8,8 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "El_Flautista_de_Hamelin/1.0.0": {
         "dependencies": {
-          "MySql.Data": "8.0.33",
-          "MySQLWorkbench": "8.0.30.0"
+          "MySql.Data": "8.0.33"
         },
         "runtime": {
           "El_Flautista_de_Hamelin.dll": {}
@@ -243,110 +242,6 @@
         "dependencies": {
           "System.Drawing.Common": "4.7.0"
         }
-      },
-      "MySQLWorkbench/8.0.30.0": {
-        "runtime": {
-          "MySQLWorkbench.exe": {
-            "assemblyVersion": "8.0.30.0",
-            "fileVersion": "8.0.30.0"
-          }
-        }
-      },
-      "wbprivate.wr/0.0.0.0": {
-        "runtime": {
-          "wbprivate.wr.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "mforms.wr/1.0.0.1": {
-        "runtime": {
-          "mforms.wr.dll": {
-            "assemblyVersion": "1.0.0.1",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "WBControls/1.0.0.0": {
-        "runtime": {
-          "WBControls.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "base.wr/1.0.8221.20258": {
-        "runtime": {
-          "base.wr.dll": {
-            "assemblyVersion": "1.0.8221.20258",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "wbpublic.wr/0.0.0.0": {
-        "runtime": {
-          "wbpublic.wr.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "grt.db.fe/1.0.1.0": {
-        "runtime": {
-          "grt.db.fe.dll": {
-            "assemblyVersion": "1.0.1.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "WbPlugins/1.0.1.0": {
-        "runtime": {
-          "WbPlugins.dll": {
-            "assemblyVersion": "1.0.1.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "base.windows/1.0.0.0": {
-        "runtime": {
-          "base.windows.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Aga.Controls/1.6.0.0": {
-        "runtime": {
-          "Aga.Controls.dll": {
-            "assemblyVersion": "1.6.0.0",
-            "fileVersion": "1.6.0.0"
-          }
-        }
-      },
-      "MySQLCsUtilities/1.0.0.0": {
-        "runtime": {
-          "MySQLCsUtilities.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "sqlide.fe/1.0.0.0": {
-        "runtime": {
-          "sqlide.fe.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "HtmlRenderer/1.4.14.0": {
-        "runtime": {
-          "HtmlRenderer.dll": {
-            "assemblyVersion": "1.4.14.0",
-            "fileVersion": "1.4.14.0"
-          }
-        }
       }
     }
   },
@@ -565,71 +460,6 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
-    },
-    "MySQLWorkbench/8.0.30.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "wbprivate.wr/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "mforms.wr/1.0.0.1": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "WBControls/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "base.wr/1.0.8221.20258": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "wbpublic.wr/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "grt.db.fe/1.0.1.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "WbPlugins/1.0.1.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "base.windows/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Aga.Controls/1.6.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "MySQLCsUtilities/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "sqlide.fe/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "HtmlRenderer/1.4.14.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

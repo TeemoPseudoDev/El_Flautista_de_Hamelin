@@ -16,7 +16,7 @@ namespace El_Flautista_de_Hamelin.Config
             int port = 3306;
             string database = "comidarapida";
             string username = "root";
-            string password = "c0c@c0l@";
+            string password = "esteesmiWORK";
 
             // Cadena de conexión
             this.connectionString = $"Server={server}; Port={port}; Database={database}; Uid={username}; Pwd={password}";

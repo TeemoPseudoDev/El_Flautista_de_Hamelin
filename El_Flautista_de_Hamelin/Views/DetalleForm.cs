@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace El_Flautista_de_Hamelin.Views
 {
-    public partial class detalle_pedido : Form
+    public partial class DetalleForm : Form
     {
 
         private DatabaseConfig database;
 
-        public detalle_pedido()
+        public DetalleForm()
         {
             database = new DatabaseConfig();
             InitializeComponent();

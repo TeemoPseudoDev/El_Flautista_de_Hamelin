@@ -32,7 +32,6 @@ F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_H
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.genruntimeconfig.cache
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\ref\El_Flautista_de_Hamelin.dll
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Properties.Resources.resources
-F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.Form1.resources
 C:\Users\E in\Desktop\Program\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\El_Flautista_de_Hamelin.exe
 C:\Users\E in\Desktop\Program\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\El_Flautista_de_Hamelin.deps.json
 C:\Users\E in\Desktop\Program\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\El_Flautista_de_Hamelin.runtimeconfig.json
@@ -84,7 +83,6 @@ F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_H
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\runtimes\win-x64\native\krb5_64.dll
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\runtimes\win-x64\native\krbcc64.dll
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
-F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.Select.resources
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.csproj.CopyComplete
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.LoginForm.resources
 C:\Users\marin\OneDrive\Escritorio\Cosas\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\El_Flautista_de_Hamelin.exe
@@ -187,3 +185,4 @@ C:\Users\E in\Desktop\Program\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\ob
 C:\Users\E in\Desktop\Program\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.detalle_pedido.resources
 C:\Users\E in\Desktop\Program\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.LoginForm.resources
 C:\Users\E in\Desktop\Program\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.TarjetaForm.resources
+F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.DetalleForm.resources

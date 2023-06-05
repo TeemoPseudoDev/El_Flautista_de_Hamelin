@@ -1,6 +1,6 @@
 ﻿namespace El_Flautista_de_Hamelin.Views
 {
-    partial class detalle_pedido
+    partial class DetalleForm
     {
         /// <summary>
         /// Required designer variable.
