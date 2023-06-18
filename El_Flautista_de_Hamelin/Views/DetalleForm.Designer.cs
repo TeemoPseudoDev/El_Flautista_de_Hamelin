@@ -182,15 +182,15 @@
             label6.TabIndex = 12;
             label6.Text = "label6";
             // 
-            // detalle_pedido
+            // DetalleForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1280, 550);
+            ClientSize = new Size(1271, 550);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "detalle_pedido";
+            Name = "DetalleForm";
             Text = "detalle_pedido";
             Load += detalle_pedido_Load;
             groupBox2.ResumeLayout(false);
