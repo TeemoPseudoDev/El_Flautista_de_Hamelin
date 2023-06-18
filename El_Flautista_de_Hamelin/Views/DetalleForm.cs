@@ -28,7 +28,7 @@ namespace El_Flautista_de_Hamelin.Views
             string query = "select * from detalle;";
             var detalle_compra = database.Usar(query);
 
-            List <Detalle> detalles = new List<Detalle> ();
+            List<Detalle> detalles = new List<Detalle>();
 
             double total = 0;
 
@@ -42,12 +42,12 @@ namespace El_Flautista_de_Hamelin.Views
                     )
                 );
 
-                total =+ Convert.ToDouble(detalle_compra["sub_total"]);
+                total = +Convert.ToDouble(detalle_compra["sub_total"]);
             }
 
-            Cliente pepe = new Cliente ("nombre","apellido,",DateTime.Now, "asdasd@asdasd", "3156", "asdasd", 26, 27,DateTime.Now,5);
+            Cliente pepe = new Cliente("nombre", "apellido,", DateTime.Now, "asdasd@asdasd", "3156", "asdasd", 26, 27, DateTime.Now, 5);
 
-            Pedido pedido1 = new Pedido (DateTime.Now, DateTime.Now, DateTime.Now, pepe, detalles, 5,total);
+            Pedido pedido1 = new Pedido(DateTime.Now, DateTime.Now, DateTime.Now, pepe, detalles, 5, total);
 
             label6.Text = pedido1.total.ToString();
         }

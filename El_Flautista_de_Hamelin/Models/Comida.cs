@@ -49,6 +49,7 @@ namespace El_Flautista_de_Hamelin.Models
             string query = "SELECT * FROM comida;"; // Query SQL
             var respuesta = Database.Usar(query); // Respuesta de la base de datos
 
+
             while (respuesta.Read()) // Abrimos la respuesta, si son muchos registros se hace en un while
             {
                 listaComidas.Add( // Por cada respuesta agregamos una nueva comida a la lista
