@@ -1,5 +1,6 @@
 using El_Flautista_de_Hamelin.Views;
 using System.Security.Cryptography.X509Certificates;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace El_Flautista_de_Hamelin
 {
@@ -12,18 +13,24 @@ namespace El_Flautista_de_Hamelin
             ApplicationConfiguration.Initialize();
 
 
-            /*detalle_pedido detalle = new detalle_pedido();
+            ComidaForm homeForm = new ComidaForm();
+            Application.Run(homeForm);
+
+            /*DetalleForm detalle = new DetalleForm();
             Application.Run(detalle);*/
 
 
-            LoginForm loginForm = new LoginForm();
-            if (loginForm.ShowDialog() == DialogResult.OK)
-            {
+            /*Menu elmenu = new Menu();
+            Application.Run(elmenu);*/
+
+            /*LoginForm loginForm = new LoginForm();
+             if (loginForm.ShowDialog() == DialogResult.OK)
+             {
                 int userId = loginForm.user_id;
 
-               ComidaForm homeForm = new ComidaForm();
-               Application.Run(homeForm);
-            }
+                Menu elmenu = new Menu();
+                Application.Run(elmenu);
+             }*/
         }
     }
 

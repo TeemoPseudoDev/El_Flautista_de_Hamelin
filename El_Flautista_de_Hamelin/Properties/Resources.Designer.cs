@@ -163,19 +163,9 @@ namespace El_Flautista_de_Hamelin.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap home2 {
+        internal static System.Drawing.Bitmap home {
             get {
-                object obj = ResourceManager.GetObject("home2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap home21 {
-            get {
-                object obj = ResourceManager.GetObject("home21", resourceCulture);
+                object obj = ResourceManager.GetObject("home", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
