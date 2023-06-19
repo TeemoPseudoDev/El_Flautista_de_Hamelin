@@ -29,6 +29,7 @@ namespace El_Flautista_de_Hamelin.Views
                 Tarjetita.Location = location;
                 Tarjetita.setNombre(comid.nombre);
                 Tarjetita.setPrecio(comid.precio.ToString("0.00"));
+                Tarjetita.setFoto(comid.foto);
                 Tarjetita.Show();
                 contadorH++;
                 if (contadorH == 4)

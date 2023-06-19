@@ -36,6 +36,50 @@ F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_H
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.pdb
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.genruntimeconfig.cache
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\ref\El_Flautista_de_Hamelin.dll
+<<<<<<< HEAD
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.Select.resources
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.TarjetaCredito.resources
 F:\Cosas Brian\Cosas mias\programacion\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Menu.resources
+=======
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\El_Flautista_de_Hamelin.exe
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\El_Flautista_de_Hamelin.deps.json
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\El_Flautista_de_Hamelin.runtimeconfig.json
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\El_Flautista_de_Hamelin.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\El_Flautista_de_Hamelin.pdb
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\System.IO.Pipelines.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.csproj.AssemblyReference.cache
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Properties.Resources.resources
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.ComidaForm.resources
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.CuentaForm.resources
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.DetalleForm.resources
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.LoginForm.resources
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Menú1.resources
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.Select.resources
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.TarjetaCredito.resources
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.Views.TarjetaForm.resources
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.csproj.GenerateResource.cache
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.AssemblyInfoInputs.cache
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.AssemblyInfo.cs
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.csproj.CoreCompileInputs.cache
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.csproj.CopyComplete
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\refint\El_Flautista_de_Hamelin.dll
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.pdb
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\El_Flautista_de_Hamelin.genruntimeconfig.cache
+C:\Users\marin\OneDrive\Escritorio\ProyectoNuevo\El_Flautista_de_Hamelin\El_Flautista_de_Hamelin\obj\Debug\net6.0-windows\ref\El_Flautista_de_Hamelin.dll
+>>>>>>> c18e4c698b624b396ff1142a9fc851a8e019d7c5

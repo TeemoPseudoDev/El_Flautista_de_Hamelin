@@ -36,9 +36,11 @@
             // 
             // foto
             // 
+            this.foto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.foto.Location = new System.Drawing.Point(39, 27);
             this.foto.Name = "foto";
             this.foto.Size = new System.Drawing.Size(169, 112);
+            this.foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.foto.TabIndex = 0;
             this.foto.TabStop = false;
             // 
