@@ -5,6 +5,12 @@ namespace El_Flautista_de_Hamelin.Models
     public  class Cliente : Usuario
     {
         private DatabaseConfig Database;
+
+        public Cliente(int id_cuenta):base(id_cuenta)
+        {
+            Database = new DatabaseConfig();
+        }
+
         public Cliente(int id, string nombre, string apellido, DateTime? nacimiento, string? email, string? telefono, string? foto, int id_direccion, int tipo_usuario, DateTime alta, int id_cuenta):base( id,  nombre,  apellido,  nacimiento,  email,  telefono, foto, id_direccion, tipo_usuario, alta, id_cuenta ) 
         {
             Database = new DatabaseConfig();
@@ -15,7 +21,25 @@ namespace El_Flautista_de_Hamelin.Models
             Database = new DatabaseConfig();
         }
 
+        public void getClient()
+        {
+            string query = $"SELECT * FROM usuario where id_cuenta = {this.id_cuenta}"; // Query SQL
+            var respuesta = Database.Usar(query); // Respuesta de la base de datos
 
+
+
+            if (respuesta.Read()) // Abrimos la respuesta, si son muchos registros se hace en un while
+            {
+                this.setNombre((string)respuesta["nombre"]);
+                this.setApellido(respuesta["apellido"].ToString());
+
+            } else
+            {
+                this.setNombre("no se encontro");
+            }
+
+            respuesta.Close(); // Cerramos la respuesta
+        }
 
         public void CrearCliente()
         {

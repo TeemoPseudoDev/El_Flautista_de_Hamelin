@@ -41,7 +41,7 @@ namespace El_Flautista_de_Hamelin.Views
 
                 using (WebClient webClient = new WebClient())
                 {
-                    //string url = "https://www.pequerecetas.com/wp-content/uploads/2013/07/hamburguesas-caseras-receta.jpg";
+                    //string url = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/NCI_Visuals_Food_Hamburger.jpg/640px-NCI_Visuals_Food_Hamburger.jpg";
                     byte[] imageBytes = webClient.DownloadData(value);
                     using (var stream = new MemoryStream(imageBytes))
                     {

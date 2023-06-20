@@ -104,6 +104,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(340, 31);
             Controls.Add(label1);
             Controls.Add(plato_gold);

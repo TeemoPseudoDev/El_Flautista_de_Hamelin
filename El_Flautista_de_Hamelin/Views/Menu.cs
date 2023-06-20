@@ -17,11 +17,15 @@ namespace El_Flautista_de_Hamelin
     public partial class Menu : Form
     {
         private int posY;
-        public Menu()
+        private int cuenta_id;
+
+        public Menu(int cuenta_id)
         {
+            this.cuenta_id = cuenta_id;
             InitializeComponent();
             posY = 5;
         }
+
 
 
         //para que al hacer click sobre la imagen también se pueda mover la ventana del formulario de login
@@ -60,6 +64,12 @@ namespace El_Flautista_de_Hamelin
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            Cliente usuario = new Cliente(this.cuenta_id);
+
+            usuario.getClient();
+
+            user_name_title.Text = $"{usuario.getNombre()} {usuario.getApellido()}";
+
             // Configuración del ícono
             Icon icon = Properties.Resources.Flautista;
             this.Icon = icon;
@@ -135,6 +145,8 @@ namespace El_Flautista_de_Hamelin
 
                 };
 
+
+
                 plato.Show();
             }
 
@@ -198,5 +210,10 @@ namespace El_Flautista_de_Hamelin
             btn.ForeColor = SystemColors.ActiveCaptionText;
         }
 
+        private void button_cancelar_pedido_Click(object sender, EventArgs e)
+        {
+            container_platos.Controls.Clear();
+            posY = 5;
+        }
     }
 }

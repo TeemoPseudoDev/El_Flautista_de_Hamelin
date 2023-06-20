@@ -34,16 +34,16 @@
             // Contenedor
             // 
             Contenedor.AutoScroll = true;
-            Contenedor.BackColor = SystemColors.ControlLightLight;
+            Contenedor.BackColor = SystemColors.Control;
             Contenedor.Location = new Point(12, 12);
             Contenedor.Name = "Contenedor";
-            Contenedor.Size = new Size(703, 565);
+            Contenedor.Size = new Size(696, 571);
             Contenedor.TabIndex = 0;
             // 
             // ComidaForm
             // 
-            BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(745, 589);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(720, 595);
             Controls.Add(Contenedor);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ComidaForm";

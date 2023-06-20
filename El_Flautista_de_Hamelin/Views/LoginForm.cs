@@ -11,7 +11,7 @@ namespace El_Flautista_de_Hamelin
     public partial class LoginForm : Form
     {
         private LoginController controller;
-        public int user_id;
+        public int cuenta_id;
 
         public LoginForm()
         {
@@ -20,7 +20,7 @@ namespace El_Flautista_de_Hamelin
             RedondearPanel(user_container, 20);
             RedondearPanel(psw_container, 20);
 
-            user_id = 0;
+            cuenta_id = 0;
         }
 
 
@@ -133,7 +133,7 @@ namespace El_Flautista_de_Hamelin
 
             if (id != 0)
             {
-                this.user_id = id;
+                this.cuenta_id = id;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

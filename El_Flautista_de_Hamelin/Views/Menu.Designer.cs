@@ -32,6 +32,7 @@
             panel_btn_inicio = new Panel();
             text_inicio = new Label();
             pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
             panel_btn_productos = new Panel();
             text_productos = new Label();
             pictureBox3 = new PictureBox();
@@ -46,17 +47,16 @@
             menu_container = new Panel();
             user_name_title = new Label();
             company_name_title = new Label();
-            pictureBox1 = new PictureBox();
             container_pedido = new Panel();
-            label2 = new Label();
             button2 = new Button();
-            button1 = new Button();
+            button_cancelar_pedido = new Button();
             container_platos = new Panel();
             label1 = new Label();
             container_main = new Panel();
             panel1.SuspendLayout();
             panel_btn_inicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel_btn_productos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel_btn_entregar.SuspendLayout();
@@ -65,7 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)login_minimize).BeginInit();
             ((System.ComponentModel.ISupportInitialize)login_close).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             container_pedido.SuspendLayout();
             container_main.SuspendLayout();
             SuspendLayout();
@@ -74,6 +73,7 @@
             // 
             panel1.BackColor = Color.FromArgb(41, 39, 40);
             panel1.Controls.Add(panel_btn_inicio);
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(panel_btn_productos);
             panel1.Controls.Add(panel_btn_entregar);
             panel1.Controls.Add(panel_btn_llevar);
@@ -88,7 +88,7 @@
             panel_btn_inicio.Controls.Add(text_inicio);
             panel_btn_inicio.Controls.Add(pictureBox2);
             panel_btn_inicio.Cursor = Cursors.Hand;
-            panel_btn_inicio.Location = new Point(3, 142);
+            panel_btn_inicio.Location = new Point(3, 164);
             panel_btn_inicio.Name = "panel_btn_inicio";
             panel_btn_inicio.Size = new Size(157, 57);
             panel_btn_inicio.TabIndex = 38;
@@ -117,6 +117,16 @@
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.el_flautista_company;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Location = new Point(-1, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(170, 110);
+            pictureBox1.TabIndex = 38;
+            pictureBox1.TabStop = false;
+            // 
             // panel_btn_productos
             // 
             panel_btn_productos.AutoSize = true;
@@ -124,7 +134,7 @@
             panel_btn_productos.Controls.Add(pictureBox3);
             panel_btn_productos.Cursor = Cursors.Hand;
             panel_btn_productos.ForeColor = SystemColors.ButtonHighlight;
-            panel_btn_productos.Location = new Point(3, 220);
+            panel_btn_productos.Location = new Point(3, 242);
             panel_btn_productos.Name = "panel_btn_productos";
             panel_btn_productos.Size = new Size(157, 57);
             panel_btn_productos.TabIndex = 37;
@@ -158,7 +168,7 @@
             panel_btn_entregar.Controls.Add(text_entregar);
             panel_btn_entregar.Controls.Add(pictureBox5);
             panel_btn_entregar.Cursor = Cursors.Hand;
-            panel_btn_entregar.Location = new Point(3, 298);
+            panel_btn_entregar.Location = new Point(3, 320);
             panel_btn_entregar.Name = "panel_btn_entregar";
             panel_btn_entregar.Size = new Size(158, 57);
             panel_btn_entregar.TabIndex = 36;
@@ -193,7 +203,7 @@
             panel_btn_llevar.Controls.Add(text_llevar);
             panel_btn_llevar.Controls.Add(pictureBox4);
             panel_btn_llevar.Cursor = Cursors.Hand;
-            panel_btn_llevar.Location = new Point(3, 376);
+            panel_btn_llevar.Location = new Point(3, 398);
             panel_btn_llevar.Name = "panel_btn_llevar";
             panel_btn_llevar.Size = new Size(157, 57);
             panel_btn_llevar.TabIndex = 35;
@@ -250,7 +260,7 @@
             // 
             // menu_container
             // 
-            menu_container.BackColor = Color.FromArgb(255, 128, 128);
+            menu_container.BackColor = SystemColors.Control;
             menu_container.Dock = DockStyle.Left;
             menu_container.Location = new Point(0, 0);
             menu_container.Name = "menu_container";
@@ -260,38 +270,27 @@
             // user_name_title
             // 
             user_name_title.AutoSize = true;
-            user_name_title.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            user_name_title.Location = new Point(784, 98);
+            user_name_title.Font = new Font("Abyssinica SIL", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            user_name_title.Location = new Point(192, 84);
             user_name_title.Name = "user_name_title";
-            user_name_title.Size = new Size(172, 21);
+            user_name_title.Size = new Size(180, 26);
             user_name_title.TabIndex = 36;
-            user_name_title.Text = "NOMBRE DE USUARIO";
+            user_name_title.Text = "Nombre de usuario";
             // 
             // company_name_title
             // 
             company_name_title.AutoSize = true;
             company_name_title.Font = new Font("Bauhaus 93", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
-            company_name_title.Location = new Point(555, 42);
+            company_name_title.Location = new Point(192, 9);
             company_name_title.Name = "company_name_title";
             company_name_title.Size = new Size(412, 42);
             company_name_title.TabIndex = 37;
             company_name_title.Text = "El flautista de Hamelin";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.el_flautista_company;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(974, 9);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(170, 110);
-            pictureBox1.TabIndex = 38;
-            pictureBox1.TabStop = false;
-            // 
             // container_pedido
             // 
-            container_pedido.Controls.Add(label2);
             container_pedido.Controls.Add(button2);
-            container_pedido.Controls.Add(button1);
+            container_pedido.Controls.Add(button_cancelar_pedido);
             container_pedido.Controls.Add(container_platos);
             container_pedido.Controls.Add(label1);
             container_pedido.Dock = DockStyle.Right;
@@ -300,17 +299,9 @@
             container_pedido.Size = new Size(383, 595);
             container_pedido.TabIndex = 39;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(17, 389);
-            label2.Name = "label2";
-            label2.Size = new Size(107, 15);
-            label2.TabIndex = 4;
-            label2.Text = "Total : 00000000000";
-            // 
             // button2
             // 
+            button2.Cursor = Cursors.Hand;
             button2.Location = new Point(222, 456);
             button2.Name = "button2";
             button2.Size = new Size(107, 40);
@@ -318,28 +309,30 @@
             button2.Text = "Pagar";
             button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // button_cancelar_pedido
             // 
-            button1.Location = new Point(77, 456);
-            button1.Name = "button1";
-            button1.Size = new Size(107, 40);
-            button1.TabIndex = 2;
-            button1.Text = "Cancelar pedido";
-            button1.UseVisualStyleBackColor = true;
+            button_cancelar_pedido.Cursor = Cursors.Hand;
+            button_cancelar_pedido.Location = new Point(77, 456);
+            button_cancelar_pedido.Name = "button_cancelar_pedido";
+            button_cancelar_pedido.Size = new Size(107, 40);
+            button_cancelar_pedido.TabIndex = 2;
+            button_cancelar_pedido.Text = "Cancelar pedido";
+            button_cancelar_pedido.UseVisualStyleBackColor = true;
+            button_cancelar_pedido.Click += button_cancelar_pedido_Click;
             // 
             // container_platos
             // 
             container_platos.AutoScroll = true;
             container_platos.Location = new Point(3, 95);
             container_platos.Name = "container_platos";
-            container_platos.Size = new Size(377, 244);
+            container_platos.Size = new Size(377, 318);
             container_platos.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Bauhaus 93", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(17, 28);
+            label1.Location = new Point(3, 46);
             label1.Name = "label1";
             label1.Size = new Size(253, 28);
             label1.TabIndex = 0;
@@ -358,10 +351,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 224, 192);
+            BackColor = SystemColors.Control;
             ClientSize = new Size(1280, 720);
             Controls.Add(container_main);
-            Controls.Add(pictureBox1);
             Controls.Add(company_name_title);
             Controls.Add(user_name_title);
             Controls.Add(login_close);
@@ -377,6 +369,7 @@
             panel_btn_inicio.ResumeLayout(false);
             panel_btn_inicio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel_btn_productos.ResumeLayout(false);
             panel_btn_productos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -388,7 +381,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)login_minimize).EndInit();
             ((System.ComponentModel.ISupportInitialize)login_close).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             container_pedido.ResumeLayout(false);
             container_pedido.PerformLayout();
             container_main.ResumeLayout(false);
@@ -421,8 +413,7 @@
         private Label label1;
         private Panel container_main;
         private Panel container_platos;
-        private Label label2;
         private Button button2;
-        private Button button1;
+        private Button button_cancelar_pedido;
     }
 }

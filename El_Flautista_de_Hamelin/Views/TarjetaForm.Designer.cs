@@ -31,19 +31,22 @@
             foto = new PictureBox();
             nombre = new Label();
             precio = new Label();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)foto).BeginInit();
             SuspendLayout();
             // 
             // foto
             // 
             foto.BackgroundImageLayout = ImageLayout.Stretch;
-            foto.ImageLocation = "https://drive.google.com/file/d/1Quf6wXt7bfSULynYDUgegRWVODlO4UGL/view?usp=drive_link";
+            foto.Enabled = false;
+            foto.ErrorImage = null;
+            foto.ImageLocation = "";
             foto.InitialImage = null;
-            foto.Location = new Point(27, 16);
+            foto.Location = new Point(11, 11);
             foto.Margin = new Padding(2);
             foto.Name = "foto";
-            foto.Size = new Size(118, 67);
-            foto.SizeMode = PictureBoxSizeMode.StretchImage;
+            foto.Size = new Size(231, 157);
+            foto.SizeMode = PictureBoxSizeMode.Zoom;
             foto.TabIndex = 0;
             foto.TabStop = false;
             // 
@@ -51,10 +54,11 @@
             // 
             nombre.AutoSize = true;
             nombre.Enabled = false;
-            nombre.Location = new Point(27, 93);
+            nombre.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            nombre.Location = new Point(27, 188);
             nombre.Margin = new Padding(2, 0, 2, 0);
             nombre.Name = "nombre";
-            nombre.Size = new Size(42, 15);
+            nombre.Size = new Size(60, 21);
             nombre.TabIndex = 1;
             nombre.Text = "aquiiiii";
             // 
@@ -62,19 +66,31 @@
             // 
             precio.AutoSize = true;
             precio.Enabled = false;
-            precio.Location = new Point(27, 118);
+            precio.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            precio.Location = new Point(50, 220);
             precio.Margin = new Padding(2, 0, 2, 0);
             precio.Name = "precio";
-            precio.Size = new Size(38, 15);
+            precio.Size = new Size(55, 21);
             precio.TabIndex = 2;
             precio.Text = "label2";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(27, 220);
+            label1.Name = "label1";
+            label1.Size = new Size(18, 21);
+            label1.TabIndex = 3;
+            label1.Text = "$";
             // 
             // TarjetaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(171, 158);
+            ClientSize = new Size(253, 259);
+            Controls.Add(label1);
             Controls.Add(precio);
             Controls.Add(nombre);
             Controls.Add(foto);
@@ -92,5 +108,6 @@
         private PictureBox foto;
         private Label nombre;
         private Label precio;
+        private Label label1;
     }
 }
