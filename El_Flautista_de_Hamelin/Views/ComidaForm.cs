@@ -10,6 +10,24 @@ namespace El_Flautista_de_Hamelin.Views
             InitializeComponent();
             comidaController = new ComidaController();
         }
+    
+
+        public delegate void MiEventoHandler(object datos_tarjeta); // Delegado personalizado para el evento
+        public event MiEventoHandler MiEvento;
+
+
+        private void HandleClickTarjetita(object sender, EventArgs e)
+        {
+            TarjetaForm Tarjetita = (TarjetaForm)sender;
+
+            var datos_tarjeta = new
+            {
+                Name = Tarjetita.getName(),
+                Precio = Tarjetita.getPrecio(),
+            };
+
+            MiEvento?.Invoke(datos_tarjeta);
+        }
 
         private void Comida_Load(object sender, EventArgs e)
         {
@@ -22,17 +40,24 @@ namespace El_Flautista_de_Hamelin.Views
             foreach (var comid in comidas)
             {
                 TarjetaForm Tarjetita = new TarjetaForm();
-                Tarjetita.Click += (sender, e) => { };
+
                 Tarjetita.TopLevel = false;
-                Tarjetita.Dock = DockStyle.None; Contenedor.Controls.Add(Tarjetita);
+                Tarjetita.Dock = DockStyle.None;
+
+                Contenedor.Controls.Add(Tarjetita);
+
                 Point location = new Point((int)(desplazamientoHorizontal * contadorH), (int)(desplazamientoVertical * contadorV));
                 Tarjetita.Location = location;
                 Tarjetita.setNombre(comid.nombre);
                 Tarjetita.setPrecio(comid.precio.ToString("0.00"));
                 Tarjetita.setFoto(comid.foto);
+
+                Tarjetita.Click += HandleClickTarjetita;
+
                 Tarjetita.Show();
+
                 contadorH++;
-                if (contadorH == 4)
+                if (contadorH == 3)
                 {
                     contadorH = 0;
                     contadorV++;
@@ -40,13 +65,11 @@ namespace El_Flautista_de_Hamelin.Views
             }
 
 
-
-
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+        
 
-        }
     }
+
 }
+

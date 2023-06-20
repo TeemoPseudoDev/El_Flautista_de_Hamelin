@@ -13,7 +13,7 @@
     <Compile Update="Views\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Select.cs">
+    <Compile Update="Views\Plato.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\TarjetaCredito.cs">
@@ -25,5 +25,10 @@
     <Compile Update="Views\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

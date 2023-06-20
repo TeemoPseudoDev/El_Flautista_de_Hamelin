@@ -28,56 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.foto = new System.Windows.Forms.PictureBox();
-            this.nombre = new System.Windows.Forms.Label();
-            this.precio = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.foto)).BeginInit();
-            this.SuspendLayout();
+            foto = new PictureBox();
+            nombre = new Label();
+            precio = new Label();
+            ((System.ComponentModel.ISupportInitialize)foto).BeginInit();
+            SuspendLayout();
             // 
             // foto
             // 
-            this.foto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.foto.Location = new System.Drawing.Point(39, 27);
-            this.foto.Name = "foto";
-            this.foto.Size = new System.Drawing.Size(169, 112);
-            this.foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.foto.TabIndex = 0;
-            this.foto.TabStop = false;
+            foto.BackgroundImageLayout = ImageLayout.Stretch;
+            foto.ImageLocation = "https://drive.google.com/file/d/1Quf6wXt7bfSULynYDUgegRWVODlO4UGL/view?usp=drive_link";
+            foto.InitialImage = null;
+            foto.Location = new Point(27, 16);
+            foto.Margin = new Padding(2);
+            foto.Name = "foto";
+            foto.Size = new Size(118, 67);
+            foto.SizeMode = PictureBoxSizeMode.StretchImage;
+            foto.TabIndex = 0;
+            foto.TabStop = false;
             // 
             // nombre
             // 
-            this.nombre.AutoSize = true;
-            this.nombre.Location = new System.Drawing.Point(39, 155);
-            this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(62, 25);
-            this.nombre.TabIndex = 1;
-            this.nombre.Text = "aquiiiii";
+            nombre.AutoSize = true;
+            nombre.Enabled = false;
+            nombre.Location = new Point(27, 93);
+            nombre.Margin = new Padding(2, 0, 2, 0);
+            nombre.Name = "nombre";
+            nombre.Size = new Size(42, 15);
+            nombre.TabIndex = 1;
+            nombre.Text = "aquiiiii";
             // 
             // precio
             // 
-            this.precio.AutoSize = true;
-            this.precio.Location = new System.Drawing.Point(39, 197);
-            this.precio.Name = "precio";
-            this.precio.Size = new System.Drawing.Size(59, 25);
-            this.precio.TabIndex = 2;
-            this.precio.Text = "label2";
+            precio.AutoSize = true;
+            precio.Enabled = false;
+            precio.Location = new Point(27, 118);
+            precio.Margin = new Padding(2, 0, 2, 0);
+            precio.Name = "precio";
+            precio.Size = new Size(38, 15);
+            precio.TabIndex = 2;
+            precio.Text = "label2";
             // 
             // TarjetaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(244, 264);
-            this.Controls.Add(this.precio);
-            this.Controls.Add(this.nombre);
-            this.Controls.Add(this.foto);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "TarjetaForm";
-            this.Text = "Tarjeta";
-            ((System.ComponentModel.ISupportInitialize)(this.foto)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(171, 158);
+            Controls.Add(precio);
+            Controls.Add(nombre);
+            Controls.Add(foto);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2);
+            Name = "TarjetaForm";
+            Text = "Tarjeta";
+            ((System.ComponentModel.ISupportInitialize)foto).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

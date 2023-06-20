@@ -1,4 +1,6 @@
-﻿using System;
+﻿using El_Flautista_de_Hamelin.Models;
+using El_Flautista_de_Hamelin.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,9 +16,11 @@ namespace El_Flautista_de_Hamelin
 {
     public partial class Menu : Form
     {
+        private int posY;
         public Menu()
         {
             InitializeComponent();
+            posY = 5;
         }
 
 
@@ -61,6 +65,78 @@ namespace El_Flautista_de_Hamelin
             this.Icon = icon;
             this.ShowIcon = true;
             this.ShowInTaskbar = true;
+
+            ComidaForm comidas = new ComidaForm();
+
+            comidas.TopLevel = false;
+
+            menu_container.Controls.Add(comidas);
+
+            comidas.MiEvento += FormHijo_MiEvento;
+
+            comidas.Show();
+
+
+        }
+
+        private void FormHijo_MiEvento(object datos_tarjeta)
+        {
+            dynamic tarjeta = datos_tarjeta;
+            bool agregado = false;
+            foreach (Plato platoControl in container_platos.Controls)
+            {
+                if (platoControl.getNombre() == tarjeta.Name)
+                {
+                    agregado = true;
+
+                    string precioString = platoControl.getPrecio();
+
+                    float precio = float.Parse(precioString);
+                    float tarjetaPrecio = float.Parse(tarjeta.Precio);
+
+                    float suma = precio + tarjetaPrecio;
+
+                    platoControl.setPrecio($"{Math.Round(suma, 2)}");
+
+
+                    int cantidad = int.Parse(platoControl.getQuantity());
+                    cantidad += 1;
+                    platoControl.setQuantity(cantidad.ToString());
+
+                    break;
+                }
+            }
+
+            if (!agregado)
+            {
+                Plato plato = new Plato();
+
+                plato.TopLevel = false;
+                plato.Dock = DockStyle.None;
+                plato.Location = new Point(0, posY - container_platos.VerticalScroll.Value);
+
+                plato.setNombre(tarjeta.Name);
+                plato.setPrecio(tarjeta.Precio);
+
+                container_platos.Controls.Add(plato);
+                posY += plato.Height + 10;
+
+                plato.MiEvento += (sender) =>
+                {
+                    plato.Dispose();
+                    plato.Close();
+                    container_platos.Refresh();
+                    posY = 5;
+                    foreach (Plato platoControl in container_platos.Controls)
+                    {
+                        platoControl.Location = new Point(0, posY - container_platos.VerticalScroll.Value);
+                        posY += plato.Height + 10;
+                    }
+
+                };
+
+                plato.Show();
+            }
 
         }
 

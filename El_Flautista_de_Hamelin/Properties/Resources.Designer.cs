@@ -143,6 +143,16 @@ namespace El_Flautista_de_Hamelin.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap el_flautista_company {
+            get {
+                object obj = ResourceManager.GetObject("el_flautista_company", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap entrar {
             get {
                 object obj = ResourceManager.GetObject("entrar", resourceCulture);

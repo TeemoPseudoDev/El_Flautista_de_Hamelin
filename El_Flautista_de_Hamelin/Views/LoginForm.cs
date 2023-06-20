@@ -107,7 +107,8 @@ namespace El_Flautista_de_Hamelin
             }
         }
 
-        private void Loguearse() {
+        private void Loguearse()
+        {
             general_message_error.Visible = false;
 
             string usuario = login_input_user.Text;

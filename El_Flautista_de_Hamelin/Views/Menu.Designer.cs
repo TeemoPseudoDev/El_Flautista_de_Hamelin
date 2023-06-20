@@ -43,6 +43,17 @@
             pictureBox4 = new PictureBox();
             login_minimize = new PictureBox();
             login_close = new PictureBox();
+            menu_container = new Panel();
+            user_name_title = new Label();
+            company_name_title = new Label();
+            pictureBox1 = new PictureBox();
+            container_pedido = new Panel();
+            label2 = new Label();
+            button2 = new Button();
+            button1 = new Button();
+            container_platos = new Panel();
+            label1 = new Label();
+            container_main = new Panel();
             panel1.SuspendLayout();
             panel_btn_inicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -54,6 +65,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)login_minimize).BeginInit();
             ((System.ComponentModel.ISupportInitialize)login_close).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            container_pedido.SuspendLayout();
+            container_main.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -63,10 +77,9 @@
             panel1.Controls.Add(panel_btn_productos);
             panel1.Controls.Add(panel_btn_entregar);
             panel1.Controls.Add(panel_btn_llevar);
-            panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(168, 720);
+            panel1.Size = new Size(169, 720);
             panel1.TabIndex = 0;
             // 
             // panel_btn_inicio
@@ -75,7 +88,7 @@
             panel_btn_inicio.Controls.Add(text_inicio);
             panel_btn_inicio.Controls.Add(pictureBox2);
             panel_btn_inicio.Cursor = Cursors.Hand;
-            panel_btn_inicio.Location = new Point(8, 97);
+            panel_btn_inicio.Location = new Point(3, 142);
             panel_btn_inicio.Name = "panel_btn_inicio";
             panel_btn_inicio.Size = new Size(157, 57);
             panel_btn_inicio.TabIndex = 38;
@@ -84,11 +97,11 @@
             // text_inicio
             // 
             text_inicio.AutoSize = true;
-            text_inicio.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            text_inicio.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             text_inicio.ForeColor = SystemColors.ButtonHighlight;
             text_inicio.Location = new Point(64, 19);
             text_inicio.Name = "text_inicio";
-            text_inicio.Size = new Size(49, 20);
+            text_inicio.Size = new Size(49, 21);
             text_inicio.TabIndex = 41;
             text_inicio.Text = "Inicio";
             text_inicio.Click += panel_btn_Click;
@@ -107,12 +120,11 @@
             // panel_btn_productos
             // 
             panel_btn_productos.AutoSize = true;
-            panel_btn_productos.BackColor = Color.FromArgb(41, 39, 40);
             panel_btn_productos.Controls.Add(text_productos);
             panel_btn_productos.Controls.Add(pictureBox3);
             panel_btn_productos.Cursor = Cursors.Hand;
             panel_btn_productos.ForeColor = SystemColors.ButtonHighlight;
-            panel_btn_productos.Location = new Point(8, 175);
+            panel_btn_productos.Location = new Point(3, 220);
             panel_btn_productos.Name = "panel_btn_productos";
             panel_btn_productos.Size = new Size(157, 57);
             panel_btn_productos.TabIndex = 37;
@@ -121,10 +133,10 @@
             // text_productos
             // 
             text_productos.AutoSize = true;
-            text_productos.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            text_productos.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             text_productos.Location = new Point(64, 19);
             text_productos.Name = "text_productos";
-            text_productos.Size = new Size(83, 20);
+            text_productos.Size = new Size(76, 21);
             text_productos.TabIndex = 40;
             text_productos.Text = "Productos";
             text_productos.Click += panel_btn_Click;
@@ -146,7 +158,7 @@
             panel_btn_entregar.Controls.Add(text_entregar);
             panel_btn_entregar.Controls.Add(pictureBox5);
             panel_btn_entregar.Cursor = Cursors.Hand;
-            panel_btn_entregar.Location = new Point(8, 253);
+            panel_btn_entregar.Location = new Point(3, 298);
             panel_btn_entregar.Name = "panel_btn_entregar";
             panel_btn_entregar.Size = new Size(158, 57);
             panel_btn_entregar.TabIndex = 36;
@@ -155,11 +167,11 @@
             // text_entregar
             // 
             text_entregar.AutoSize = true;
-            text_entregar.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            text_entregar.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             text_entregar.ForeColor = SystemColors.ButtonHighlight;
             text_entregar.Location = new Point(64, 8);
             text_entregar.Name = "text_entregar";
-            text_entregar.Size = new Size(71, 40);
+            text_entregar.Size = new Size(68, 42);
             text_entregar.TabIndex = 39;
             text_entregar.Text = "Entregar\r\nen mesa";
             text_entregar.Click += panel_btn_Click;
@@ -181,7 +193,7 @@
             panel_btn_llevar.Controls.Add(text_llevar);
             panel_btn_llevar.Controls.Add(pictureBox4);
             panel_btn_llevar.Cursor = Cursors.Hand;
-            panel_btn_llevar.Location = new Point(8, 331);
+            panel_btn_llevar.Location = new Point(3, 376);
             panel_btn_llevar.Name = "panel_btn_llevar";
             panel_btn_llevar.Size = new Size(157, 57);
             panel_btn_llevar.TabIndex = 35;
@@ -190,11 +202,11 @@
             // text_llevar
             // 
             text_llevar.AutoSize = true;
-            text_llevar.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            text_llevar.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             text_llevar.ForeColor = SystemColors.ButtonHighlight;
             text_llevar.Location = new Point(64, 19);
             text_llevar.Name = "text_llevar";
-            text_llevar.Size = new Size(88, 20);
+            text_llevar.Size = new Size(85, 21);
             text_llevar.TabIndex = 35;
             text_llevar.Text = "Para llevar";
             text_llevar.Click += panel_btn_Click;
@@ -236,11 +248,122 @@
             login_close.TabStop = false;
             login_close.Click += form_close;
             // 
+            // menu_container
+            // 
+            menu_container.BackColor = Color.FromArgb(255, 128, 128);
+            menu_container.Dock = DockStyle.Left;
+            menu_container.Location = new Point(0, 0);
+            menu_container.Name = "menu_container";
+            menu_container.Size = new Size(720, 595);
+            menu_container.TabIndex = 35;
+            // 
+            // user_name_title
+            // 
+            user_name_title.AutoSize = true;
+            user_name_title.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            user_name_title.Location = new Point(784, 98);
+            user_name_title.Name = "user_name_title";
+            user_name_title.Size = new Size(172, 21);
+            user_name_title.TabIndex = 36;
+            user_name_title.Text = "NOMBRE DE USUARIO";
+            // 
+            // company_name_title
+            // 
+            company_name_title.AutoSize = true;
+            company_name_title.Font = new Font("Bauhaus 93", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
+            company_name_title.Location = new Point(555, 42);
+            company_name_title.Name = "company_name_title";
+            company_name_title.Size = new Size(412, 42);
+            company_name_title.TabIndex = 37;
+            company_name_title.Text = "El flautista de Hamelin";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.el_flautista_company;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Location = new Point(974, 9);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(170, 110);
+            pictureBox1.TabIndex = 38;
+            pictureBox1.TabStop = false;
+            // 
+            // container_pedido
+            // 
+            container_pedido.Controls.Add(label2);
+            container_pedido.Controls.Add(button2);
+            container_pedido.Controls.Add(button1);
+            container_pedido.Controls.Add(container_platos);
+            container_pedido.Controls.Add(label1);
+            container_pedido.Dock = DockStyle.Right;
+            container_pedido.Location = new Point(728, 0);
+            container_pedido.Name = "container_pedido";
+            container_pedido.Size = new Size(383, 595);
+            container_pedido.TabIndex = 39;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(17, 389);
+            label2.Name = "label2";
+            label2.Size = new Size(107, 15);
+            label2.TabIndex = 4;
+            label2.Text = "Total : 00000000000";
+            // 
+            // button2
+            // 
+            button2.Location = new Point(222, 456);
+            button2.Name = "button2";
+            button2.Size = new Size(107, 40);
+            button2.TabIndex = 3;
+            button2.Text = "Pagar";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(77, 456);
+            button1.Name = "button1";
+            button1.Size = new Size(107, 40);
+            button1.TabIndex = 2;
+            button1.Text = "Cancelar pedido";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // container_platos
+            // 
+            container_platos.AutoScroll = true;
+            container_platos.Location = new Point(3, 95);
+            container_platos.Name = "container_platos";
+            container_platos.Size = new Size(377, 244);
+            container_platos.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Bauhaus 93", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(17, 28);
+            label1.Name = "label1";
+            label1.Size = new Size(253, 28);
+            label1.TabIndex = 0;
+            label1.Text = "Platos seleccionados";
+            // 
+            // container_main
+            // 
+            container_main.Controls.Add(menu_container);
+            container_main.Controls.Add(container_pedido);
+            container_main.Location = new Point(169, 125);
+            container_main.Name = "container_main";
+            container_main.Size = new Size(1111, 595);
+            container_main.TabIndex = 40;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 224, 192);
             ClientSize = new Size(1280, 720);
+            Controls.Add(container_main);
+            Controls.Add(pictureBox1);
+            Controls.Add(company_name_title);
+            Controls.Add(user_name_title);
             Controls.Add(login_close);
             Controls.Add(login_minimize);
             Controls.Add(panel1);
@@ -265,7 +388,12 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)login_minimize).EndInit();
             ((System.ComponentModel.ISupportInitialize)login_close).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            container_pedido.ResumeLayout(false);
+            container_pedido.PerformLayout();
+            container_main.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -285,5 +413,16 @@
         private Label text_productos;
         private Label text_entregar;
         private Label text_llevar;
+        private Panel menu_container;
+        private Label user_name_title;
+        private Label company_name_title;
+        private PictureBox pictureBox1;
+        private Panel container_pedido;
+        private Label label1;
+        private Panel container_main;
+        private Panel container_platos;
+        private Label label2;
+        private Button button2;
+        private Button button1;
     }
 }

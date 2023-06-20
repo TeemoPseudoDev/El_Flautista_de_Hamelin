@@ -29,29 +29,21 @@
         private void InitializeComponent()
         {
             Contenedor = new Panel();
-            panel1 = new Panel();
             SuspendLayout();
             // 
             // Contenedor
             // 
             Contenedor.AutoScroll = true;
             Contenedor.BackColor = SystemColors.ControlLightLight;
-            Contenedor.Location = new Point(47, 45);
+            Contenedor.Location = new Point(12, 12);
             Contenedor.Name = "Contenedor";
-            Contenedor.Size = new Size(1039, 596);
+            Contenedor.Size = new Size(703, 565);
             Contenedor.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            panel1.Location = new Point(1143, 45);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(257, 596);
-            panel1.TabIndex = 1;
             // 
             // ComidaForm
             // 
-            ClientSize = new Size(1447, 720);
-            Controls.Add(panel1);
+            BackColor = SystemColors.ControlLightLight;
+            ClientSize = new Size(745, 589);
             Controls.Add(Contenedor);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ComidaForm";
@@ -62,6 +54,5 @@
         #endregion
 
         private Panel Contenedor;
-        private Panel panel1;
     }
 }
