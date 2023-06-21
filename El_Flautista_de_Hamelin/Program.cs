@@ -13,14 +13,6 @@ namespace El_Flautista_de_Hamelin
             ApplicationConfiguration.Initialize();
 
 
-            /*Menu elmenu = new Menu();
-            Application.Run(elmenu);*/
-
-            /*ComidaForm homeForm = new ComidaForm();
-            Application.Run(homeForm);
-            */
-
-
            LoginForm loginForm = new LoginForm();
              if (loginForm.ShowDialog() == DialogResult.OK)
              {
