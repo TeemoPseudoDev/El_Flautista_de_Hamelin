@@ -86,7 +86,6 @@ namespace El_Flautista_de_Hamelin
 
             comidas.Show();
 
-
         }
 
         private void FormHijo_MiEvento(object datos_tarjeta)
@@ -142,14 +141,10 @@ namespace El_Flautista_de_Hamelin
                         platoControl.Location = new Point(0, posY - container_platos.VerticalScroll.Value);
                         posY += plato.Height + 10;
                     }
-
                 };
-
-
 
                 plato.Show();
             }
-
         }
 
         private void form_close(object sender, EventArgs e)
@@ -214,6 +209,45 @@ namespace El_Flautista_de_Hamelin
         {
             container_platos.Controls.Clear();
             posY = 5;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DetalleForm detalle = new DetalleForm();
+
+            detalle.Load += (object sender, EventArgs e) => 
+            {
+                var container = detalle.devolverPanel();
+
+                float acuTotal = 0;
+                var pos = 35;
+
+                foreach (Plato platoControl in container_platos.Controls)
+                {
+                    PlatoNoAbominacion miPlato = new PlatoNoAbominacion();
+                    miPlato.TopLevel = false;
+                    miPlato.setComidaTitle(platoControl.getNombre());
+                    miPlato.setComidaCantidad(platoControl.getQuantity());
+                    miPlato.setComidaPrecio(platoControl.getPrecio());
+
+                    miPlato.Location = new Point(0, pos );
+
+                    container.Controls.Add(miPlato);
+
+                    miPlato.Show();
+                    pos += 35;
+
+                    acuTotal += float.Parse(platoControl.getPrecio());
+                }
+
+
+                var total = Math.Round(acuTotal,2);
+
+                detalle.setTotalPrecio(total.ToString());
+
+
+            };
+            detalle.ShowDialog();
         }
     }
 }

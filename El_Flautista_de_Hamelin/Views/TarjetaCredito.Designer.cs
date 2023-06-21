@@ -210,7 +210,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(354, 254);
+            button6.Location = new Point(302, 254);
             button6.Name = "button6";
             button6.Size = new Size(69, 33);
             button6.TabIndex = 19;
@@ -219,7 +219,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(345, 236);
+            label7.Location = new Point(293, 236);
             label7.Name = "label7";
             label7.Size = new Size(93, 15);
             label7.TabIndex = 20;

@@ -97,11 +97,11 @@
             // text_inicio
             // 
             text_inicio.AutoSize = true;
-            text_inicio.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            text_inicio.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             text_inicio.ForeColor = SystemColors.ButtonHighlight;
             text_inicio.Location = new Point(64, 19);
             text_inicio.Name = "text_inicio";
-            text_inicio.Size = new Size(49, 21);
+            text_inicio.Size = new Size(42, 18);
             text_inicio.TabIndex = 41;
             text_inicio.Text = "Inicio";
             text_inicio.Click += panel_btn_Click;
@@ -143,10 +143,10 @@
             // text_productos
             // 
             text_productos.AutoSize = true;
-            text_productos.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            text_productos.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             text_productos.Location = new Point(64, 19);
             text_productos.Name = "text_productos";
-            text_productos.Size = new Size(76, 21);
+            text_productos.Size = new Size(77, 18);
             text_productos.TabIndex = 40;
             text_productos.Text = "Productos";
             text_productos.Click += panel_btn_Click;
@@ -177,11 +177,11 @@
             // text_entregar
             // 
             text_entregar.AutoSize = true;
-            text_entregar.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            text_entregar.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             text_entregar.ForeColor = SystemColors.ButtonHighlight;
             text_entregar.Location = new Point(64, 8);
             text_entregar.Name = "text_entregar";
-            text_entregar.Size = new Size(68, 42);
+            text_entregar.Size = new Size(65, 36);
             text_entregar.TabIndex = 39;
             text_entregar.Text = "Entregar\r\nen mesa";
             text_entregar.Click += panel_btn_Click;
@@ -212,11 +212,11 @@
             // text_llevar
             // 
             text_llevar.AutoSize = true;
-            text_llevar.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            text_llevar.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             text_llevar.ForeColor = SystemColors.ButtonHighlight;
             text_llevar.Location = new Point(64, 19);
             text_llevar.Name = "text_llevar";
-            text_llevar.Size = new Size(85, 21);
+            text_llevar.Size = new Size(77, 18);
             text_llevar.TabIndex = 35;
             text_llevar.Text = "Para llevar";
             text_llevar.Click += panel_btn_Click;
@@ -270,10 +270,10 @@
             // user_name_title
             // 
             user_name_title.AutoSize = true;
-            user_name_title.Font = new Font("Abyssinica SIL", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            user_name_title.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             user_name_title.Location = new Point(192, 84);
             user_name_title.Name = "user_name_title";
-            user_name_title.Size = new Size(180, 26);
+            user_name_title.Size = new Size(173, 24);
             user_name_title.TabIndex = 36;
             user_name_title.Text = "Nombre de usuario";
             // 
@@ -308,6 +308,7 @@
             button2.TabIndex = 3;
             button2.Text = "Pagar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button_cancelar_pedido
             // 

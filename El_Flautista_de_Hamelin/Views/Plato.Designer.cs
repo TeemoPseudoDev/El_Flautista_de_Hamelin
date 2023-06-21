@@ -39,21 +39,21 @@
             // plato_name
             // 
             plato_name.AutoSize = true;
-            plato_name.Font = new Font("Abyssinica SIL", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            plato_name.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             plato_name.Location = new Point(3, 9);
             plato_name.MaximumSize = new Size(170, 16);
             plato_name.Name = "plato_name";
-            plato_name.Size = new Size(169, 16);
+            plato_name.Size = new Size(166, 16);
             plato_name.TabIndex = 0;
             plato_name.Text = "fsdfasdfasffsdfasdfasffsdfasdfasf";
             // 
             // plato_x
             // 
             plato_x.AutoSize = true;
-            plato_x.Font = new Font("Abyssinica SIL", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            plato_x.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             plato_x.Location = new Point(176, 5);
             plato_x.Name = "plato_x";
-            plato_x.Size = new Size(19, 21);
+            plato_x.Size = new Size(16, 18);
             plato_x.TabIndex = 1;
             plato_x.Text = "x";
             // 
@@ -71,31 +71,31 @@
             // plato_quantity
             // 
             plato_quantity.AutoSize = true;
-            plato_quantity.Font = new Font("Abyssinica SIL", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            plato_quantity.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             plato_quantity.Location = new Point(190, 7);
             plato_quantity.Name = "plato_quantity";
-            plato_quantity.Size = new Size(15, 18);
+            plato_quantity.Size = new Size(14, 16);
             plato_quantity.TabIndex = 3;
             plato_quantity.Text = "1";
             // 
             // plato_gold
             // 
             plato_gold.AutoSize = true;
-            plato_gold.Font = new Font("Abyssinica SIL", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            plato_gold.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             plato_gold.Location = new Point(232, 7);
             plato_gold.MaximumSize = new Size(60, 18);
             plato_gold.Name = "plato_gold";
-            plato_gold.Size = new Size(50, 18);
+            plato_gold.Size = new Size(49, 16);
             plato_gold.TabIndex = 4;
             plato_gold.Text = "515151";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Abyssinica SIL", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(220, 7);
             label1.Name = "label1";
-            label1.Size = new Size(15, 18);
+            label1.Size = new Size(14, 16);
             label1.TabIndex = 5;
             label1.Text = "$";
             // 

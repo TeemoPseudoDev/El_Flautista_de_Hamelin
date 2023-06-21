@@ -28,42 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox2 = new GroupBox();
             button2 = new Button();
             button1 = new Button();
             label2 = new Label();
             label1 = new Label();
             label3 = new Label();
             label4 = new Label();
+            total_precio = new Label();
             label5 = new Label();
-            groupBox1 = new GroupBox();
-            label9 = new Label();
-            label8 = new Label();
-            label7 = new Label();
-            label6 = new Label();
-            groupBox2.SuspendLayout();
-            groupBox1.SuspendLayout();
+            container_pago = new Panel();
+            login_close = new PictureBox();
+            panel_pago = new Panel();
+            panel1 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)login_close).BeginInit();
+            panel_pago.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // groupBox2
-            // 
-            groupBox2.BackColor = SystemColors.ControlLight;
-            groupBox2.Controls.Add(button2);
-            groupBox2.Controls.Add(button1);
-            groupBox2.Controls.Add(label2);
-            groupBox2.Controls.Add(label1);
-            groupBox2.Location = new Point(678, 51);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(260, 182);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
             // 
             // button2
             // 
             button2.BackColor = SystemColors.AppWorkspace;
             button2.Cursor = Cursors.Hand;
             button2.FlatStyle = FlatStyle.Popup;
-            button2.Location = new Point(145, 115);
+            button2.Location = new Point(228, 100);
             button2.Name = "button2";
             button2.Size = new Size(97, 49);
             button2.TabIndex = 5;
@@ -77,7 +64,7 @@
             button1.Cursor = Cursors.Hand;
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(19, 115);
+            button1.Location = new Point(102, 100);
             button1.Name = "button1";
             button1.Size = new Size(97, 49);
             button1.TabIndex = 4;
@@ -88,16 +75,16 @@
             // label2
             // 
             label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(19, 72);
+            label2.Location = new Point(147, 57);
             label2.Name = "label2";
-            label2.Size = new Size(178, 28);
+            label2.Size = new Size(119, 28);
             label2.TabIndex = 1;
             label2.Text = "Tipo de pago:";
             // 
             // label1
             // 
             label1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(102, 38);
+            label1.Location = new Point(185, 23);
             label1.Name = "label1";
             label1.Size = new Size(65, 19);
             label1.TabIndex = 0;
@@ -105,113 +92,123 @@
             // 
             // label3
             // 
-            label3.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(40, 38);
+            label3.AutoSize = true;
+            label3.Font = new Font("Bauhaus 93", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(163, 16);
             label3.Name = "label3";
-            label3.Size = new Size(65, 19);
+            label3.Size = new Size(116, 42);
             label3.TabIndex = 6;
             label3.Text = "PAGO";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(40, 385);
+            label4.Font = new Font("Bauhaus 93", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(19, 453);
             label4.Name = "label4";
-            label4.Size = new Size(42, 15);
+            label4.Size = new Size(81, 24);
             label4.TabIndex = 7;
             label4.Text = "TOTAL:";
+            // 
+            // total_precio
+            // 
+            total_precio.AutoSize = true;
+            total_precio.Font = new Font("Bauhaus 93", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            total_precio.Location = new Point(295, 453);
+            total_precio.Name = "total_precio";
+            total_precio.Size = new Size(94, 24);
+            total_precio.TabIndex = 8;
+            total_precio.Text = "*******";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(188, 385);
+            label5.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(267, 453);
             label5.Name = "label5";
-            label5.Size = new Size(77, 15);
-            label5.TabIndex = 8;
-            label5.Text = "**************";
+            label5.Size = new Size(25, 25);
+            label5.TabIndex = 37;
+            label5.Text = "$";
             // 
-            // groupBox1
+            // container_pago
             // 
-            groupBox1.BackColor = SystemColors.ControlLight;
-            groupBox1.Controls.Add(label9);
-            groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Location = new Point(200, 51);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(412, 432);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
+            container_pago.AutoScroll = true;
+            container_pago.Location = new Point(19, 61);
+            container_pago.Name = "container_pago";
+            container_pago.Size = new Size(395, 373);
+            container_pago.TabIndex = 36;
             // 
-            // label9
+            // login_close
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(213, 115);
-            label9.Name = "label9";
-            label9.Size = new Size(38, 15);
-            label9.TabIndex = 15;
-            label9.Text = "label9";
+            login_close.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            login_close.BackgroundImage = Properties.Resources.tenedor_y_cuchillo_en_cruz;
+            login_close.BackgroundImageLayout = ImageLayout.Stretch;
+            login_close.Cursor = Cursors.Hand;
+            login_close.Location = new Point(469, 2);
+            login_close.Name = "login_close";
+            login_close.Size = new Size(25, 25);
+            login_close.TabIndex = 35;
+            login_close.TabStop = false;
+            login_close.Click += login_close_Click;
             // 
-            // label8
+            // panel_pago
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(150, 115);
-            label8.Name = "label8";
-            label8.Size = new Size(13, 15);
-            label8.TabIndex = 14;
-            label8.Text = "x";
+            panel_pago.BackColor = SystemColors.Control;
+            panel_pago.Controls.Add(label5);
+            panel_pago.Controls.Add(label3);
+            panel_pago.Controls.Add(total_precio);
+            panel_pago.Controls.Add(container_pago);
+            panel_pago.Controls.Add(label4);
+            panel_pago.Location = new Point(31, 43);
+            panel_pago.Name = "panel_pago";
+            panel_pago.Size = new Size(430, 504);
+            panel_pago.TabIndex = 36;
             // 
-            // label7
+            // panel1
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(169, 115);
-            label7.Name = "label7";
-            label7.Size = new Size(38, 15);
-            label7.TabIndex = 13;
-            label7.Text = "label7";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(44, 115);
-            label6.Name = "label6";
-            label6.Size = new Size(38, 15);
-            label6.TabIndex = 12;
-            label6.Text = "label6";
+            panel1.BackColor = SystemColors.Control;
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(label2);
+            panel1.Location = new Point(31, 553);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(430, 166);
+            panel1.TabIndex = 37;
             // 
             // DetalleForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1111, 595);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
+            BackColor = SystemColors.ControlLight;
+            ClientSize = new Size(497, 720);
+            Controls.Add(panel1);
+            Controls.Add(panel_pago);
+            Controls.Add(login_close);
             FormBorderStyle = FormBorderStyle.None;
             Name = "DetalleForm";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "detalle_pedido";
             Load += detalle_pedido_Load;
-            groupBox2.ResumeLayout(false);
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)login_close).EndInit();
+            panel_pago.ResumeLayout(false);
+            panel_pago.PerformLayout();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-        private GroupBox groupBox2;
         private Label label2;
         private Label label1;
         private Button button2;
         private Button button1;
         private Label label3;
         private Label label4;
+        private Label total_precio;
+        private PictureBox login_close;
+        private Panel container_pago;
         private Label label5;
-        private GroupBox groupBox1;
-        private Label label9;
-        private Label label8;
-        private Label label7;
-        private Label label6;
+        private Panel panel_pago;
+        private Panel panel1;
     }
 }
