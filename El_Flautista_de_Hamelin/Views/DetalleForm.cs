@@ -23,6 +23,11 @@ namespace El_Flautista_de_Hamelin.Views
             InitializeComponent();
         }
 
+        public void setTotalPrecio(string totalPrecio)
+        {
+            total_precio.Text = totalPrecio;
+        }
+
         private void detalle_pedido_Load(object sender, EventArgs e)
         {
             string query = "select * from detalle;";
@@ -48,8 +53,6 @@ namespace El_Flautista_de_Hamelin.Views
             Cliente pepe = new Cliente("nombre", "apellido,", DateTime.Now, "asdasd@asdasd", "3156", "asdasd", 26, 27, DateTime.Now, 5);
 
             Pedido pedido1 = new Pedido(DateTime.Now, DateTime.Now, DateTime.Now, pepe, detalles, 5, total);
-
-            label6.Text = pedido1.total.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,6 +67,15 @@ namespace El_Flautista_de_Hamelin.Views
             button1.BackColor = Color.Gray;
         }
 
+        private void login_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        public Panel devolverPanel()
+        {
+            return container_pago;
+        }
 
     }
 }

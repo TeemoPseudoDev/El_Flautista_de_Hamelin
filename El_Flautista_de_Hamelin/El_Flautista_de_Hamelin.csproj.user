@@ -16,6 +16,9 @@
     <Compile Update="Views\Plato.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\PlatoNoAbominacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\TarjetaCredito.cs">
       <SubType>Form</SubType>
     </Compile>
