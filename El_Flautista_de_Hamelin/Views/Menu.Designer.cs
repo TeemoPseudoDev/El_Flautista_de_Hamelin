@@ -301,24 +301,30 @@
             // 
             // button2
             // 
+            button2.BackColor = SystemColors.ActiveCaption;
             button2.Cursor = Cursors.Hand;
-            button2.Location = new Point(222, 456);
+            button2.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.ActiveCaptionText;
+            button2.Location = new Point(215, 456);
             button2.Name = "button2";
-            button2.Size = new Size(107, 40);
+            button2.Size = new Size(114, 53);
             button2.TabIndex = 3;
             button2.Text = "Pagar";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // button_cancelar_pedido
             // 
+            button_cancelar_pedido.BackColor = SystemColors.ActiveCaption;
             button_cancelar_pedido.Cursor = Cursors.Hand;
+            button_cancelar_pedido.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button_cancelar_pedido.ForeColor = SystemColors.ActiveCaptionText;
             button_cancelar_pedido.Location = new Point(77, 456);
             button_cancelar_pedido.Name = "button_cancelar_pedido";
-            button_cancelar_pedido.Size = new Size(107, 40);
+            button_cancelar_pedido.Size = new Size(114, 53);
             button_cancelar_pedido.TabIndex = 2;
             button_cancelar_pedido.Text = "Cancelar pedido";
-            button_cancelar_pedido.UseVisualStyleBackColor = true;
+            button_cancelar_pedido.UseVisualStyleBackColor = false;
             button_cancelar_pedido.Click += button_cancelar_pedido_Click;
             // 
             // container_platos

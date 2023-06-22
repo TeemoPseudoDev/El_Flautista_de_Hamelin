@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
-            button1 = new Button();
+            tarjeta_btn_tarjeta = new Button();
+            tarjeta_btn_efectivo = new Button();
             label2 = new Label();
-            label1 = new Label();
             label3 = new Label();
             label4 = new Label();
             total_precio = new Label();
@@ -40,55 +39,51 @@
             login_close = new PictureBox();
             panel_pago = new Panel();
             panel1 = new Panel();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)login_close).BeginInit();
             panel_pago.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // button2
+            // tarjeta_btn_tarjeta
             // 
-            button2.BackColor = SystemColors.AppWorkspace;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Location = new Point(228, 100);
-            button2.Name = "button2";
-            button2.Size = new Size(97, 49);
-            button2.TabIndex = 5;
-            button2.Text = "TARJETA";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            tarjeta_btn_tarjeta.BackColor = SystemColors.ActiveCaption;
+            tarjeta_btn_tarjeta.Cursor = Cursors.Hand;
+            tarjeta_btn_tarjeta.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tarjeta_btn_tarjeta.ForeColor = SystemColors.ActiveCaptionText;
+            tarjeta_btn_tarjeta.Location = new Point(280, 23);
+            tarjeta_btn_tarjeta.Name = "tarjeta_btn_tarjeta";
+            tarjeta_btn_tarjeta.Size = new Size(81, 41);
+            tarjeta_btn_tarjeta.TabIndex = 5;
+            tarjeta_btn_tarjeta.Text = "Tarjeta";
+            tarjeta_btn_tarjeta.UseVisualStyleBackColor = false;
+            tarjeta_btn_tarjeta.Click += button2_Click;
             // 
-            // button1
+            // tarjeta_btn_efectivo
             // 
-            button1.BackColor = SystemColors.AppWorkspace;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(102, 100);
-            button1.Name = "button1";
-            button1.Size = new Size(97, 49);
-            button1.TabIndex = 4;
-            button1.Text = "EFECTIVO";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            tarjeta_btn_efectivo.BackColor = SystemColors.ActiveCaption;
+            tarjeta_btn_efectivo.Cursor = Cursors.Hand;
+            tarjeta_btn_efectivo.FlatAppearance.BorderColor = Color.Red;
+            tarjeta_btn_efectivo.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
+            tarjeta_btn_efectivo.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 0, 192);
+            tarjeta_btn_efectivo.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tarjeta_btn_efectivo.ForeColor = SystemColors.ActiveCaptionText;
+            tarjeta_btn_efectivo.Location = new Point(162, 23);
+            tarjeta_btn_efectivo.Name = "tarjeta_btn_efectivo";
+            tarjeta_btn_efectivo.Size = new Size(81, 41);
+            tarjeta_btn_efectivo.TabIndex = 4;
+            tarjeta_btn_efectivo.Text = "Efectivo";
+            tarjeta_btn_efectivo.UseVisualStyleBackColor = false;
+            tarjeta_btn_efectivo.Click += button1_Click;
             // 
             // label2
             // 
             label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(147, 57);
+            label2.Location = new Point(19, 30);
             label2.Name = "label2";
             label2.Size = new Size(119, 28);
             label2.TabIndex = 1;
             label2.Text = "Tipo de pago:";
-            // 
-            // label1
-            // 
-            label1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(185, 23);
-            label1.Name = "label1";
-            label1.Size = new Size(65, 19);
-            label1.TabIndex = 0;
-            label1.Text = "PAGO";
             // 
             // label3
             // 
@@ -124,7 +119,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(267, 453);
+            label5.Location = new Point(264, 452);
             label5.Name = "label5";
             label5.Size = new Size(25, 25);
             label5.TabIndex = 37;
@@ -167,14 +162,31 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.Control;
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(label1);
             panel1.Controls.Add(button1);
+            panel1.Controls.Add(tarjeta_btn_tarjeta);
+            panel1.Controls.Add(tarjeta_btn_efectivo);
             panel1.Controls.Add(label2);
             panel1.Location = new Point(31, 553);
             panel1.Name = "panel1";
             panel1.Size = new Size(430, 166);
             panel1.TabIndex = 37;
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ActiveCaption;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = Color.Red;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 0, 192);
+            button1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ActiveCaptionText;
+            button1.Location = new Point(146, 106);
+            button1.Name = "button1";
+            button1.Size = new Size(133, 49);
+            button1.TabIndex = 6;
+            button1.Text = "CONFIRMAR COMPRA";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // DetalleForm
             // 
@@ -199,9 +211,8 @@
 
         #endregion
         private Label label2;
-        private Label label1;
-        private Button button2;
-        private Button button1;
+        private Button tarjeta_btn_tarjeta;
+        private Button tarjeta_btn_efectivo;
         private Label label3;
         private Label label4;
         private Label total_precio;
@@ -210,5 +221,6 @@
         private Label label5;
         private Panel panel_pago;
         private Panel panel1;
+        private Button button1;
     }
 }

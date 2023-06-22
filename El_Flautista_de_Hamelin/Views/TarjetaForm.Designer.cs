@@ -94,6 +94,7 @@
             Controls.Add(precio);
             Controls.Add(nombre);
             Controls.Add(foto);
+            Cursor = Cursors.Hand;
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "TarjetaForm";

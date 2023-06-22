@@ -60,6 +60,8 @@
             // plato_delete
             // 
             plato_delete.Cursor = Cursors.Hand;
+            plato_delete.FlatAppearance.BorderColor = Color.Maroon;
+            plato_delete.FlatStyle = FlatStyle.Flat;
             plato_delete.Location = new Point(289, 5);
             plato_delete.Name = "plato_delete";
             plato_delete.Size = new Size(45, 23);
@@ -104,7 +106,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            BackColor = SystemColors.ActiveCaption;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(340, 31);
             Controls.Add(label1);
             Controls.Add(plato_gold);

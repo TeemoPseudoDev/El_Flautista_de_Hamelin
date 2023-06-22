@@ -215,7 +215,7 @@ namespace El_Flautista_de_Hamelin
         {
             DetalleForm detalle = new DetalleForm();
 
-            detalle.Load += (object sender, EventArgs e) => 
+            detalle.Load += (object sender, EventArgs e) =>
             {
                 var container = detalle.devolverPanel();
 
@@ -230,7 +230,7 @@ namespace El_Flautista_de_Hamelin
                     miPlato.setComidaCantidad(platoControl.getQuantity());
                     miPlato.setComidaPrecio(platoControl.getPrecio());
 
-                    miPlato.Location = new Point(0, pos );
+                    miPlato.Location = new Point(0, pos);
 
                     container.Controls.Add(miPlato);
 
@@ -241,11 +241,16 @@ namespace El_Flautista_de_Hamelin
                 }
 
 
-                var total = Math.Round(acuTotal,2);
+                var total = Math.Round(acuTotal, 2);
 
                 detalle.setTotalPrecio(total.ToString());
 
 
+            };
+
+            detalle.FormClosed += (sender, e) => {
+                container_platos.Controls.Clear();
+                posY = 5;
             };
             detalle.ShowDialog();
         }

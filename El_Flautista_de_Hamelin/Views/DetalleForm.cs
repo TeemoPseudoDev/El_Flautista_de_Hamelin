@@ -57,14 +57,32 @@ namespace El_Flautista_de_Hamelin.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-            button1.BackColor = Color.LightBlue;
-            button2.BackColor = Color.Gray;
+            tarjeta_btn_efectivo.BackColor = SystemColors.ActiveCaption;
+            tarjeta_btn_tarjeta.BackColor = Color.Gray;
+        }
+
+        private void capturarPantallaTicket()
+        {
+            Rectangle bounds = panel_pago.Bounds;
+
+            using (Bitmap bitmap = new Bitmap(bounds.Width, bounds.Height))
+            {
+                using (Graphics graphics = Graphics.FromImage(bitmap))
+                {
+                    graphics.CopyFromScreen(panel_pago.PointToScreen(Point.Empty), Point.Empty, bounds.Size);
+                }
+
+                bitmap.Save("C:\\Users\\brian\\Desktop\\ticket_pago.png");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            button2.BackColor = Color.LightBlue;
-            button1.BackColor = Color.Gray;
+            tarjeta_btn_tarjeta.BackColor = SystemColors.ActiveCaption;
+            tarjeta_btn_efectivo.BackColor = Color.Gray;
+
+            TarjetaCredito tarjetaCredito = new TarjetaCredito();
+            tarjetaCredito.ShowDialog();
         }
 
         private void login_close_Click(object sender, EventArgs e)
@@ -77,5 +95,18 @@ namespace El_Flautista_de_Hamelin.Views
             return container_pago;
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            capturarPantallaTicket();
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+            timer.Interval = 1000; // Intervalo de tiempo en milisegundos (en este caso, 1 segundo)
+
+            timer.Tick += (sender, e) =>
+            {
+                this.Close();
+            };
+
+            timer.Start(); // Inicia el temporizador
+        }
     }
 }
